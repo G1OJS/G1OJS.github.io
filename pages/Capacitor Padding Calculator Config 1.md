@@ -19,9 +19,8 @@ input { display: table-cell;}
 
 <body>
 This calculator works out the values needed for capacitors C1 and C2 in the diagram below to achieve a specified range of output capacitance Cout, and shows the range of capacitance achieved when using specified values for C1 and C2
-
+<p> </p>
 <img src='{{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png'>
-
 <p> </p>
 Usage: Edit the values in the first four boxes. The calculator will show the values of C1 and C2 needed to achieve this range. Note that errors will occur if unachievable ranges are specified. Once calculated, these values are copied to the "Padding Capacitors Used" boxes and used to calculate the final row which shows the capacitance range achieved. You can edit the "Padding Capacitors Used" boxes to see the effect of chosing different values (e.g. to pick from E12 values or simply to experiment).
 <p> </p>
