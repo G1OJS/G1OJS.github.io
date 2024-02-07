@@ -26,14 +26,6 @@ baseurl: "" # the subpath of your site, e.g. /docs
 url: "https://G1OJS.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  G1OJS
 #
-sidebar:
-#  - getting-started
-   - label: Calculators
-    children:
-      - Calculating Padding Capacitors
-      - Calculating Padding Capacitors
-#  - deployment
-#
 # Build settings
 remote_theme: zendesk/jekyll-theme-zendesk-garden@main
 plugins:
