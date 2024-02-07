@@ -9,7 +9,7 @@ permalink: /calculating-padding-capacitors/
 
 Padding capacitors are capacitors added to a variable capacitor in order to change the available range of capacitance. 
 <p></p>
-Generally, we need to add *two* capacitors - one in parallel and another in series. The diagrams below show the two ways of doing this, and they require different values of each of the padding capacitors C1 and C2. 
+Generally, we need to add *two* capacitors - one in parallel and another in series. The diagrams below show the two ways of doing this. Each method requires different values of each of the padding capacitors C1 and C2, and has different implications for the current and voltage seen by each of the three capacitors making up the circuit, and hence implications for power handling and sensitity to temperature coefficients etc. 
 <p></p>
 There's a link below each diagram that opens a calculator for working out C1 and C2 for the configuration shown above it. The rest of this page explains the maths used in the calculators.
 <p></p>
@@ -21,7 +21,7 @@ There's a link below each diagram that opens a calculator for working out C1 and
 
 <p></p>
 
-## The Maths!
+## The Maths
 It's easy to work out the range of capacitance achieved given the available range of the variable capacitor (e.g. 5pF to 250pf) and the values of the added capacitors, by using the well-known formulas for combining capacitors:
 
 | Capacitors in Parallel  | Capacitors in Series|
