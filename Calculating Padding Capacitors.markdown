@@ -13,4 +13,4 @@ For capacitors in series:
 
 $$\frac{1}{C_{out}}=\frac{1}{C_1}+\frac{1}{C_2}$$
 
-
+more words
