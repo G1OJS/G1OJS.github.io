@@ -26,7 +26,7 @@ It's easy to work out the range of capacitance achieved given the available rang
 
 | Capacitors in Parallel  | Capacitors in Series|
 | ------------- | ------------- |
-| $$C=C1+C2$$ | $$\frac{1}{C}=\frac{1}{C1}+\frac{1}{C2}$$ |
+| $C=C1+C2$ | $\frac{1}{C}=\frac{1}{C1}+\frac{1}{C2}$ |
 
 So, for ecample, for configuration a) you'd first add C1 to the variable capacitance and then use the second formula to account for the effect of C2, and you'd do this twice; once for the variable's minimum capacitance and once for its maximum (or you could spreadsheet it and graph out intermediate values).
 
