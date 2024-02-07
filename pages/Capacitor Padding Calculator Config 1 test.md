@@ -3,10 +3,9 @@ layout: default
 title: "Capacitor Padding Calculator Config 1 test"
 permalink: /calculating-padding-capacitors-test/
 ---
-<!DOCTYPE html>
+
 <html> 
 <head>
-<meta charset=utf-8 />
 <title>G1OJS Capacitor Padding Calculator</title>
 <style type="text/css">
 body {margin: 30px;}
@@ -44,7 +43,7 @@ input { display: table-cell;}
  <label>C2</label>
 </p>
 <p>
-  <label for ="C1Req">Padding Capacitors Required</label><input type="text" class="readonly" id="C1Req" size="5" readonly ">
+  <label for ="C1Req">Padding Capacitors Required</label><input type="text" class="readonly" id="C1Req" size="5" readonly>
   <label for = "C2Req"></label><input type="text" class="readonly" id="C2Req" size="5" readonly>
 </p>
 <p>
