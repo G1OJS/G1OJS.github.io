@@ -98,7 +98,7 @@ $$C2=B-\frac{1}{(\frac{1}{C1}+\frac{1}{\beta})}$$
 
 I've used the maths above to make two simple JavaScript calculators which you can find [here]({{ site.baseurl }}/Capacitor padding calculator config 1.html) and [here]({{ site.baseurl }}/Capacitor padding calculator config 2.html) for configurations a) and b) respectively.
 
-I'll add a few more words around these calculators soon but they are fairly self-explanatory - enter your own values in the input fields with white backgrounds and the calculator will give you the needed C1 and C2 values which you can then edit to nearest available values etc.
+I'll add a few more words around these calculators soon but they are fairly self-explanatory - enter your own values in the input fields with white backgrounds and the calculator will give you the needed C1 and C2 values which you can then edit to nearest available values etc whilst the final line shows the achieved capacitance range & verifies ('cos it uses the simple capacitor combination formulas) that the more involved maths has worked properly!
 
 **Planned Changes**
 
