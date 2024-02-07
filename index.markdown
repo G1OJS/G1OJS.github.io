@@ -4,3 +4,5 @@
 
 layout: home
 ---
+This is my homepage
+Click [here](Capacitor padding calculator config 1.html) for the calculator
