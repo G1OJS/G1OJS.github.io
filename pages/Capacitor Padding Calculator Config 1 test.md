@@ -35,7 +35,7 @@ input { display: table-cell;}
   <label for = "Ca">Needed Capacitance Range</label><input type="text" id="Ca" value="200" size="5" onchange="CalcPadding()">
   <label for = "Cb"></label><input type="text" id="Cb" value="240" size="5" onchange="CalcPadding()">
 </p>
-<p>&nbsp</p>
+<p> </p>
 <p>
  <label></label> 
  <label>C1</label>
@@ -50,7 +50,7 @@ input { display: table-cell;}
   <label for ="C1Used">Padding Capacitors Used</label><input type="text" id="C1Used"  size="5" onchange="EvaluatePadding()">
   <label for = "C2Used"></label><input type="text" id="C2Used" size="5" onchange="EvaluatePadding()">
 </p>
-<p>&nbsp</p>
+<p> </p>
 <p>
  <label></label> 
  <label>Min</label>
