@@ -10,4 +10,4 @@ Click
 here
 for the calculator
 
-[calculator](<https://github.com/G1OJS/G1OJS.github.io/Capacitor padding calculator config 1.html>)
+[calculator](<Capacitor padding calculator config 1.html>)
