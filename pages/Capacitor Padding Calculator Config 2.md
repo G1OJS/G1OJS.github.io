@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Capacitor Padding Calculator Config 2 test"
-permalink: /calculating-padding-capacitors-test-2/
+title: "Capacitor Padding Calculator Config 2"
+permalink: /Capacitor-Padding-Calc-Cfg2/
 ---
 <html> 
 <head>
