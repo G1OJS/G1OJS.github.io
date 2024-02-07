@@ -27,6 +27,8 @@ However, it's not so easy to work out what values you need for C1 and C2 in orde
 
 **The Maths!**
 
+**Configuration a)**
+
 Let's look first at the first configuration with the parallel capacitor connected directly across the variable one:
 
 ![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png)
@@ -69,6 +71,30 @@ To get C2, and then C1 follows easily from
 
 $$\frac{1}{C1}=\frac{1}{B}+\frac{1}{C2+\beta}$$
 
-**A simple calculator**
-I've used the maths above to make a simple JavaScript calculator which you can find [here]({{ site.baseurl }}/<Capacitor padding calculator config 1.html>)
+**Configuration b)**
+
+
+![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png)
+
+For the other configuration, the maths is very similar and shows that this time C1 rather than C2 is quadratic with coefficients -
+
+$$a=B-A+\alpha-\beta$$
+
+$$b=(B-A)(\alpha+\beta)$$
+
+$$c=alpha\beta(B-A)$$
+
+This time we use the *negative* result of the square root to find C1:
+
+$$C1=\frac{-b-\sqrt{b^2-4ac}}{2a}$$
+
+... and then get C2 from 
+
+$$C2=B-\frac{1}{(\frac{1}{C1}+\frac{1}{\beta})}$$
+
+**Two simple calculators**
+I've used the maths above to make two simple JavaScript calculators which you can find [here]({{ site.baseurl }}/<Capacitor padding calculator config 1.html>) and [here]({{ site.baseurl }}/<Capacitor padding calculator config 2.html>) for configurations a) and b) respectively.
+
+I'll add a few more words around these calculators soon but they are fairly self-explanatory.
+
 
