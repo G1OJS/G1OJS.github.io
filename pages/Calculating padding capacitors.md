@@ -5,7 +5,7 @@ permalink: /calculating-padding-capacitors/
 ---
 {% include head.html %}
 
-#Calculating Padding Capacitors
+# Calculating Padding Capacitors
 
 Padding capacitors are capacitors added to a variable capacitor in order to change the available range of capacitance. Generally, we will need to add *two* capacitors to steer the capacitance range to where we need it to be; we need to add one capacitor in parallel and another in series. There are two ways of doing this too; a) with the parallel capacitor connected directly across the variable & b) with that capacitor instead connected across the "output":
 <p></p>
@@ -15,8 +15,6 @@ Padding capacitors are capacitors added to a variable capacitor in order to chan
 | ![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png "Configuration a)" )  | ![Padding capacitors config 2]({{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png "Configuration b)" )  |
 | [Calculator]({{ site.baseurl }}/Capacitor-Padding-Calc-Cfg1)  | [Calculator]({{ site.baseurl }}/Capacitor-Padding-Calc-Cfg2) |
 
-
-![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png "Configuration a)" ) ![Padding capacitors config 2]({{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png "Configuration b)" )
 <p></p>
 It's easy to work out the range of capacitance achieved given the available range of the variable capacitor (e.g. 5pF to 250pf) and the values of the added capacitors, by using the formula for combining capacitors:
 
@@ -32,11 +30,11 @@ So, for ecample, for configuration a) you'd first add C1 to the variable capacit
 
 However, it's not so easy to work out what values you need for C1 and C2 in order to achieve a particular desired capacitance range. This requires a bit more maths.
 
-⚠️ <span style="color:red">If you don't want the maths, skip straight to the bottom of this page to get to the calculators.</span>
+⚠️ <span style="color:red">If you don't want the maths, skip straight to the bottom of this page to get to the calculators (or click the links under the diagrams above).</span> ⚠️ 
 
-##The Maths!
+## The Maths!
 
-###Configuration a)
+### Configuration a)
 
 Let's look first at the first configuration with the parallel capacitor connected directly across the variable one:
 
@@ -80,7 +78,7 @@ To get C2, and then C1 follows easily from
 
 $$\frac{1}{C1}=\frac{1}{B}+\frac{1}{C2+\beta}$$
 
-###Configuration b)
+### Configuration b)
 
 
 ![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png)
@@ -101,12 +99,10 @@ $$C1=\frac{-b-\sqrt{b^2-4ac}}{2a}$$
 
 $$C2=B-\frac{1}{(\frac{1}{C1}+\frac{1}{\beta})}$$
 
-##Two simple calculators
+## Two simple calculators
 
 I've used the maths above to make two simple JavaScript calculators which you can find [here]({{ site.baseurl }}/Capacitor-Padding-Calc-Cfg1) and [here]({{ site.baseurl }}/Capacitor-Padding-Calc-Cfg2) for configurations a) and b) respectively.
 
-I'll add a few more words around these calculators soon but they are fairly self-explanatory - enter your own values in the input fields with white backgrounds and the calculator will give you the needed C1 and C2 values which you can then edit to nearest available values etc whilst the final line shows the achieved capacitance range & verifies ('cos it uses the simple capacitor combination formulas) that the more involved maths has worked properly!
-
-##Planned Changes
+## Planned Changes
 Embed calculators on this page?
 Construct a combined calculator that allows comparing config a) and config b) side by side
