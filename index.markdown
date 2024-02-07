@@ -5,4 +5,9 @@
 layout: home
 ---
 This is my homepage
-Click [here](Capacitor padding calculator config 1.html) for the calculator
+
+Click 
+here
+for the calculator
+
+[calculator](<https://github.com/G1OJS/G1OJS.github.io/Capacitor padding calculator config 1.html>)
