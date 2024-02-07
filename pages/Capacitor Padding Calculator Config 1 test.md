@@ -20,7 +20,7 @@ input { display: table-cell;}
 
 <body>
 
-<img src='assets/img/Capacitor padding circuit 1.png'>
+<img src='{{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png'>
 <form>
 <p>
  <label></label> 
