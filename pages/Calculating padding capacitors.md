@@ -11,14 +11,17 @@ Padding capacitors are capacitors added to a variable capacitor in order to chan
 #
 #![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png "Configuration a)" ) ![Padding capacitors config 2]({{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png "Configuration b)" )
 #
-<figure>
-  <img src="{{site.baseurl}}/assets/img/Capacitor padding circuit 1.png" alt="Variable capacitor in parallel with C1 and this in series with C2"/>
-  <figcaption>Configuration a)</figcaption>
-</figure><figure>
-  <img src="{{site.baseurl}}/assets/img/Capacitor padding circuit 2.png" alt="Variable capacitor in series with C1 and this in parallel with C2"/>
-  <figcaption>Configuration b)</figcaption>
-</figure>
-
+<p></p>
+#<figure>
+#  <img src="{{site.baseurl}}/assets/img/Capacitor padding circuit 1.png" alt="Variable capacitor in parallel with C1 and this in series with C2"/>
+#  <figcaption>Configuration a)</figcaption>
+#</figure><figure>
+#  <img src="{{site.baseurl}}/assets/img/Capacitor padding circuit 2.png" alt="Variable capacitor in series with C1 and this in parallel with C2"/>
+#  <figcaption>Configuration b)</figcaption>
+#</figure>
+|![]({{site.baseurl}}/assets/img/Capacitor padding circuit 1.png)<br>Configuration a)![]({{site.baseurl}}/assets/img/Capacitor padding circuit 2.png)<br>Configuration b)|
+|:-:|:-:|
+<p></p>
 It's easy to work out the range of capacitance achieved given the available range of the variable capacitor (e.g. 5pF to 250pf) and the values of the added capacitors, by using the formula for combining capacitors:
 
 For capacitors in parallel:
