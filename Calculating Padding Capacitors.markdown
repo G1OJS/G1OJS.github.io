@@ -7,10 +7,10 @@ Padding capacitors are capacitors added to a variable capacitor in order to chan
 It's easy to work out the range of capacitance from the available range of the variable capacitor (e.g. 5pF to 250pf) by using the formula for adding capacitors:
 
 For capacitors in parallel:
-$$C_out=C_1+C_2$$
+$$C_{out}=C_1+C_2$$
 
 For capacitors in series:
 
-$$\frac{1}{C_out}=\frac{1}{C_1}+\frac{1}{C_2}$$
+$$\frac{1}{C_{out}}=\frac{1}{C_1}+\frac{1}{C_2}$$
 
 
