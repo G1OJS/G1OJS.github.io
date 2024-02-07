@@ -8,6 +8,6 @@ This is my homepage and it's *very simple* at the moment as I'm just getting to 
 
 Here are some of the pages I'm working on:
 
-[Calculating padding capacitors](Calculating Padding Capacitors.markdown)
+[Calculating padding capacitors](Calculating Padding Capacitors)
 
 [calculator](<Capacitor padding calculator config 1.html>)
