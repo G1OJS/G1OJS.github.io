@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Capacitor Padding Calculator Config 1 test"
+permalink: /calculating-padding-capacitors-test/
+---
 <!DOCTYPE html>
 <html> 
 <head>
