@@ -4,10 +4,10 @@
 
 layout: default
 ---
-This is my homepage
+This is my homepage and it's *very simple* at the moment as I'm just getting to grips with building a site using Jekyll hosted on GitHub.
 
-Click 
-here
-for the calculator
+Here are some of the pages I'm working on:
+
+[Calculating padding capacitors](Calculating Padding Capacitors.markdown)
 
 [calculator](<Capacitor padding calculator config 1.html>)
