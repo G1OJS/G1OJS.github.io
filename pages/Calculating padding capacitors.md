@@ -25,6 +25,8 @@ So, for ecample, for configuration a) you'd first add C1 to the variable capacit
 
 However, it's not so easy to work out what values you need for C1 and C2 in order to achieve a particular desired capacitance range. This requires a bit more maths.
 
+⚠️ <span style="color:red">If you don't want the maths, skip straight to the bottom of this page to get to the calculators.</span>
+
 **The Maths!**
 
 **Configuration a)**
@@ -96,6 +98,12 @@ $$C2=B-\frac{1}{(\frac{1}{C1}+\frac{1}{\beta})}$$
 
 I've used the maths above to make two simple JavaScript calculators which you can find [here]({{ site.baseurl }}/Capacitor padding calculator config 1.html) and [here]({{ site.baseurl }}/Capacitor padding calculator config 2.html) for configurations a) and b) respectively.
 
-I'll add a few more words around these calculators soon but they are fairly self-explanatory.
+I'll add a few more words around these calculators soon but they are fairly self-explanatory - enter your own values in the input fields with white backgrounds and the calculator will give you the needed C1 and C2 values which you can then edit to nearest available values etc.
 
+**Planned Changes**
 
+1 Add instructions to the calculator pages
+
+2 Embed calculators on this page additionally
+
+3 Construct a combined calculator that allows comparing config a) and config b) side by side
