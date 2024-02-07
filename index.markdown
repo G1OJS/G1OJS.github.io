@@ -10,4 +10,3 @@ Here are some of the pages I'm working on:
 
 [Calculating padding capacitors]({{ site.baseurl }}/calculating-padding-capacitors)
 
-[calculator](<Capacitor padding calculator config 1.html>)
