@@ -10,7 +10,7 @@ permalink: /calculating-padding-capacitors/
 Padding capacitors are capacitors added to a variable capacitor in order to change the available range of capacitance. Generally, we will need to add *two* capacitors to steer the capacitance range to where we need it to be; we need to add one capacitor in parallel and another in series. There are two ways of doing this too; a) with the parallel capacitor connected directly across the variable & b) with that capacitor instead connected across the "output":
 <p></p>
 
-| Configuration a)  | Configuration a) |
+| Configuration a)  | Configuration b) |
 | ------------- | ------------- |
 | ![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png "Configuration a)" )  | ![Padding capacitors config 2]({{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png "Configuration b)" )  |
 | [Calculator]({{ site.baseurl }}/Capacitor-Padding-Calc-Cfg1)  | [Calculator]({{ site.baseurl }}/Capacitor-Padding-Calc-Cfg2) |
