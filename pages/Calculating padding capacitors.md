@@ -36,8 +36,11 @@ Let's call the capacitance range we need A (min) to B (max) and the capacitance 
 From the capacitor combination formulas above we can see that
 
 $$\frac{1}{A}=\frac{1}{C1}+\frac{1}{C2+\alpha}$$
+
 for the minimum capacitance, and 
+
 $$\frac{1}{B}=\frac{1}{C1}+\frac{1}{C2+\beta}$$
+
 for the maximum capacitance
 
 Rearranging, 
