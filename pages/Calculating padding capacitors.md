@@ -46,7 +46,22 @@ $$\frac{1}{C1}=\frac{1}{A}-\frac{1}{C2+\alpha}=\frac{1}{B}-\frac{1}{C2+\beta}$$
 
 If we multiply through with $(C2+\alpha)(C2+\beta)$, then expand those brackets and gather terms together, we find that the right hand equality (the one that doesn't involve C1) shows C2 in a quadratic equation:
 
-$$(\frac{1}{A}-\frac{1}{A})C2^2+(\frac{\alpha}{A}-\frac{\alpha}{B}+\frac{\beta}{A}-\frac{\beta}{B})C2+\frac{\alpha\beta}{A}-\frac{\alpha\beta}{B}+\alpha-\beta=0$$
+$$(\frac{1}{A}-\frac{1}{B})C2^2+(\frac{\alpha}{A}-\frac{\alpha}{B}+\frac{\beta}{A}-\frac{\beta}{B})C2+\frac{\alpha\beta}{A}-\frac{\alpha\beta}{B}+\alpha-\beta=0$$
 
+Using the standard notation for quadratic coefficients a,b,c we have a quadratic with:
 
+$$a=\frac{1}{A}-\frac{1}{B}$$
 
+$$b=a(\alpha+\beta)$$
+
+$$c=a\alpha\beta+\alpha-\beta$$
+
+.. noting that, for convenience, the coefficient a appears in the expressions for coefficients b and c.
+
+Then we can use the standard formula (using only the positive square root)
+
+$$C2=\frac{-b+\sqrt{b^2-4ac}}{2a}$$
+
+To get C2, and then C1 follows easily from 
+
+$$\frac{1}{C1}=\frac{1}{B}+\frac{1}{C2+\beta}$$
