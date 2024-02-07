@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Calculating Padding Capacitors"
+permalink: /calculating-padding-capacitors/
 ---
 Padding capacitors are capacitors added to a variable capacitor in order to change the available range of capacitance.
 
