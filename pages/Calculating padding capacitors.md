@@ -68,3 +68,7 @@ $$C2=\frac{-b+\sqrt{b^2-4ac}}{2a}$$
 To get C2, and then C1 follows easily from 
 
 $$\frac{1}{C1}=\frac{1}{B}+\frac{1}{C2+\beta}$$
+
+**A simple calculator**
+I've used the maths above to make a simple JavaScript calculator which you can find [here]({{ site.baseurl }}/padding-capacitor-calculator-cfg1)
+
