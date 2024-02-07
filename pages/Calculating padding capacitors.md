@@ -94,7 +94,7 @@ $$C2=B-\frac{1}{(\frac{1}{C1}+\frac{1}{\beta})}$$
 
 **Two simple calculators**
 
-I've used the maths above to make two simple JavaScript calculators which you can find [here]({{ site.baseurl }}/<Capacitor padding calculator config 1.html>) and [here]({{ site.baseurl }}/<Capacitor padding calculator config 2.html>) for configurations a) and b) respectively.
+I've used the maths above to make two simple JavaScript calculators which you can find [here]({{ site.baseurl }}/Capacitor padding calculator config 1.html) and [here]({{ site.baseurl }}/Capacitor padding calculator config 2.html) for configurations a) and b) respectively.
 
 I'll add a few more words around these calculators soon but they are fairly self-explanatory.
 
