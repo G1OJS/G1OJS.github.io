@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Calculating Padding Capacitors"
 permalink: /calculating-padding-capacitors/
 ---
