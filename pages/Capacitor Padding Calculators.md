@@ -45,7 +45,7 @@ input { display: table-cell;}
   <label for = "Cb"></label><input type="text" id="Cb" value="240" size="5" onchange="CalcPadding()">
 </p>
 <p> </p>
-<img src="{{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png "Configuration a)"><img src="{{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png "Configuration b)">
+<img src="{{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png "Configuration a)"/><img src="{{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png "Configuration b)"/>
 <p></p>
  <p>
  <label></label> 
