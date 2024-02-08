@@ -59,13 +59,13 @@ Usage: Edit the values in the first four boxes. The calculator will show the val
 <p>
   <label for ="CFG1_C1Req">Padding Capacitors Required</label><input type="text" class="readonly" id="CFG1_C1Req" size="5" readonly>
   <label for = "CFG1_C2Req"></label><input type="text" class="readonly" id="CFG1_C2Req" size="5" readonly>
-  <label for ="CFG2_C1Req">Padding Capacitors Required</label><input type="text" class="readonly" id="CFG2_C1Req" size="5" readonly>
+  <label for ="CFG2_C1Req"></label><input type="text" class="readonly" id="CFG2_C1Req" size="5" readonly>
   <label for = "CFG2_C2Req"></label><input type="text" class="readonly" id="CFG2_C2Req" size="5" readonly>
 </p>
 <p>
   <label for ="CFG1_C1Used">Padding Capacitors Used</label><input type="text" id="CFG1_C1Used"  size="5" onchange="EvaluatePadding()">
   <label for = "CFG1_C2Used"></label><input type="text" id="CFG1_C2Used" size="5" onchange="EvaluatePadding()">
-  <label for ="CFG2_C1Used">Padding Capacitors Used</label><input type="text" id="CFG2_C1Used"  size="5" onchange="EvaluatePadding()">
+  <label for ="CFG2_C1Used"></label><input type="text" id="CFG2_C1Used"  size="5" onchange="EvaluatePadding()">
   <label for = "CFG2_C2Used"></label><input type="text" id="CFG2_C2Used" size="5" onchange="EvaluatePadding()">
 </p>
 <p> </p>
@@ -82,7 +82,7 @@ Usage: Edit the values in the first four boxes. The calculator will show the val
 <p>
   <label for="CFG1_Cmin">Output Capacitance</label><input type="text" class="readonly" id="CFG1_Cmin" size="5" readonly>
   <label for="CFG1_Cmax"></label><input type="text" class="readonly" id="CFG1_Cmax" size="5" readonly>
-  <label for="CFG2_Cmin">Output Capacitance</label><input type="text" class="readonly" id="CFG2_Cmin" size="5" readonly>
+  <label for="CFG2_Cmin"></label><input type="text" class="readonly" id="CFG2_Cmin" size="5" readonly>
   <label for="CFG2_Cmax"></label><input type="text" class="readonly" id="CFG2_Cmax" size="5" readonly>
 </p>
 
