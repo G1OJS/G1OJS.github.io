@@ -41,6 +41,7 @@ input { display: table-cell;}
 <img src="{{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png" width=100px />
 <label></label>
 <label></label>
+<label></label>
 <img src="{{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png" width=100px />
 </p>
 
@@ -137,8 +138,8 @@ function EvaluatePadding() {
     document.getElementById("CFG1_Cmin").value = CFG1_Cmin.toString();
     document.getElementById("CFG1_Cmax").value = CFG1_Cmax.toString();
 	
-    CFG2_Cmin=1/(1/CFG2_C1Used+1/(CFG2_C2Used+Alpha));
-    CFG2_Cmax=1/(1/CFG2_C1Used+1/(CFG2_C2Used+Beta));	
+    CFG2_Cmin=C2Used+1/(1/CFG2_C1Used+1/Alpha);
+    CFG2_Cmax=C2Used+1/(1/CFG2_C1Used+1/Beta);
     document.getElementById("CFG2_Cmin").value = CFG2_Cmin.toString();
     document.getElementById("CFG2_Cmax").value = CFG2_Cmax.toString();
 }
