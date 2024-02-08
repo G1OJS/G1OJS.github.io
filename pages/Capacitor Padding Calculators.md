@@ -96,15 +96,24 @@ function CalcPadding() {
     aa=1/Ca-1/Cb;
     bb=aa*Alpha + aa*Beta;
     cc=aa*Alpha*Beta + Alpha - Beta;
-
     CFG1_C2=(-bb+Math.sqrt(bb*bb-4*aa*cc))/(2*aa)
     CFG1_C1=1/(1/Cb-1/(CFG1_C2+Beta))
 
+    aa=Cb-Ca+Alpha-Beta;
+    bb=(Cb-Ca)*(Alpha+Beta);
+    cc=Alpha*Beta*(Cb-Ca);
+    CFG2_C1=(-bb-Math.sqrt(bb*bb-4*aa*cc))/(2*aa)
+    CFG2_C2=Cb-1/(1/CFG2_C1+1/Beta)
+
     document.getElementById("CFG1_C1Req").value = CFG1_C1.toString();
     document.getElementById("CFG1_C2Req").value = CFG1_C2.toString();
-
     document.getElementById("CFG1_C1Used").value = Math.max(0,Math.round(CFG1_C1)).toString();
     document.getElementById("CFG1_C2Used").value = Math.max(0,Math.round(CFG1_C2)).toString();
+    
+    document.getElementById("CFG2_C1Req").value = CFG2_C1.toString();
+    document.getElementById("CFG2_C2Req").value = CFG2_C2.toString();
+    document.getElementById("CFG2_C1Used").value = Math.max(0,Math.round(CFG2_C1)).toString();
+    document.getElementById("CFG2_C2Used").value = Math.max(0,Math.round(CFG2_C2)).toString();
 
 	EvaluatePadding()
 }
@@ -115,10 +124,17 @@ function EvaluatePadding() {
     Beta = Number(document.getElementById("Beta").value);
     CFG1_C1Used = Number(document.getElementById("CFG1_C1Used").value);
     CFG1_C2Used = Number(document.getElementById("CFG1_C2Used").value);
+    CFG2_C1Used = Number(document.getElementById("CFG2_C1Used").value);
+    CFG2_C2Used = Number(document.getElementById("CFG2_C2Used").value);
 
     CFG1_Cmin=1/(1/CFG1_C1Used+1/(CFG1_C2Used+Alpha));
     CFG1_Cmax=1/(1/CFG1_C1Used+1/(CFG1_C2Used+Beta));	
     document.getElementById("CFG1_Cmin").value = CFG1_Cmin.toString();
     document.getElementById("CFG1_Cmax").value = CFG1_Cmax.toString();
+	
+    CFG2_Cmin=1/(1/CFG1_C1Used+1/(CFG2_C2Used+Alpha));
+    CFG2_Cmax=1/(1/CFG1_C1Used+1/(CFG2_C2Used+Beta));	
+    document.getElementById("CFG2_Cmin").value = CFG2_Cmin.toString();
+    document.getElementById("CFG2_Cmax").value = CFG2_Cmax.toString();
 }
 </script>
