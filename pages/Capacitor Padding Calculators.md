@@ -40,6 +40,7 @@ input { display: table-cell;}
 <label></label> 
 <img src="{{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png" width=100px />
 <label></label>
+<label></label>
 <img src="{{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png" width=100px />
 </p>
 
