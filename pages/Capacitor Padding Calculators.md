@@ -4,20 +4,6 @@ title: "Capacitor Padding Calculator Config 1"
 permalink: /Capacitor-Padding-Calc/
 ---
 
-<html> 
-<head>
-<title>G1OJS Capacitor Padding Calculator</title>
-<style type="text/css">
-body {margin: 30px;}
-form  { display: table; border: 1px solid red; }
-p     { display: table-row;}
-label { display: table-cell;}
-input { display: table-cell;}
-	.readonly {background-color : #d1d1d1;}
-</style> 
-</head>
-
-<body>
 This calculator works out the values needed for capacitors C1 and C2 in the diagrams below to achieve a specified range of output capacitance Cout, and shows the range of capacitance achieved when using specified values for C1 and C2
 	
 <p></p>
@@ -31,6 +17,18 @@ This calculator works out the values needed for capacitors C1 and C2 in the diag
 Usage: Edit the values in the first four boxes. The calculator will show the values of C1 and C2 needed to achieve this range. Note that errors will occur if unachievable ranges are specified. Once calculated, these values are copied to the "Padding Capacitors Used" boxes and used to calculate the final row which shows the capacitance range achieved. You can edit the "Padding Capacitors Used" boxes to see the effect of chosing different values (e.g. to pick from E12 values or simply to experiment).
 <p> </p>
 <p> </p>
+<html> 
+<head>
+<style type="text/css">
+body {margin: 30px;}
+form  { display: table; border: 1px solid red; }
+p     { display: table-row;}
+label { display: table-cell;}
+input { display: table-cell;}
+	.readonly {background-color : #d1d1d1;}
+</style> 
+</head>
+<body>
 <form>
 <p>
  <label></label> 
