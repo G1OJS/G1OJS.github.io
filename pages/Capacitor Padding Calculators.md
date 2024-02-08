@@ -48,12 +48,12 @@ Usage: Edit the values in the first four boxes. The calculator will show the val
  <label>C2</label>
 </p>
 <p>
-  <label for ="C1Req">Padding Capacitors Required</label><input type="text" class="readonly" id="C1Req" size="5" readonly>
-  <label for = "C2Req"></label><input type="text" class="readonly" id="C2Req" size="5" readonly>
+  <label for ="CFG1_C1Req">Padding Capacitors Required</label><input type="text" class="readonly" id="CFG1_C1Req" size="5" readonly>
+  <label for = "CFG1_C2Req"></label><input type="text" class="readonly" id="CFG1_C2Req" size="5" readonly>
 </p>
 <p>
-  <label for ="C1Used">Padding Capacitors Used</label><input type="text" id="C1Used"  size="5" onchange="EvaluatePadding()">
-  <label for = "C2Used"></label><input type="text" id="C2Used" size="5" onchange="EvaluatePadding()">
+  <label for ="CFG1_C1Used">Padding Capacitors Used</label><input type="text" id="CFG1_C1Used"  size="5" onchange="EvaluatePadding()">
+  <label for = "CFG1_C2Used"></label><input type="text" id="CFG1_C2Used" size="5" onchange="EvaluatePadding()">
 </p>
 <p> </p>
 <p>
@@ -63,8 +63,8 @@ Usage: Edit the values in the first four boxes. The calculator will show the val
  <label>Max</label>
 </p>
 <p>
-  <label for="Cmin">Output Capacitance</label><input type="text" class="readonly" id="Cmin" size="5" readonly>
-  <label for="Cmax"></label><input type="text" class="readonly" id="Cmax" size="5" readonly>
+  <label for="CFG1_Cmin">Output Capacitance</label><input type="text" class="readonly" id="CFG1_Cmin" size="5" readonly>
+  <label for="CFG1_Cmax"></label><input type="text" class="readonly" id="CFG1_Cmax" size="5" readonly>
 </p>
 
 </form>
@@ -85,14 +85,14 @@ function CalcPadding() {
     bb=aa*Alpha + aa*Beta;
     cc=aa*Alpha*Beta + Alpha - Beta;
 
-    C2=(-bb+Math.sqrt(bb*bb-4*aa*cc))/(2*aa)
-    C1=1/(1/Cb-1/(C2+Beta))
+    CFG1_C2=(-bb+Math.sqrt(bb*bb-4*aa*cc))/(2*aa)
+    CFG1_C1=1/(1/Cb-1/(C2+Beta))
 
-    document.getElementById("C1Req").value = C1.toString();
-    document.getElementById("C2Req").value = C2.toString();
+    document.getElementById("CFG1_C1Req").value = CFG1_C1.toString();
+    document.getElementById("CFG1_C2Req").value = CFG1_C2.toString();
 
-    document.getElementById("C1Used").value = Math.max(0,Math.round(C1)).toString();
-    document.getElementById("C2Used").value = Math.max(0,Math.round(C2)).toString();
+    document.getElementById("CFG1_C1Used").value = Math.max(0,Math.round(C1)).toString();
+    document.getElementById("CFG1_C2Used").value = Math.max(0,Math.round(C2)).toString();
 
 	EvaluatePadding()
 }
@@ -101,12 +101,12 @@ function EvaluatePadding() {
 //Calculate output capacitance range from used C1 and C2
     Alpha = Number(document.getElementById("Alpha").value);
     Beta = Number(document.getElementById("Beta").value);
-    C1Used = Number(document.getElementById("C1Used").value);
-    C2Used = Number(document.getElementById("C2Used").value);
+    CFG1_C1Used = Number(document.getElementById("CFG1_C1Used").value);
+    CFG1_C2Used = Number(document.getElementById("CFG1_C2Used").value);
 
-    Cmin=1/(1/C1Used+1/(C2Used+Alpha));
-    Cmax=1/(1/C1Used+1/(C2Used+Beta));	
-    document.getElementById("Cmin").value = Cmin.toString();
-    document.getElementById("Cmax").value = Cmax.toString();
+    CFG1_Cmin=1/(1/CFG1_C1Used+1/(CFG1_C2Used+Alpha));
+    CFG1_Cmax=1/(1/CFG1_C1Used+1/(CFG1_C2Used+Beta));	
+    document.getElementById("CFG1_Cmin").value = CFG1_Cmin.toString();
+    document.getElementById("CFG1_Cmax").value = CFG1_Cmax.toString();
 }
 </script>
