@@ -91,8 +91,8 @@ function CalcPadding() {
     document.getElementById("CFG1_C1Req").value = CFG1_C1.toString();
     document.getElementById("CFG1_C2Req").value = CFG1_C2.toString();
 
-    document.getElementById("CFG1_C1Used").value = Math.max(0,Math.round(C1)).toString();
-    document.getElementById("CFG1_C2Used").value = Math.max(0,Math.round(C2)).toString();
+    document.getElementById("CFG1_C1Used").value = Math.max(0,Math.round(CFG1_C1)).toString();
+    document.getElementById("CFG1_C2Used").value = Math.max(0,Math.round(CFG1_C2)).toString();
 
 	EvaluatePadding()
 }
