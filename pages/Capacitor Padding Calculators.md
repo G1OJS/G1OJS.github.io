@@ -18,9 +18,14 @@ input { display: table-cell;}
 </head>
 
 <body>
-This calculator works out the values needed for capacitors C1 and C2 in the diagram below to achieve a specified range of output capacitance Cout, and shows the range of capacitance achieved when using specified values for C1 and C2
+This calculator works out the values needed for capacitors C1 and C2 in the diagrams below to achieve a specified range of output capacitance Cout, and shows the range of capacitance achieved when using specified values for C1 and C2
 <p> </p>
-<img src='{{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png'>
+
+| Configuration a)  | Configuration b) |
+| ------------- | ------------- |
+| ![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png "Configuration a)" )  | ![Padding capacitors config 2]({{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png "Configuration b)" )  |
+| [Calculator]({{ site.baseurl }}/Capacitor-Padding-Calc-Cfg1)  | [Calculator]({{ site.baseurl }}/Capacitor-Padding-Calc-Cfg2) |
+
 <p> </p>
 Usage: Edit the values in the first four boxes. The calculator will show the values of C1 and C2 needed to achieve this range. Note that errors will occur if unachievable ranges are specified. Once calculated, these values are copied to the "Padding Capacitors Used" boxes and used to calculate the final row which shows the capacitance range achieved. You can edit the "Padding Capacitors Used" boxes to see the effect of chosing different values (e.g. to pick from E12 values or simply to experiment).
 <p> </p>
@@ -46,17 +51,29 @@ Usage: Edit the values in the first four boxes. The calculator will show the val
  <label>C1</label>
  <label></label> 
  <label>C2</label>
+ <label></label> 
+ <label>C1</label>
+ <label></label> 
+ <label>C2</label>
 </p>
 <p>
   <label for ="CFG1_C1Req">Padding Capacitors Required</label><input type="text" class="readonly" id="CFG1_C1Req" size="5" readonly>
   <label for = "CFG1_C2Req"></label><input type="text" class="readonly" id="CFG1_C2Req" size="5" readonly>
+  <label for ="CFG2_C1Req">Padding Capacitors Required</label><input type="text" class="readonly" id="CFG2_C1Req" size="5" readonly>
+  <label for = "CFG2_C2Req"></label><input type="text" class="readonly" id="CFG2_C2Req" size="5" readonly>
 </p>
 <p>
   <label for ="CFG1_C1Used">Padding Capacitors Used</label><input type="text" id="CFG1_C1Used"  size="5" onchange="EvaluatePadding()">
   <label for = "CFG1_C2Used"></label><input type="text" id="CFG1_C2Used" size="5" onchange="EvaluatePadding()">
+  <label for ="CFG2_C1Used">Padding Capacitors Used</label><input type="text" id="CFG2_C1Used"  size="5" onchange="EvaluatePadding()">
+  <label for = "CFG2_C2Used"></label><input type="text" id="CFG2_C2Used" size="5" onchange="EvaluatePadding()">
 </p>
 <p> </p>
 <p>
+ <label></label> 
+ <label>Min</label>
+ <label></label> 
+ <label>Max</label> 
  <label></label> 
  <label>Min</label>
  <label></label> 
@@ -65,6 +82,8 @@ Usage: Edit the values in the first four boxes. The calculator will show the val
 <p>
   <label for="CFG1_Cmin">Output Capacitance</label><input type="text" class="readonly" id="CFG1_Cmin" size="5" readonly>
   <label for="CFG1_Cmax"></label><input type="text" class="readonly" id="CFG1_Cmax" size="5" readonly>
+  <label for="CFG2_Cmin">Output Capacitance</label><input type="text" class="readonly" id="CFG2_Cmin" size="5" readonly>
+  <label for="CFG2_Cmax"></label><input type="text" class="readonly" id="CFG2_Cmax" size="5" readonly>
 </p>
 
 </form>
