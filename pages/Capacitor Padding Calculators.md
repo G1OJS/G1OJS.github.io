@@ -22,9 +22,11 @@ input { display: table-cell;}
 </head>
 <body>
 
+</html>
 <p> </p>
 ![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png "Configuration a))![Padding capacitors config 2]({{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png "Configuration b)")
 <p></p>
+<html>
 
 <form>
 <p>
