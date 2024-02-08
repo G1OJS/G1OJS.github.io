@@ -104,7 +104,7 @@ function CalcPadding() {
     cc=aa*Alpha*Beta + Alpha - Beta;
 
     CFG1_C2=(-bb+Math.sqrt(bb*bb-4*aa*cc))/(2*aa)
-    CFG1_C1=1/(1/Cb-1/(C2+Beta))
+    CFG1_C1=1/(1/Cb-1/(CFG1_C2+Beta))
 
     document.getElementById("CFG1_C1Req").value = CFG1_C1.toString();
     document.getElementById("CFG1_C2Req").value = CFG1_C2.toString();
