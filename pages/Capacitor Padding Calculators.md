@@ -36,10 +36,12 @@ input { display: table-cell;}
   <label for = "Ca">Needed Capacitance Range</label><input type="text" id="Ca" value="200" size="5" onchange="CalcPadding()">
   <label for = "Cb"></label><input type="text" id="Cb" value="240" size="5" onchange="CalcPadding()">
 </p>
-
+<p>
+<label></label> 
 <img src="{{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png" width=100px /><img src="{{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png" width=100px />
+</p>
 
- <p>
+<p>
  <label></label> 
  <label>C1</label>
  <label></label> 
