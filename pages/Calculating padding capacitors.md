@@ -11,15 +11,17 @@ Padding capacitors are capacitors added to a variable capacitor in order to chan
 <p></p>
 Generally, we need to add *two* capacitors - one in parallel and another in series. The diagrams below show the two ways of doing this. Each method requires different values of each of the padding capacitors C1 and C2, and has different implications for the current and voltage seen by each of the three capacitors making up the circuit, and hence implications for power handling and sensitity to temperature coefficients etc. 
 <p></p>
-There's a link below each diagram that opens a calculator for working out C1 and C2 for the configuration shown above it. The rest of this page explains the maths used in the calculators.
+### 📱 
+Click [here]({{ site.baseurl }}/Capacitor-Padding-Calc) to get to a calculator that works out C1 and C2 based on your needed capacitance range for a given variable capacitor's range.
+<p></p>
+The rest of this page explains the maths used in the calculator.
 <p></p>
 
 | Configuration a)  | Configuration b) |
 | ------------- | ------------- |
 | ![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png "Configuration a)" )  | ![Padding capacitors config 2]({{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png "Configuration b)" )  |
 
-### 📱 Click [here]({{ site.baseurl }}/Capacitor-Padding-Calc) for the calculator.
-<p></p>
+
 
 ## The Maths
 It's easy to work out the range of capacitance achieved given the available range of the variable capacitor (e.g. 5pF to 250pf) and the values of the added capacitors, by using the well-known formulas for combining capacitors:
