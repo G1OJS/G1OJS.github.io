@@ -11,4 +11,4 @@ You can find quite a lot of ham radio content from me on my [G1OJS pages at Inst
 
 Here's the index page for the site: 
 
-### [G1OJS at GutHub]({{ site.baseurl }}/https://g1ojs.github.io/)
+### (/https://g1ojs.github.io/)
