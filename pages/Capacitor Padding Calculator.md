@@ -28,7 +28,7 @@ input {
 }
 
 span.first {
-  width: 200px;
+  width: 150px;
   margin-left: 0px;
   margin-right: 5px;
   float: left;
@@ -36,7 +36,7 @@ span.first {
 }
 
 span {
-  width: 200px;
+  width: 190px;
   margin-left: 0px;
   margin-right: 5px;
   float: left;
@@ -70,7 +70,7 @@ label {
   <label>Max</label><input type="text" id="Cb" value="240" onchange="CalcPadding()"/>
   <div></div>
   <h2>Exact Solutions:</h2>
-  <span>.</span>
+  <span class="first">.</span>
   <span><b>Configuration a)</b></span>
   <span><b>Configuration b)</b></span>
   <div></div>
