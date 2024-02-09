@@ -28,7 +28,7 @@ input {
 }
 
 span.first {
-  width: 150px;
+  width: 190px;
   margin-left: 0px;
   margin-right: 5px;
   float: left;
