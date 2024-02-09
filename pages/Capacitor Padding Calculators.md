@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Capacitor Padding Calculator Config 1"
+title: "Capacitor Padding Calculator"
 permalink: /Capacitor-Padding-Calc/
 ---
 
