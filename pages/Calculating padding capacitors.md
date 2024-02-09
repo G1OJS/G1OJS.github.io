@@ -18,7 +18,7 @@ There's a link below each diagram that opens a calculator for working out C1 and
 | ------------- | ------------- |
 | ![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png "Configuration a)" )  | ![Padding capacitors config 2]({{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png "Configuration b)" )  |
 
-:iphone: Click [here]({{ site.baseurl }}/Capacitor-Padding-Calc) for the calculator.
+📱 Click [here]({{ site.baseurl }}/Capacitor-Padding-Calc) for the calculator.
 <p></p>
 
 ## The Maths
