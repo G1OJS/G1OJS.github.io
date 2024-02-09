@@ -58,7 +58,7 @@ label {
 .readonly { background-color: #d1d1d1; }
 </style>
 
-<!-- <meta name="viewport" content="width=650,maximum-scale=2"> -->
+<meta name="viewport" content="width=650,initial-scale=1.0">
 
 </head>
 
@@ -72,8 +72,6 @@ label {
   <label>Min</label><input type="text" id="Ca" value="200" onchange="CalcPadding()"/>
   <label>Max</label><input type="text" id="Cb" value="240" onchange="CalcPadding()"/>
   <div></div>
-
-<div style="min-width:675px; ">
  
   <h2>Exact Solutions:</h2>
   <span class="first">.</span>
@@ -117,8 +115,6 @@ label {
   </span>
   
   <div style="height: 50px;"></div>
-
-</div>
 
 </body>
 </html>
