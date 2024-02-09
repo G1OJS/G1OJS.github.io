@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Capacitor Padding Calculator"
-permalink: /Capacitor-Padding-Calc2/
+permalink: /Capacitor-Padding-Calc/
 ---
 # Introduction
 This calculator works out the values needed for capacitors C1 and C2 in the diagrams below to achieve a specified range of output capacitance Cout, and shows the range of capacitance achieved when using specified values for C1 and C2
