@@ -62,7 +62,7 @@ label {
 
 </head>
 
-<body onload="CalcPadding()" style="min-width:650px;">
+<body onload="CalcPadding()" >
   <h2>Available and needed capacitance ranges:</h2>
   <span class="first">Variable Capacitor Range</span>
   <label>Min</label><input type="text" id="Alpha" value="10" onchange="CalcPadding()" />
@@ -72,6 +72,9 @@ label {
   <label>Min</label><input type="text" id="Ca" value="200" onchange="CalcPadding()"/>
   <label>Max</label><input type="text" id="Cb" value="240" onchange="CalcPadding()"/>
   <div></div>
+
+<div style="min-width:650px; width=device-width;">
+ 
   <h2>Exact Solutions:</h2>
   <span class="first">.</span>
   <span><b>Configuration a)</b></span>
@@ -114,6 +117,8 @@ label {
   </span>
   
   <div style="height: 50px;"></div>
+
+</div>
 
 </body>
 </html>
