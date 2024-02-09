@@ -56,6 +56,9 @@ label {
 }
 
 .readonly { background-color: #d1d1d1; }
+
+@media screen and (max-width: 700px){ html,body {min-width:700px} }
+	
 </style>
 
 <!-- 
