@@ -57,6 +57,9 @@ label {
 
 .readonly { background-color: #d1d1d1; }
 </style>
+
+<meta name="viewport" content="width=650,maximum-scale=2">
+
 </head>
 
 <body onload="CalcPadding()">
