@@ -67,7 +67,7 @@ $$b=a(\alpha+\beta)$$
 
 $$c=a\alpha\beta+\alpha-\beta$$
 
-.. noting that, for convenience, the coefficient a appears in the expressions for coefficients b and c.
+... noting that, for convenience, the coefficient a appears in the expressions for coefficients b and c.
 
 Then we can use the standard formula (using only the positive square root)
 
