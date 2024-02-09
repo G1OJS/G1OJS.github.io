@@ -26,7 +26,7 @@ input {
 }
 
 span.first {
-  width: 125px;
+  width: 200px;
   margin-left: 0px;
   margin-right: 5px;
   float: left;
@@ -34,7 +34,7 @@ span.first {
 }
 
 span {
-  width: 150px;
+  width: 200px;
   margin-left: 0px;
   margin-right: 5px;
   float: left;
