@@ -36,8 +36,6 @@ However, it's not so easy to work out what values you need for C1 and C2 in orde
 
 Let's look first at the first configuration with the parallel capacitor connected directly across the variable one:
 
-![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png)
-
 Let's call the capacitance range we need A (min) to B (max) and the capacitance range of the variable capacitor similarly $\alpha$ and $\beta$.
 
 From the capacitor combination formulas above we can see that
@@ -77,9 +75,6 @@ To get C2, and then C1 follows easily from
 $$\frac{1}{C1}=\frac{1}{B}+\frac{1}{C2+\beta}$$
 
 ### Configuration b)
-
-
-![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png)
 
 For the other configuration, the maths is very similar and shows that this time C1 rather than C2 is quadratic with coefficients -
 
