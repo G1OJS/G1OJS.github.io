@@ -1,0 +1,58 @@
+<html>
+<head>
+
+</head>
+<body>
+  <h2>Available and needed capacitance ranges:</h2>
+  <span class="first">Variable Capacitor Range</span>
+  <label>Min</label><input type="text" id="Alpha" value="10" onchange="CalcPadding()" />
+  <label>Max</label><input type="text" id="Beta" value="250" onchange="CalcPadding()" />
+  <div></div>
+  <span class="first">Needed Capacitance Range</span>
+  <label>Min</label><input type="text" id="Ca" value="200" onchange="CalcPadding()"/>
+  <label>Max</label><input type="text" id="Cb" value="240" onchange="CalcPadding()"/>
+  <div></div>
+  <h2>Exact Solutions:</h2>
+  <span>.</span>
+  <span><b>Configuration a)</b></span>
+  <span><b>Configuration b)</b></span>
+  <div></div>
+  <span class="first">.</span>
+  <span><img src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%201.png"/></span>
+  <span><img src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%202.png"/></span>
+  <div></div>
+  <span class="first">Padding Capacitors Required</span>
+  <span>
+  <label>C1</label><input type="text" id="CFG1_C1Req" class="readonly" readonly=true />
+  <label>C2</label><input type="text" id="CFG1_C2Req" class="readonly" readonly=true />
+  </span>
+  <span>
+   <label>C1</label><input type="text" id="CFG2_C1Req" class="readonly" readonly=true/>
+   <label>C2</label><input type="text" id="CFG2_C2Req" class="readonly" readonly=true/>
+  </span>
+  <div></div>
+  <h2>Practical Solutions:</h2>
+  <span class="first">Padding Capacitors Used</span>
+  <span>
+  <label>C1</label><input type="text" id="CFG1_C1Used"   onchange="EvaluatePadding()"/>
+  <label>C2</label><input type="text" id="CFG1_C2Used"  onchange="EvaluatePadding()"/>
+  </span>
+  <span>
+  <label>C1</label><input type="text" id="CFG2_C1Used"  onchange="EvaluatePadding()"/>
+  <label>C2</label><input type="text" id="CFG2_C2Used"  onchange="EvaluatePadding()"/>
+  </span>
+  <div></div>
+  
+  <span class="first">Output Capacitance</span>
+  <span>
+  <label>Min</label><input type="text" class="readonly" id="CFG1_Cmin" size="5" readonly=true />
+  <label>Max</label><input type="text" class="readonly" id="CFG1_Cmax" size="5" readonly=true />
+  </span>
+  <span>
+  <label>Min</label><input type="text" class="readonly" id="CFG2_Cmin" size="5" readonly=true  />
+  <label>Max</label><input type="text" class="readonly" id="CFG2_Cmax" size="5" readonly=true  />
+  </span>
+  
+</body>
+</html>
+
