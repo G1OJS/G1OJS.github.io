@@ -1,5 +1,64 @@
+---
+layout: default
+title: "Capacitor Padding Calculator"
+permalink: /Capacitor-Padding-Calc/
+---
+
+This calculator works out the values needed for capacitors C1 and C2 in the diagrams below to achieve a specified range of output capacitance Cout, and shows the range of capacitance achieved when using specified values for C1 and C2
+
+Usage: Edit the values in the first four boxes. The calculator will show the values of C1 and C2 needed to achieve this range. Note that errors will occur if unachievable ranges are specified. Once calculated, these values are copied to the "Padding Capacitors Used" boxes and used to calculate the final row which shows the capacitance range achieved. You can edit the "Padding Capacitors Used" boxes to see the effect of chosing different values (e.g. to pick from E12 values or simply to experiment).
+<p> </p>
+<p> </p>
+
+
 <html>
 <head>
+
+<style>
+
+img {
+    width: 100%;
+
+}
+
+input {
+    height: 15px;
+    width: 40px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+span.first {
+  width: 200px;
+  margin-left: 0px;
+  margin-right: 5px;
+  float: left;
+  text-align: left;
+}
+
+span {
+  width: 200px;
+  margin-left: 0px;
+  margin-right: 5px;
+  float: left;
+  text-align: center;
+}
+
+div {
+  clear: both;
+}
+
+label {
+  width: 35px;
+  margin-left: 0px;
+  margin-right: 5px;
+  float: left;
+  text-align: right;
+}
+
+.readonly { background-color: #d1d1d1; }
+
+</style>
 
 </head>
 <body>
