@@ -57,7 +57,7 @@ label {
 </style>
 </head>
 
-<body>
+<body onload="CalcPadding()">
   <h2>Available and needed capacitance ranges:</h2>
   <span class="first">Variable Capacitor Range</span>
   <label>Min</label><input type="text" id="Alpha" value="10" onchange="CalcPadding()" />
