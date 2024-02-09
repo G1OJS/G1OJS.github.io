@@ -58,11 +58,11 @@ label {
 .readonly { background-color: #d1d1d1; }
 </style>
 
-<meta name="viewport" content="width=650,maximum-scale=2">
+<!-- <meta name="viewport" content="width=650,maximum-scale=2"> -->
 
 </head>
 
-<body onload="CalcPadding()">
+<body onload="CalcPadding()" style="min-width:650px;">
   <h2>Available and needed capacitance ranges:</h2>
   <span class="first">Variable Capacitor Range</span>
   <label>Min</label><input type="text" id="Alpha" value="10" onchange="CalcPadding()" />
