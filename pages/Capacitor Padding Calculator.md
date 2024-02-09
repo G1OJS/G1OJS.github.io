@@ -73,7 +73,7 @@ label {
   <label>Max</label><input type="text" id="Cb" value="240" onchange="CalcPadding()"/>
   <div></div>
 
-<div style="min-width:650px; width=device-width;">
+<div style="min-width:675px; ">
  
   <h2>Exact Solutions:</h2>
   <span class="first">.</span>
