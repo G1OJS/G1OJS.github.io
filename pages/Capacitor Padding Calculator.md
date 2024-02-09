@@ -34,7 +34,7 @@ span.first {
 }
 
 span {
-  width: 200px;
+  width: 125px;
   margin-left: 0px;
   margin-right: 5px;
   float: left;
