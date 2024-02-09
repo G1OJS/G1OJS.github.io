@@ -108,6 +108,8 @@ label {
   <label>Max</label><input type="text" class="readonly" id="CFG2_Cmax" size="5" readonly=true  />
   </span>
   
+  <div style="height: 50px;"></div>
+
 </body>
 </html>
 
