@@ -3,7 +3,7 @@ layout: default
 title: "Calculating Padding Capacitors"
 permalink: /calculating-padding-capacitors/
 ---
-{% include head.html %}
+{% include MathJax.html %}
 <head>
 <!-- 
 This next line is a bit of a hack and fights against Jekyll
