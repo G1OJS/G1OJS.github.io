@@ -119,18 +119,18 @@ but it would be better to redesign the column layout of spans so that the spans 
     <label>Max</label><input type="text" class="readonly" id="CFG1_Cmax" size="5" readonly=true />
   </span>
   <span>
-  <label>Min</label><input type="text" class="readonly" id="CFG2_Cmin" size="5" readonly=true  />
-  <label>Max</label><input type="text" class="readonly" id="CFG2_Cmax" size="5" readonly=true  />
+    <label>Min</label><input type="text" class="readonly" id="CFG2_Cmin" size="5" readonly=true  />
+    <label>Max</label><input type="text" class="readonly" id="CFG2_Cmax" size="5" readonly=true  />
   </span>
 
   <span class="first">Capacitor Voltages for 1v across Cout</span>
   <span>
-    <span class="first">.</span><input type="text" class="readonly" id="CFG1_C1V_Cmin" size="5" readonly=true />
-    <span class="first">.</span><input type="text" class="readonly" id="CFG1_C1V_Cmax" size="5" readonly=true />
+    <input type="text" class="readonly" id="CFG1_C1V_Cmin" size="5" readonly=true />
+    <input type="text" class="readonly" id="CFG1_C1V_Cmax" size="5" readonly=true />
   </span>
   <span>
-    <span class="first">.</span>><input type="text" class="readonly" id="CFG2_C1V_Cmin" size="5" readonly=true  />
-    <span class="first">.</span><input type="text" class="readonly" id="CFG2_C1V_Cmax" size="5" readonly=true  />
+    <input type="text" class="readonly" id="CFG2_C1V_Cmin" size="5" readonly=true  />
+    <input type="text" class="readonly" id="CFG2_C1V_Cmax" size="5" readonly=true  />
   </span>
   
 </div> <!-- main div -->  
