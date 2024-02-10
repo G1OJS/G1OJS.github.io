@@ -28,7 +28,7 @@ input {
 }
 
 span.first {
-  width: 190px;
+  width: 200px;
   margin-left: 0px;
   margin-right: 5px;
   float: left;
@@ -36,7 +36,7 @@ span.first {
 }
 
 span {
-  width: 190px;
+  width: 200px;
   margin-left: 0px;
   margin-right: 5px;
   float: left;
@@ -45,6 +45,7 @@ span {
 
 div {
   clear: both;
+  min-width: 700px;
 }
 
 label {
@@ -63,13 +64,15 @@ label {
 This next line is a bit of a hack and fights against Jekyll
 It could be put into script in onload to work out scales and set them correctly initially
 but it would be better to redesign the column layout of spans so that the spans can't wrap
--->
 <meta name="viewport" content="width=650,initial-scale=1.0">
+-->
+
 
 
 </head>
 
 <body onload="CalcPadding()" >
+<div> <!-- main div -->
   <h2>Available and needed capacitance ranges:</h2>
   <span class="first">Variable Capacitor Range</span>
   <label>Min</label><input type="text" id="Alpha" value="10" onchange="CalcPadding()" />
@@ -120,8 +123,9 @@ but it would be better to redesign the column layout of spans so that the spans 
   <label>Min</label><input type="text" class="readonly" id="CFG2_Cmin" size="5" readonly=true  />
   <label>Max</label><input type="text" class="readonly" id="CFG2_Cmax" size="5" readonly=true  />
   </span>
-  
-  <div style="height: 50px;"></div>
+</div> <!-- main div -->  
+
+<div style="height: 50px;"></div>
 
 </body>
 </html>
