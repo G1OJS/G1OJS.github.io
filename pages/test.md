@@ -176,7 +176,7 @@ if ( window.matchMedia("(orientation: landscape)").matches ) {
 if (fw < 700) {
     var sc = fw/700
     var mvp = document.getElementById("testViewport");
-    mvp.setAttribute("content","width=device-width,initial-scale=" & sc);
+    mvp.setAttribute("content","width=700, initial-scale=" & sc);
     }
     CalcPadding()
 }
