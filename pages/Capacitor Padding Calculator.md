@@ -48,7 +48,7 @@ span {
 
 div {
   clear: both;
-  min-width: 650px;
+  min-width: 700px;
 }
 
 label {
@@ -66,8 +66,8 @@ label {
 This next line is a bit of a hack and fights against Jekyll
 It could be put into script in onload to work out scales and set them correctly initially
 but it would be better to redesign the column layout of spans so that the spans can't wrap
+->>
 <meta name="viewport" content="width=650,initial-scale=1.0">
--->
 
 
 
