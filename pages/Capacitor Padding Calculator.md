@@ -39,7 +39,7 @@ span.first {
 }
 
 span {
-  width: 220px;
+  width: 200px;
   margin-left: 0px;
   margin-right: 5px;
   float: left;
@@ -156,40 +156,47 @@ but it would be better to redesign the column layout of spans so that the spans 
 function CalcPadding() {
 
 //Calculate required C1 and C2 from input values
+
+//Get input parameters
     Alpha = Number(document.getElementById("Alpha").value);
     Beta = Number(document.getElementById("Beta").value);
     Ca = Number(document.getElementById("Ca").value);
     Cb = Number(document.getElementById("Cb").value);
 
+//C1 and C2 for config a)
     aa=1/Ca-1/Cb;
     bb=aa*Alpha + aa*Beta;
     cc=aa*Alpha*Beta + Alpha - Beta;
     CFG1_C2=(-bb+Math.sqrt(bb*bb-4*aa*cc))/(2*aa)
     CFG1_C1=1/(1/Cb-1/(CFG1_C2+Beta))
 
+//C1 and C2 for config b)
     aa=Cb-Ca+Alpha-Beta;
     bb=(Cb-Ca)*(Alpha+Beta);
     cc=Alpha*Beta*(Cb-Ca);
     CFG2_C1=(-bb-Math.sqrt(bb*bb-4*aa*cc))/(2*aa)
     CFG2_C2=Cb-1/(1/CFG2_C1+1/Beta)
 
+// Write C1 and C2 for config a)
     document.getElementById("CFG1_C1Req").value = CFG1_C1.toString();
     document.getElementById("CFG1_C2Req").value = CFG1_C2.toString();
     document.getElementById("CFG1_C1Used").value = Math.max(0,Math.round(CFG1_C1)).toString();
     document.getElementById("CFG1_C2Used").value = Math.max(0,Math.round(CFG1_C2)).toString();
-    
+
+// Write C1 and C2 for config a)
     document.getElementById("CFG2_C1Req").value = CFG2_C1.toString();
     document.getElementById("CFG2_C2Req").value = CFG2_C2.toString();
     document.getElementById("CFG2_C1Used").value = Math.max(0,Math.round(CFG2_C1)).toString();
     document.getElementById("CFG2_C2Used").value = Math.max(0,Math.round(CFG2_C2)).toString();
 
-	EvaluatePadding()
+// Call to write resulting values
+    EvaluatePadding()
 }
 
 function EvaluatePadding() {
 //Calculate output capacitance range from used C1 and C2
 
-//Get call circuit capacitance values
+//Get all circuit capacitance values
     Alpha = Number(document.getElementById("Alpha").value);
     Beta = Number(document.getElementById("Beta").value);
     CFG1_C1Used = Number(document.getElementById("CFG1_C1Used").value);
