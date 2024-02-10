@@ -124,21 +124,23 @@ but it would be better to redesign the column layout of spans so that the spans 
   </span>
   <div></div>
 
-  <!-- layout is not fully intuitive
-  
   <h3>Maximum Capacitor Voltages (scaled to 1V at Cout):</h3>
-  <h4>For configuration a):</h4>
-  <span class="first">C1, at max Cout </span><input type="text" class="readonly" id="CFG1_C1V_Cmax" size="5" readonly=true />
+  <span class="first">C1, at max Cout </span>
+  <span style="width: 140px;">.</span>
+  <input type="text" class="readonly" id="CFG1_C1V_Cmax" size="5" readonly=true />  
+  <span style="width: 145px;">.</span>
+  <input type="text" class="readonly" id="CFG2_C1V_Cmax" size="5" readonly=true />
+   <div></div>
+   <span class="first">CV, at min Cout</span>
+   <span style="width: 40px;">.</span>
+   <input type="text" class="readonly" id="CFG1_CVV_Cmin" size="5" readonly=true />
+   <span style="width: 145px;">.</span>
+   <input type="text" class="readonly" id="CFG2_CVV_Cmin" size="5" readonly=true />
   <div></div>
-  <span class="first">C2 and CV, at min Cout</span><input type="text" class="readonly" id="CFG1_C2V_Cmin" size="5" readonly=true />
+  <p>
+    In both configurations, the maximum voltage across C1 occurs at maximum output capacitance, and the maximum voltage across CV occurs at minimum output capacitance. The voltage across C2 is the same as that across CV in configuration a), and the same as that across the output in configuration b).
+  </p>
   <div></div>
-  <h4>For configuration b):</h4>
-  <span class="first">C1, at max Cout </span><input type="text" class="readonly" id="CFG2_C1V_Cmax" size="5" readonly=true />
-  <div></div>
-  <span class="first">CV, at min Cout </span><input type="text" class="readonly" id="CFG2_CVV_Cmin" size="5" readonly=true />
-  <div></div>
-
-  -->
 
 </div> <!-- main div -->  
 
@@ -184,6 +186,8 @@ function CalcPadding() {
 
 function EvaluatePadding() {
 //Calculate output capacitance range from used C1 and C2
+
+//Get call circuit capacitance values
     Alpha = Number(document.getElementById("Alpha").value);
     Beta = Number(document.getElementById("Beta").value);
     CFG1_C1Used = Number(document.getElementById("CFG1_C1Used").value);
@@ -191,15 +195,27 @@ function EvaluatePadding() {
     CFG2_C1Used = Number(document.getElementById("CFG2_C1Used").value);
     CFG2_C2Used = Number(document.getElementById("CFG2_C2Used").value);
 
+//Min and Max capacitance for config a)
     CFG1_Cmin=1/(1/CFG1_C1Used+1/(CFG1_C2Used+Alpha));
     CFG1_Cmax=1/(1/CFG1_C1Used+1/(CFG1_C2Used+Beta));	
     document.getElementById("CFG1_Cmin").value = CFG1_Cmin.toString();
     document.getElementById("CFG1_Cmax").value = CFG1_Cmax.toString();
-	
+
+//Min and Max capacitance for config b)
     CFG2_Cmin=CFG2_C2Used+1/(1/CFG2_C1Used+1/Alpha);
     CFG2_Cmax=CFG2_C2Used+1/(1/CFG2_C1Used+1/Beta);
     document.getElementById("CFG2_Cmin").value = CFG2_Cmin.toString();
     document.getElementById("CFG2_Cmax").value = CFG2_Cmax.toString();
+
+// Max voltages across capacitors
+    CFG1_C1V_Cmax=CFG1_Cmax/CFG1_C1Used
+    CFG1_CVV_Cmin=CFG1_Cmax/(Beta+CFG1_C2Used)    
+    CFG2_C1V_Cmax=(CFG2_Cmax-CFG2_C2Used)/CFG2_C1Used
+    CFG2_CVV_Cmin=1-CFG2_C1V_Cmax
+    document.getElementById("CFG1_C1V_Cmax").value = CFG1_C1V_Cmax.toString();
+    document.getElementById("CFG1_CVV_Cmin").value = CFG1_CVV_Cmin.toString();
+    document.getElementById("CFG2_C1V_Cmax").value = CFG2_C1V_Cmax.toString();
+    document.getElementById("CFG2_CVV_Cmin").value = CFG2_CVV_Cmin.toString();	
 }
 
 </script>
