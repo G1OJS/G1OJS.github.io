@@ -5,17 +5,6 @@ permalink: /test/
 ---
 {% include MathJax.html %}
 
-Just a test file to see how the page loads
-
-Padding capacitors are capacitors added to a variable capacitor in order to change the available range of capacitance. 
-<p></p>
-Generally, we need to add *two* capacitors - one in parallel and another in series. The diagrams below show the two ways of doing this. 
-<p></p>
----
-layout: default
-title: "Capacitor Padding Calculator"
-permalink: /Capacitor-Padding-Calc/
----
 # Introduction
 This calculator works out the values needed for capacitors C1 and C2 in the diagrams below to achieve a specified range of output capacitance Cout, and shows the range of capacitance achieved when using specified values for C1 and C2. The maths behind the calculator is described on the calculator's parent page [here]({{ site.baseurl }}/calculating-padding-capacitors).
 
