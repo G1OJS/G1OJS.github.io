@@ -161,8 +161,8 @@ function init() {
 
 function init_screen() {
 var sw = screen.width;
-if (sw < 700) {
-    var sc = 700/sw
+if (sw < 650) {
+    var sc = 650/sw
     var mvp = document.getElementById("testViewport");
     mvp.setAttribute("content","width=700, initial-scale=" + sc.toString());
         }
