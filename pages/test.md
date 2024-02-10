@@ -167,11 +167,11 @@ if ( window.matchMedia("(orientation: landscape)").matches ) {
 } else {
   var fw = sw;
 }
-if (fw < 700) {
+//if (fw < 700) {
     var sc = 700/fw
     var mvp = document.getElementById("testViewport");
     mvp.setAttribute("content","width=700, initial-scale=" + sc.toString());
-    }
+//    }
 }
 
 function CalcPadding() {
