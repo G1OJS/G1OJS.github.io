@@ -15,6 +15,8 @@ Edit the values in the first four boxes. The calculator will then show the value
 <head>
 
 <style type="text/css">
+
+
 img {
     width: 100%;
 }
@@ -24,6 +26,8 @@ input {
     width: 40px;
     float: left;
     margin-bottom: 5px;
+      margin-left: 0px;
+  margin-right: 5px;
 }
 
 span.first {
@@ -44,11 +48,11 @@ span {
 
 div {
   clear: both;
-  min-width: 700px;
+  min-width: 620px;
 }
 
 label {
-  width: 35px;
+  width: 40px;
   margin-left: 0px;
   margin-right: 5px;
   float: left;
@@ -56,7 +60,6 @@ label {
 }
 
 .readonly { background-color: #d1d1d1; }
-	
 </style>
 
 <!-- 
