@@ -125,21 +125,15 @@ but it would be better to redesign the column layout of spans so that the spans 
   <div></div>
   
   <h3>Maximum Capacitor Voltages (scaled to 1V at Cout):</h3>
-  <span class="first"> For configuration a) </span>
-    <span>
-       <label>C1, at max Cout</label><input type="text" class="readonly" id="CFG1_C1V_Cmax" size="5" readonly=true />
-    </span>
-    <span>
-       <label>C2 and CV, at min Cout</label><input type="text" class="readonly" id="CFG1_C2V_Cmin" size="5" readonly=true />
-    </span>
+  <h4>For configuration a):</h4>
+  <span class="first">C1, at max Cout </span><input type="text" class="readonly" id="CFG1_C1V_Cmax" size="5" readonly=true />
   <div></div>
-  <span class="first"> For configuration b) </span>
-    <span>
-       <label>C1, at max Cout</label><input type="text" class="readonly" id="CFG2_C1V_Cmax" size="5" readonly=true />
-    </span>
-    <span>
-       <label>CV, at min Cout</label><input type="text" class="readonly" id="CFG2_CVV_Cmin" size="5" readonly=true />
-    </span>
+  <span class="first">C2 and CV, at min Cout</span><input type="text" class="readonly" id="CFG1_C2V_Cmin" size="5" readonly=true />
+  <div></div>
+  <h4>For configuration b):</h4>
+  <span class="first">C1, at max Cout </span><input type="text" class="readonly" id="CFG2_C1V_Cmax" size="5" readonly=true />
+  <div></div>
+  <span class="first">CV, at min Cout </span><input type="text" class="readonly" id="CFG2_CVV_Cmin" size="5" readonly=true />
   <div></div>
 
 </div> <!-- main div -->  
