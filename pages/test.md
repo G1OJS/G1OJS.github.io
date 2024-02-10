@@ -80,11 +80,11 @@ It could be put into script in onload to work out scales and set them correctly 
 but it would be better to redesign the column layout of spans so that the spans can't wrap
 -->
 
-<meta name="viewport" content="width=710,initial-scale=0.5">
+    <meta id="testViewport" name="viewport" content="width=710,initial-scale=0.5">
 
 </head>
 
-<body onload="CalcPadding()" >
+<body onload="init()">
 <div> <!-- main div -->
   <h2>Available and needed capacitance ranges:</h2>
   <span class="first">Variable Capacitor Range</span>
@@ -164,6 +164,22 @@ but it would be better to redesign the column layout of spans so that the spans 
 </html>
 
 <script>
+
+function init() {
+var sw = screen.width;
+var sh = screen.height;
+if ( window.matchMedia("(orientation: landscape)").matches ) {
+  var fw = sh;
+} else {
+  var fw = sw;
+}
+if (fw < 700) {
+    var sc = fw/700
+    var mvp = document.getElementById("testViewport");
+    mvp.setAttribute("content","width=device-width,initial-scale=" & sc);
+    }
+    CalcPadding()
+}
 
 function CalcPadding() {
 
