@@ -123,6 +123,8 @@ but it would be better to redesign the column layout of spans so that the spans 
     <label>Max</label><input type="text" class="readonly" id="CFG2_Cmax" size="5" readonly=true  />
   </span>
   <div></div>
+
+  <!-- layout is not fully intuitive
   
   <h3>Maximum Capacitor Voltages (scaled to 1V at Cout):</h3>
   <h4>For configuration a):</h4>
@@ -135,6 +137,8 @@ but it would be better to redesign the column layout of spans so that the spans 
   <div></div>
   <span class="first">CV, at min Cout </span><input type="text" class="readonly" id="CFG2_CVV_Cmin" size="5" readonly=true />
   <div></div>
+
+  -->
 
 </div> <!-- main div -->  
 
