@@ -68,7 +68,7 @@ This next line is a bit of a hack and fights against Jekyll
 It could be put into script in onload to work out scales and set them correctly initially
 but it would be better to redesign the column layout of spans so that the spans can't wrap
 -->
-
+<script>init_screen()</script>
     <meta id="testViewport" name="viewport" content="width=device-width,initial-scale=1">
 
 </head>
