@@ -125,7 +125,7 @@ but it would be better to redesign the column layout of spans so that the spans 
   </span>
   <div></div>
 
-  <h3>Maximum Capacitor Voltages (scaled to 1V at Cout):</h3>
+  <h4>Maximum Capacitor Voltages (scaled to 1V at Cout):</h4>
   <span class="first">C1, at max Cout </span>
   <span style="width: 125px;">.</span>
   <input type="text" class="readonly" id="CFG1_C1V_Cmax" size="5" readonly=true />  
