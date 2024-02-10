@@ -155,7 +155,7 @@ but it would be better to redesign the column layout of spans so that the spans 
 <script>
 
 function init() {
-    //init_screen()
+    init_screen()
     CalcPadding()
 }
 
