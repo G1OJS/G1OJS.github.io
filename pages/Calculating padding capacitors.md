@@ -18,7 +18,7 @@ Generally, we need to add *two* capacitors - one in parallel and another in seri
 
 Each method requires different values of each of the padding capacitors C1 and C2, and has different implications for the current and voltage seen by each of the three capacitors making up the circuit, and hence implications for power handling and sensitity to temperature coefficients etc. 
 <p></p>
-## (📱 Calculator) ({{ site.baseurl }}/Capacitor-Padding-Calc)
+## [📱 Calculator]({{ site.baseurl }}/Capacitor-Padding-Calc)
 Click above to get to a calculator that works out C1 and C2 based on your needed capacitance range for a given variable capacitor's range.
 <p></p>
 The rest of this page explains the maths used in the calculator.
