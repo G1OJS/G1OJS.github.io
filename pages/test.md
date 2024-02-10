@@ -170,7 +170,7 @@ if ( window.matchMedia("(orientation: landscape)").matches ) {
 if (fw < 700) {
     var sc = 700/fw
     var mvp = document.getElementById("testViewport");
-    mvp.setAttribute("content","width=700, initial-scale=" & 0.2);
+    mvp.setAttribute("content","width=700, initial-scale=" + sc.toString());
     }
 }
 
