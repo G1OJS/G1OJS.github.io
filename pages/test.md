@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Calculating Padding Capacitors"
+title: "Test"
 permalink: /test/
 ---
 {% include MathJax.html %}
