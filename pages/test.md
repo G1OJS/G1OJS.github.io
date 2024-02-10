@@ -169,7 +169,7 @@ if ( window.matchMedia("(orientation: landscape)").matches ) {
 }
 //if (fw < 700) {
     fw=device.width;
-    var sc = 700/fw
+    var sc = fw/700;
     var mvp = document.getElementById("testViewport");
     mvp.setAttribute("content","width=700, initial-scale=" + sc.toString());
 //    }
