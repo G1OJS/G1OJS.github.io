@@ -122,17 +122,17 @@ but it would be better to redesign the column layout of spans so that the spans 
     <label>Min</label><input type="text" class="readonly" id="CFG2_Cmin" size="5" readonly=true  />
     <label>Max</label><input type="text" class="readonly" id="CFG2_Cmax" size="5" readonly=true  />
   </span>
-
-  <span class="first">Capacitor Voltages for 1v across Cout</span>
-  <span>
-    <input type="text" class="readonly" id="CFG1_C1V_Cmin" size="5" readonly=true />
-    <input type="text" class="readonly" id="CFG1_C1V_Cmax" size="5" readonly=true />
-  </span>
-  <span>
-    <input type="text" class="readonly" id="CFG2_C1V_Cmin" size="5" readonly=true  />
-    <input type="text" class="readonly" id="CFG2_C1V_Cmax" size="5" readonly=true  />
-  </span>
+  <div></div>
   
+  <h2>Maximum Capacitor Voltages (1V at Cout):</h2>
+  <span>
+    <label>C1</label><input type="text" class="readonly" id="CFG1_C1V_Cmax" size="5" readonly=true />
+    <label>C2</label><input type="text" class="readonly" id="CFG1_C2V_Cmin" size="5" readonly=true />
+  </span>
+  <span>
+    <label>C1</label><input type="text" class="readonly" id="CFG2_C1V_Cmax" size="5" readonly=true />
+  </span>
+
 </div> <!-- main div -->  
 
 <div style="height: 50px;"></div>
