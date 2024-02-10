@@ -8,8 +8,7 @@ This calculator works out the values needed for capacitors C1 and C2 in the diag
 
 # Usage
 Edit the values in the first four boxes. The calculator will then show the values of C1 and C2 needed to achieve this range using each configuration. Note that errors will occur if unachievable ranges are specified. Once calculated, these values are copied to the "Padding Capacitors Used" boxes and used to calculate the final row which shows the capacitance ranges achieved. You can edit the "Padding Capacitors Used" boxes to see the effect of chosing different values (e.g. to pick from E12 values or simply to experiment).
-<p> </p>
-**note** - at the moment this page displays best on pages that are about 600 pixels wide, so if you're on a mobile phone you might want to tuen the phone sideways and view in landscape mode.
+
 <p> </p>
 
 <html>
@@ -94,35 +93,46 @@ but it would be better to redesign the column layout of spans so that the spans 
   <div></div>
   <span class="first">Padding Capacitors Required</span>
   <span>
-  <label>C1</label><input type="text" id="CFG1_C1Req" class="readonly" readonly=true />
-  <label>C2</label><input type="text" id="CFG1_C2Req" class="readonly" readonly=true />
+    <label>C1</label><input type="text" id="CFG1_C1Req" class="readonly" readonly=true />
+    <label>C2</label><input type="text" id="CFG1_C2Req" class="readonly" readonly=true />
   </span>
   <span>
-   <label>C1</label><input type="text" id="CFG2_C1Req" class="readonly" readonly=true/>
-   <label>C2</label><input type="text" id="CFG2_C2Req" class="readonly" readonly=true/>
+    <label>C1</label><input type="text" id="CFG2_C1Req" class="readonly" readonly=true/>
+    <label>C2</label><input type="text" id="CFG2_C2Req" class="readonly" readonly=true/>
   </span>
   <div></div>
   <h2>Practical Solutions:</h2>
   <span class="first">Padding Capacitors Used</span>
   <span>
-  <label>C1</label><input type="text" id="CFG1_C1Used"   onchange="EvaluatePadding()"/>
-  <label>C2</label><input type="text" id="CFG1_C2Used"  onchange="EvaluatePadding()"/>
+    <label>C1</label><input type="text" id="CFG1_C1Used"   onchange="EvaluatePadding()"/>
+    <label>C2</label><input type="text" id="CFG1_C2Used"  onchange="EvaluatePadding()"/>
   </span>
   <span>
-  <label>C1</label><input type="text" id="CFG2_C1Used"  onchange="EvaluatePadding()"/>
-  <label>C2</label><input type="text" id="CFG2_C2Used"  onchange="EvaluatePadding()"/>
+    <label>C1</label><input type="text" id="CFG2_C1Used"  onchange="EvaluatePadding()"/>
+    <label>C2</label><input type="text" id="CFG2_C2Used"  onchange="EvaluatePadding()"/>
   </span>
   <div></div>
   
   <span class="first">Output Capacitance</span>
   <span>
-  <label>Min</label><input type="text" class="readonly" id="CFG1_Cmin" size="5" readonly=true />
-  <label>Max</label><input type="text" class="readonly" id="CFG1_Cmax" size="5" readonly=true />
+    <label>Min</label><input type="text" class="readonly" id="CFG1_Cmin" size="5" readonly=true />
+    <label>Max</label><input type="text" class="readonly" id="CFG1_Cmax" size="5" readonly=true />
   </span>
   <span>
   <label>Min</label><input type="text" class="readonly" id="CFG2_Cmin" size="5" readonly=true  />
   <label>Max</label><input type="text" class="readonly" id="CFG2_Cmax" size="5" readonly=true  />
   </span>
+
+  <span class="first">Capacitor Voltages for 1v across Cout</span>
+  <span>
+    <span class="first">.</span><input type="text" class="readonly" id="CFG1_C1V_Cmin" size="5" readonly=true />
+    <span class="first">.</span><input type="text" class="readonly" id="CFG1_C1V_Cmax" size="5" readonly=true />
+  </span>
+  <span>
+    <span class="first">.</span>><input type="text" class="readonly" id="CFG2_C1V_Cmin" size="5" readonly=true  />
+    <span class="first">.</span><input type="text" class="readonly" id="CFG2_C1V_Cmax" size="5" readonly=true  />
+  </span>
+  
 </div> <!-- main div -->  
 
 <div style="height: 50px;"></div>
