@@ -16,14 +16,13 @@ Edit the values in the first four boxes. The calculator will then show the value
 
 <style type="text/css">
 
-
 img {
     width: 100%;
 }
 
 input {
     height: 15px;
-    width: 40px;
+    width: 35px;
     float: left;
     margin-bottom: 5px;
       margin-left: 0px;
@@ -52,7 +51,7 @@ div {
 }
 
 label {
-  width: 40px;
+  width: 35px;
   margin-left: 0px;
   margin-right: 5px;
   float: left;
@@ -128,15 +127,15 @@ but it would be better to redesign the column layout of spans so that the spans 
 
   <h3>Maximum Capacitor Voltages (scaled to 1V at Cout):</h3>
   <span class="first">C1, at max Cout </span>
-  <span style="width: 140px;">.</span>
+  <span style="width: 125px;">.</span>
   <input type="text" class="readonly" id="CFG1_C1V_Cmax" size="5" readonly=true />  
-  <span style="width: 145px;">.</span>
+  <span style="width: 150px;">.</span>
   <input type="text" class="readonly" id="CFG2_C1V_Cmax" size="5" readonly=true />
    <div></div>
    <span class="first">CV, at min Cout</span>
-   <span style="width: 40px;">.</span>
+   <span style="width: 35px;">.</span>
    <input type="text" class="readonly" id="CFG1_CVV_Cmin" size="5" readonly=true />
-   <span style="width: 145px;">.</span>
+   <span style="width: 155px;">.</span>
    <input type="text" class="readonly" id="CFG2_CVV_Cmin" size="5" readonly=true />
   <div></div>
   <p>
