@@ -4,15 +4,6 @@ title: "Calculating Padding Capacitors"
 permalink: /calculating-padding-capacitors/
 ---
 {% include MathJax.html %}
-<head>
-<!-- 
-This next line is a bit of a hack and fights against Jekyll
-It could be put into script in onload to work out scales and set them correctly initially
-but it would be better to redesign the column layout of spans so that the spans can't wrap
-<meta name="viewport" content="width=650,initial-scale=1.0">
--->
-  
-</head>
 
 # Calculating Padding Capacitors
 
@@ -66,7 +57,7 @@ $$\frac{1}{C1}=\frac{1}{A}-\frac{1}{C2+\alpha}=\frac{1}{B}-\frac{1}{C2+\beta}$$
 
 If we multiply through with $(C2+\alpha)(C2+\beta)$, then expand those brackets and gather terms together, we find that the right hand equality (the one that doesn't involve C1) shows C2 in a quadratic equation:
 
-$$(\frac{1}{A}-\frac{1}{B})C2^2+(\frac{\alpha}{A}-\frac{\alpha}{B}+\frac{\beta}{A}-\frac{\beta}{B})C2+\frac{\alpha\beta}{A}-\frac{\alpha\beta}{B}+\alpha-\beta=0$$
+$$(\frac{1}{A}-\frac{1}{B})C2^2\\+(\frac{\alpha}{A}-\frac{\alpha}{B}+\frac{\beta}{A}-\frac{\beta}{B})C2\\+\frac{\alpha\beta}{A}-\frac{\alpha\beta}{B}+\alpha-\beta=0$$
 
 Using the standard notation for quadratic coefficients a,b,c we have a quadratic with:
 
