@@ -155,20 +155,13 @@ but it would be better to redesign the column layout of spans so that the spans 
 <script>
 
 function init() {
-    init_screen()
     CalcPadding()
+    init_screen()
 }
 
 function init_screen() {
 var sw = screen.width;
-var sh = screen.height;
-if ( window.matchMedia("(orientation: landscape)").matches ) {
-  var fw = sh;
-} else {
-  var fw = sw;
-}
-//if (fw < 700) {
-    fw=device.width;
+//if (sw < 700) {
     var sc = 0.2;
     var mvp = document.getElementById("testViewport");
     mvp.setAttribute("content","width=700, initial-scale=" + sc.toString());
