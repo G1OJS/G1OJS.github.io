@@ -120,9 +120,7 @@ label {
    <span style="width: 155px;">.</span>
    <input type="text" class="readonly" id="CFG2_CVV_Cmin" size="5" readonly=true />
   <div></div>
-  <p>
-    In both configurations, the maximum voltage across C1 occurs at maximum output capacitance, and the maximum voltage across CV occurs at minimum output capacitance. The voltage across C2 is the same as that across CV in configuration a), and the same as that across the output in configuration b).
-  </p>
+In both configurations, the maximum voltage across C1 occurs at maximum output capacitance, and the maximum voltage across CV occurs at minimum output capacitance. The voltage across C2 is the same as that across CV in configuration a), and the same as that across the output in configuration b).
   <div></div>
 
 </div> <!-- main div -->  
