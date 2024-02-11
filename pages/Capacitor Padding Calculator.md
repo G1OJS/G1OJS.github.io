@@ -9,17 +9,11 @@ This calculator works out the values needed for capacitors C1 and C2 in the diag
 # Usage
 Edit the values in the first four boxes. The calculator will then show the values of C1 and C2 needed to achieve this range using each configuration. Note that errors will occur if unachievable ranges are specified. Once calculated, these values are copied to the "Padding Capacitors Used" boxes and used to calculate the final row which shows the capacitance ranges achieved. You can edit the "Padding Capacitors Used" boxes to see the effect of chosing different values (e.g. to pick from E12 values or simply to experiment).
 
-<p> </p>
-
 <html>
-<head>
-
 <style type="text/css">
-
 img {
     width: 100%;
 }
-
 input {
     height: 15px;
     width: 35px;
@@ -28,7 +22,6 @@ input {
       margin-left: 0px;
   margin-right: 5px;
 }
-
 span.first {
   width: 200px;
   margin-left: 0px;
@@ -36,7 +29,6 @@ span.first {
   float: left;
   text-align: left;
 }
-
 span {
   width: 200px;
   margin-left: 0px;
@@ -44,12 +36,10 @@ span {
   float: left;
   text-align: center;
 }
-
 div {
   clear: both;
   min-width: 700px;
 }
-
 label {
   width: 35px;
   margin-left: 0px;
@@ -57,7 +47,6 @@ label {
   float: left;
   text-align: right;
 }
-
 .readonly { background-color: #d1d1d1; }
 </style>
 
@@ -68,8 +57,6 @@ but it would be better to redesign the column layout of spans so that the spans 
 -->
 
 <meta name="viewport" content="width=710,initial-scale=1.0">
-
-</head>
 
 <body onload="CalcPadding()" >
 <div> <!-- main div -->
