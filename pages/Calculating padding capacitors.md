@@ -1,5 +1,6 @@
 ---
 layout: default
+mathjax: true
 title: "Calculating Padding Capacitors"
 permalink: /calculating-padding-capacitors/
 ---
