@@ -1,9 +1,10 @@
 ---
 layout: default
+calculator_style:true
 title: "Test"
 permalink: /test/
 ---
-{% include MathJax.html %}
+
 
 # Introduction
 This calculator works out the values needed for capacitors C1 and C2 in the diagrams below to achieve a specified range of output capacitance Cout, and shows the range of capacitance achieved when using specified values for C1 and C2. The maths behind the calculator is described on the calculator's parent page [here]({{ site.baseurl }}/calculating-padding-capacitors).
