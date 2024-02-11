@@ -29,6 +29,7 @@ github_username:  G1OJS
 
 # Build settings
 remote_theme: pages-themes/slate@v0.2.0
+markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
