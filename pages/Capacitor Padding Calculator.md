@@ -39,7 +39,7 @@ span {
 }
 div {
   clear: both;
-  min-width: 700px;
+  min-width: 640px;
 }
 label {
   width: 35px;
