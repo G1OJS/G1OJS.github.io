@@ -4,7 +4,7 @@ usemathjax: true
 title: "Calculating Padding Capacitors"
 permalink: /calculating-padding-capacitors/
 ---
-
+{% include head.html %}
 
 # Calculating Padding Capacitors
 
