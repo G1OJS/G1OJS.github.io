@@ -59,10 +59,6 @@ If we multiply through with $$(C2+\alpha)(C2+\beta)$$, then expand those bracket
 
 <p>$$\displaylines{\frac{1}{A}-\frac{1}{B})C2^2 \\\ +(\frac{\alpha}{A}-\frac{\alpha}{B}+\frac{\beta}{A}-\frac{\beta}{B})C2 \\\ +\frac{\alpha\beta}{A}-\frac{\alpha\beta}{B}+\alpha-\beta=0 }$$</p>
 
-<p>
-$$(\frac{1}{A}-\frac{1}{B})C2^2\\+(\frac{\alpha}{A}-\frac{\alpha}{B}+\frac{\beta}{A}-\frac{\beta}{B})C2\\+\frac{\alpha\beta}{A}-\frac{\alpha\beta}{B}+\alpha-\beta=0$$
-</p>
-
 Using the standard notation for quadratic coefficients a,b,c we have a quadratic with:
 
 $$a=\frac{1}{A}-\frac{1}{B}$$
