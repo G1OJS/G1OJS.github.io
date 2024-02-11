@@ -1,5 +1,6 @@
 ---
 layout: default
+calculator_style: true
 title: "Capacitor Padding Calculator"
 permalink: /Capacitor-Padding-Calc/
 ---
