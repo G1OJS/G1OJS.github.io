@@ -39,7 +39,7 @@ However, it's not so easy to work out what values you need for C1 and C2 in orde
 
 Let's look first at the first configuration with the parallel capacitor connected directly across the variable one:
 
-Let's call the capacitance range we need A (min) to B (max) and the capacitance range of the variable capacitor similarly $\alpha$ and $\beta$.
+Let's call the capacitance range we need A (min) to B (max) and the capacitance range of the variable capacitor similarly $$\alpha$$ and $$\beta$$.
 
 From the capacitor combination formulas above we can see that
 
@@ -55,7 +55,9 @@ Rearranging,
 
 $$\frac{1}{C1}=\frac{1}{A}-\frac{1}{C2+\alpha}=\frac{1}{B}-\frac{1}{C2+\beta}$$
 
-If we multiply through with $(C2+\alpha)(C2+\beta)$, then expand those brackets and gather terms together, we find that the right hand equality (the one that doesn't involve C1) shows C2 in a quadratic equation:
+If we multiply through with $$(C2+\alpha)(C2+\beta)$$, then expand those brackets and gather terms together, we find that the right hand equality (the one that doesn't involve C1) shows C2 in a quadratic equation:
+
+<p>$$\displaylines{\frac{1}{A}-\frac{1}{B})C2^2 \\\ +(\frac{\alpha}{A}-\frac{\alpha}{B}+\frac{\beta}{A}-\frac{\beta}{B})C2 \\\ +\frac{\alpha\beta}{A}-\frac{\alpha\beta}{B}+\alpha-\beta=0 }$$</p>
 
 <p>
 $$(\frac{1}{A}-\frac{1}{B})C2^2\\+(\frac{\alpha}{A}-\frac{\alpha}{B}+\frac{\beta}{A}-\frac{\beta}{B})C2\\+\frac{\alpha\beta}{A}-\frac{\alpha\beta}{B}+\alpha-\beta=0$$
