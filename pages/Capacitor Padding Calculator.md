@@ -54,7 +54,7 @@ label {
 <meta name="viewport" content="width=640">
 
 <body onload="CalcPadding()" >
-<div> <!-- main div -->
+<div> <!-- main div for calculator elements -->
   <h2>Available and needed capacitance ranges:</h2>
   <span class="first">Variable Capacitor Range</span>
   <label>Min</label><input type="text" id="Alpha" value="10" onchange="CalcPadding()" />
@@ -120,12 +120,12 @@ label {
    <span style="width: 155px;">.</span>
    <input type="text" class="readonly" id="CFG2_CVV_Cmin" size="5" readonly=true />
   <div></div>
+</div> <!-- end of main div for calculator elements-->  
+
   <p></p>
 In both configurations, the maximum voltage across C1 occurs at maximum output capacitance, and the maximum voltage across CV occurs at minimum output capacitance. The voltage across C2 is the same as that across CV in configuration a), and the same as that across the output in configuration b).
   <div></div>
-
-</div> <!-- main div -->  
-
+  
 <div style="height: 50px;"></div>
 
 </body>
