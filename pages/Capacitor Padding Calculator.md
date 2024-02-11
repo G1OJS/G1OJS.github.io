@@ -57,7 +57,7 @@ It could be put into script in onload to work out scales and set them correctly 
 but it would be better to redesign the column layout of spans so that the spans can't wrap
 -->
 
-<meta name="viewport" content="width=710,initial-scale=1.0">
+<meta name="viewport" content="width=660">
 
 <body onload="CalcPadding()" >
 <div> <!-- main div -->
