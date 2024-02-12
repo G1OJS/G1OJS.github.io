@@ -36,12 +36,6 @@ Edit the values in the first four boxes. The calculator will then show the value
 .right2 { grid-area: right2; }
 .top1 { grid-area: top1; }
 
-img {
-    width: 100%;
-    margin-top: 5px;
-    margin-left: 0px;
-}
-
 input {
     margin-left: 0px;
     margin-right: 0px;
@@ -83,7 +77,7 @@ output {
       <strong>Configuration a)</strong><br>
         <label>C1</label><input type="text" id="CFG1_C1Used" onchange="EvaluatePadding()" />
         <label>C2</label><input type="text" id="CFG1_C2Used" onchange="EvaluatePadding()" />
-        <img src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%201.png" />
+        <img style="padding: 0px; margin: 0px; margin-top: 5px;" src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%201.png"/>
     </div>
 
     <div class="right1">
@@ -100,7 +94,7 @@ output {
       <strong>Configuration b)</strong><br>
       <label>C1</label><input type="text" id="CFG2_C1Used" onchange="EvaluatePadding()" />
       <label>C2</label><input type="text" id="CFG2_C2Used" onchange="EvaluatePadding()" />
-      <img style="padding: 0px; margin: 0px;" src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%202.png"/>
+      <img style="padding: 0px; margin: 0px; margin-top: 5px;" src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%202.png"/>
     </div>
 
     <div class="right2">
