@@ -39,7 +39,7 @@ Edit the values in the first four boxes. The calculator will then show the value
 img {
     width: 100%;
     margin-top: 5px;
-    border-style: none;
+    margin-left: 0px;
 }
 
 input {
