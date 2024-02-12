@@ -118,10 +118,8 @@ output {
 </div>
     
 </body>
-</html>
 
 <script>
-
 function CalcPadding() {
 
 //Calculate required C1 and C2 from input values
@@ -201,3 +199,4 @@ function EvaluatePadding() {
 }
 
 </script>
+</html>
