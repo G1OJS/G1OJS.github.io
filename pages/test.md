@@ -147,14 +147,14 @@ function CalcPadding() {
     CFG2_C2=Cb-1/(1/CFG2_C1+1/Beta)
 
 // Write C1 and C2 for config a)
-    document.getElementById("CFG1_C1Req").value = CFG1_C1.toString();
-    document.getElementById("CFG1_C2Req").value = CFG1_C2.toString();
+ //   document.getElementById("CFG1_C1Req").value = CFG1_C1.toString();
+//    document.getElementById("CFG1_C2Req").value = CFG1_C2.toString();
     document.getElementById("CFG1_C1Used").value = Math.max(0,Math.round(CFG1_C1)).toString();
     document.getElementById("CFG1_C2Used").value = Math.max(0,Math.round(CFG1_C2)).toString();
 
 // Write C1 and C2 for config a)
-    document.getElementById("CFG2_C1Req").value = CFG2_C1.toString();
-    document.getElementById("CFG2_C2Req").value = CFG2_C2.toString();
+//    document.getElementById("CFG2_C1Req").value = CFG2_C1.toString();
+//    document.getElementById("CFG2_C2Req").value = CFG2_C2.toString();
     document.getElementById("CFG2_C1Used").value = Math.max(0,Math.round(CFG2_C1)).toString();
     document.getElementById("CFG2_C2Used").value = Math.max(0,Math.round(CFG2_C2)).toString();
 
@@ -176,24 +176,28 @@ function EvaluatePadding() {
 //Min and Max capacitance for config a)
     CFG1_Cmin=1/(1/CFG1_C1Used+1/(CFG1_C2Used+Alpha));
     CFG1_Cmax=1/(1/CFG1_C1Used+1/(CFG1_C2Used+Beta));	
-    document.getElementById("CFG1_Cmin").value = CFG1_Cmin.toString();
-    document.getElementById("CFG1_Cmax").value = CFG1_Cmax.toString();
+    document.getElementById("CFG1_Cmin").value = Math.round(CFG1_Cmin).toString();
+    document.getElementById("CFG1_Cmax").value = Math.round(CFG1_Cmax).toString();
 
 //Min and Max capacitance for config b)
     CFG2_Cmin=CFG2_C2Used+1/(1/CFG2_C1Used+1/Alpha);
     CFG2_Cmax=CFG2_C2Used+1/(1/CFG2_C1Used+1/Beta);
-    document.getElementById("CFG2_Cmin").value = CFG2_Cmin.toString();
-    document.getElementById("CFG2_Cmax").value = CFG2_Cmax.toString();
+    document.getElementById("CFG2_Cmin").value = Math.round(CFG2_Cmin).toString();
+    document.getElementById("CFG2_Cmax").value = Math.round(CFG2_Cmax).toString();
+
 
 // Max voltages across capacitors
     CFG1_C1V_Cmax=CFG1_Cmax/CFG1_C1Used
     CFG1_CVV_Cmin=CFG1_Cmax/(Beta+CFG1_C2Used)    
     CFG2_C1V_Cmax=(CFG2_Cmax-CFG2_C2Used)/CFG2_C1Used
     CFG2_CVV_Cmin=1-CFG2_C1V_Cmax
-    document.getElementById("CFG1_C1V_Cmax").value = CFG1_C1V_Cmax.toString();
-    document.getElementById("CFG1_CVV_Cmin").value = CFG1_CVV_Cmin.toString();
-    document.getElementById("CFG2_C1V_Cmax").value = CFG2_C1V_Cmax.toString();
-    document.getElementById("CFG2_CVV_Cmin").value = CFG2_CVV_Cmin.toString();	
+    document.getElementById("CFG1_C1V_Cmax").value = CFG1_C1V_Cmax.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
+    document.getElementById("CFG1_CVV_Cmin").value = CFG1_CVV_Cmin.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
+    document.getElementById("CFG1_C2V_Cmin").value = CFG1_CVV_Cmin.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
+    document.getElementById("CFG2_C1V_Cmax").value = CFG2_C1V_Cmax.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
+    document.getElementById("CFG2_CVV_Cmin").value = CFG2_CVV_Cmin.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
+    
+ 
 }
 
 </script>
