@@ -37,7 +37,7 @@ Edit the values in the first four boxes. The calculator will then show the value
 .top1 { grid-area: top1; }
 
 img {
-    width: 100%;
+    width: 95%;
     margin-top: 5px;
 }
 
@@ -68,7 +68,7 @@ output {
 
 <div class="calcblock">
     <div class="top1">
-      <h4>Requirements:</h4>
+      <strong>Requirements:</strong>
       <br><span style="display: inline-block; width: 200px;"> Variable Capacitor Range </span>
       <label>Min</label><input type="text" id="Alpha" value="10" onchange="CalcPadding()" />
       <label>Max</label><input type="text" id="Beta" value="250" onchange="CalcPadding()" />
