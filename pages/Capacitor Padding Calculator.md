@@ -69,10 +69,10 @@ output {
 <div class="calcblock">
     <div class="top1">
       <strong>Requirements:</strong>
-      <br><span style="display: inline-block; width: 200px;"> Variable Capacitor Range </span>
+      <br><span style="display: inline-block; width: 180px;"> Variable Capacitor Range </span>
       <label>Min</label><input type="text" id="Alpha" value="10" onchange="CalcPadding()" />
       <label>Max</label><input type="text" id="Beta" value="250" onchange="CalcPadding()" />
-      <br><span style="display: inline-block; width: 200px;">Needed Capacitance Range</span>
+      <br><span style="display: inline-block; width: 180px;">Needed Capacitance Range</span>
       <label>Min</label><input type="text" id="Ca" value="200" onchange="CalcPadding()" />
       <label>Max</label><input type="text" id="Cb" value="240" onchange="CalcPadding()" />
     </div>
