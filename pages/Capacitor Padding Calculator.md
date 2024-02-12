@@ -100,7 +100,7 @@ output {
       <strong>Configuration b)</strong><br>
       <label>C1</label><input type="text" id="CFG2_C1Used" onchange="EvaluatePadding()" />
       <label>C2</label><input type="text" id="CFG2_C2Used" onchange="EvaluatePadding()" />
-      <img src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%202.png" />
+      <div><img src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%202.png"/></div>
     </div>
 
     <div class="right2">
