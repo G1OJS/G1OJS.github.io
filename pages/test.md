@@ -12,116 +12,111 @@ Edit the values in the first four boxes. The calculator will then show the value
 
 <html>
 <style type="text/css">
+.calcblock {
+  display: grid;
+  grid-template-areas:
+  'top1  top1'
+  'left1 right1'
+  'left2 right2';
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 5px;
+  background-color: #2196F3;
+  padding: 5px;
+}
+
+.calcblock > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+}
+
+.left1 { grid-area: left1; }
+.right1 { grid-area: right1; }
+.left2 { grid-area: left2; }
+.right2 { grid-area: right2; }
+.top1 { grid-area: top1; }
+
 img {
     width: 100%;
+    margin-top: 5px;
 }
+
 input {
-    height: 15px;
-    width: 35px;
-    float: left;
-    margin-bottom: 5px;
-      margin-left: 0px;
-  margin-right: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 40px;
 }
-span.first {
-  width: 200px;
-  margin-left: 0px;
-  margin-right: 5px;
-  float: left;
-  text-align: left;
-}
-span {
-  width: 200px;
-  margin-left: 0px;
-  margin-right: 5px;
-  float: left;
-  text-align: center;
-}
-div {
-  clear: both;
-  min-width: 640px;
-}
+
 label {
-  width: 35px;
-  margin-left: 0px;
-  margin-right: 5px;
-  float: left;
-  text-align: right;
+    display: inline-block;
+    margin-left: 0px;
+    margin-right: 2px;
+    width: 40px;
+    text-align: right;
 }
-.readonly { background-color: #d1d1d1; }
+
+output {
+    display: inline-block;
+    margin-left: 0px;
+    margin-right: 10px;
+    width: 40px;
+    text-align: right;
+}
 </style>
 
 <meta name="viewport" content="width=640">
 
-<body onload="CalcPadding()" >
-<div> <!-- main div for calculator elements -->
-  <h2>Available and needed capacitance ranges:</h2>
-  <span class="first">Variable Capacitor Range</span>
-  <label>Min</label><input type="text" id="Alpha" value="10" onchange="CalcPadding()" />
-  <label>Max</label><input type="text" id="Beta" value="250" onchange="CalcPadding()" />
-  <div></div>
-  <span class="first">Needed Capacitance Range</span>
-  <label>Min</label><input type="text" id="Ca" value="200" onchange="CalcPadding()"/>
-  <label>Max</label><input type="text" id="Cb" value="240" onchange="CalcPadding()"/>
-  <div></div>
-  <span class="first">.</span>
-  <span><b>Configuration a)</b></span>
-  <span><b>Configuration b)</b></span>
-  <div></div>
-  <span class="first">.</span>
-  <span><img src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%201.png"/></span>
-  <span><img src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%202.png"/></span>
-  <div></div>
-  <span class="first">Padding Capacitors Required</span>
-  <span>
-    <input type="text" id="CFG1_C1Req" class="readonly" readonly=true />
-    <input type="text" id="CFG1_C2Req" class="readonly" readonly=true />
-  </span>
-  <span>
-    <input type="text" id="CFG2_C1Req" class="readonly" readonly=true/>
-    <input type="text" id="CFG2_C2Req" class="readonly" readonly=true/>
-  </span>
-  <div></div>
-  <span class="first">Padding Capacitors Used</span>
-  <span>
-    <input type="text" id="CFG1_C1Used"  onchange="EvaluatePadding()"/>
-    <input type="text" id="CFG1_C2Used"  onchange="EvaluatePadding()"/>
-  </span>
-  <span>
-    <input type="text" id="CFG2_C1Used"  onchange="EvaluatePadding()"/>
-    <input type="text" id="CFG2_C2Used"  onchange="EvaluatePadding()"/>
-  </span>
-  <div></div>
-  <span class="first">Output Capacitance</span>
-  <span>
-    <input type="text" class="readonly" id="CFG1_Cmin" size="5" readonly=true />
-    <input type="text" class="readonly" id="CFG1_Cmax" size="5" readonly=true />
-  </span>
-  <span>
-    <input type="text" class="readonly" id="CFG2_Cmin" size="5" readonly=true  />
-    <input type="text" class="readonly" id="CFG2_Cmax" size="5" readonly=true  />
-  </span>
-  <div></div>
-  <span class="first">C1, at max Cout </span>
-  <span style="width: 125px;">.</span>
-  <input type="text" class="readonly" id="CFG1_C1V_Cmax" size="5" readonly=true />  
-  <span style="width: 150px;">.</span>
-  <input type="text" class="readonly" id="CFG2_C1V_Cmax" size="5" readonly=true />
-   <div></div>
-   <span class="first">CV, at min Cout</span>
-   <span style="width: 35px;">.</span>
-   <input type="text" class="readonly" id="CFG1_CVV_Cmin" size="5" readonly=true />
-   <span style="width: 155px;">.</span>
-   <input type="text" class="readonly" id="CFG2_CVV_Cmin" size="5" readonly=true />
-  <div></div>
-</div> <!-- end of main div for calculator elements-->  
 
-  <p></p>
-In both configurations, the maximum voltage across C1 occurs at maximum output capacitance, and the maximum voltage across CV occurs at minimum output capacitance. The voltage across C2 is the same as that across CV in configuration a), and the same as that across the output in configuration b).
-  <div></div>
-  
-<div style="height: 50px;"></div>
+<body onload="CalcPadding()">
 
+<div class="calcblock">
+    <div class="top1">
+      <b>Requirements:</b>
+      <br><span style="display: inline-block; width: 200px;"> Variable Capacitor Range </span>
+      <label>Min</label><input type="text" id="Alpha" value="10" onchange="CalcPadding()" />
+      <label>Max</label><input type="text" id="Beta" value="250" onchange="CalcPadding()" />
+      <br><span style="display: inline-block; width: 200px;">Needed Capacitance Range</span>
+      <label>Min</label><input type="text" id="Ca" value="200" onchange="CalcPadding()" />
+      <label>Max</label><input type="text" id="Cb" value="240" onchange="CalcPadding()" />
+    </div>
+
+    <div class="left1">
+      <b>Configuration a)</b><br>
+        <label>C1</label><input type="text" id="CFG1_C1Used" onchange="EvaluatePadding()" />
+        <label>C2</label><input type="text" id="CFG1_C2Used" onchange="EvaluatePadding()" />
+        <img src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%201.png" />
+    </div>
+
+    <div class="right1">
+        <b>Capacitance range at C<sub>out</sub>:</b><br>
+        <label>C<sub>min</sub>:</label><output id="CFG1_Cmin"></output><br>
+        <label>C<sub>max</sub>:</label><output id="CFG1_Cmax"></output><br>
+        <br>
+        <b>Max voltage, % of voltage at C<sub>out</sub>:</b><br>
+        <label>CV:</label><output id="CFG1_CVV_Cmin"></output> at C<sub>min</sub><br>
+        <label>C1:</label><output id="CFG1_C1V_Cmax"></output> at C<sub>max</sub><br>
+        <label>C2:</label><output id="CFG1_C2V_Cmin"></output> at C<sub>min</sub>
+    </div>
+
+    <div class="left2">
+      <b>Configuration b)</b><br>
+      <label>C1</label><input type="text" id="CFG2_C1Used" onchange="EvaluatePadding()" />
+      <label>C2</label><input type="text" id="CFG2_C2Used" onchange="EvaluatePadding()" />
+      <img src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%202.png" />
+    </div>
+
+    <div class="right2">
+      <b>Capacitance range at C<sub>out</sub>:</b><br>
+      <label>C<sub>min</sub>:</label><output id="CFG2_Cmin"></output><br>
+      <label>C<sub>max</sub>:</label><output id="CFG2_Cmax"></output><br>
+      <br>
+      <b>Max voltage, % of voltage at C<sub>out</sub>:</b><br>
+      <label>CV:</label><output id="CFG2_CVV_Cmin"></output> at C<sub>min</sub><br>
+      <label>C1:</label><output id="CFG2_C1V_Cmax"></output> at C<sub>max</sub><br>
+      <label>C2:</label><output>100%</output> always
+    </div>
+
+</div>
+    
 </body>
 </html>
 
