@@ -78,36 +78,36 @@ output {
     </div>
 
     <div class="left1">
-      <b>Configuration a)</b><br>
+      <strong>Configuration a)</strong><br>
         <label>C1</label><input type="text" id="CFG1_C1Used" onchange="EvaluatePadding()" />
         <label>C2</label><input type="text" id="CFG1_C2Used" onchange="EvaluatePadding()" />
         <img src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%201.png" />
     </div>
 
     <div class="right1">
-        <b>Capacitance range at C<sub>out</sub>:</b><br>
+        <strong>Capacitance range at C<sub>out</sub>:</strong><br>
         <label>C<sub>min</sub>:</label><output id="CFG1_Cmin"></output><br>
         <label>C<sub>max</sub>:</label><output id="CFG1_Cmax"></output><br>
         <br>
-        <b>Max voltage, % of voltage at C<sub>out</sub>:</b><br>
+        <strong>Max voltage, % of voltage at C<sub>out</sub>:</strong><br>
         <label>CV:</label><output id="CFG1_CVV_Cmin"></output> at C<sub>min</sub><br>
         <label>C1:</label><output id="CFG1_C1V_Cmax"></output> at C<sub>max</sub><br>
         <label>C2:</label><output id="CFG1_C2V_Cmin"></output> at C<sub>min</sub>
     </div>
 
     <div class="left2">
-      <b>Configuration b)</b><br>
+      <strong>Configuration b)</strong><br>
       <label>C1</label><input type="text" id="CFG2_C1Used" onchange="EvaluatePadding()" />
       <label>C2</label><input type="text" id="CFG2_C2Used" onchange="EvaluatePadding()" />
       <img src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%202.png" />
     </div>
 
     <div class="right2">
-      <b>Capacitance range at C<sub>out</sub>:</b><br>
+      <strong>Capacitance range at C<sub>out</sub>:</strong><br>
       <label>C<sub>min</sub>:</label><output id="CFG2_Cmin"></output><br>
       <label>C<sub>max</sub>:</label><output id="CFG2_Cmax"></output><br>
       <br>
-      <b>Max voltage, % of voltage at C<sub>out</sub>:</b><br>
+      <strong>Max voltage, % of voltage at C<sub>out</sub>:</strong><br>
       <label>CV:</label><output id="CFG2_CVV_Cmin"></output> at C<sub>min</sub><br>
       <label>C1:</label><output id="CFG2_C1V_Cmax"></output> at C<sub>max</sub><br>
       <label>C2:</label><output>100%</output> always
