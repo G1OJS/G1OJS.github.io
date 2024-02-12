@@ -88,7 +88,6 @@ output {
         <strong>Capacitance range at C<sub>out</sub>:</strong><br>
         <label>C<sub>min</sub>:</label><output id="CFG1_Cmin"></output><br>
         <label>C<sub>max</sub>:</label><output id="CFG1_Cmax"></output><br>
-        <br>
         <strong>Max voltage, % of voltage at C<sub>out</sub>:</strong><br>
         <label>CV:</label><output id="CFG1_CVV_Cmin"></output> at C<sub>min</sub><br>
         <label>C1:</label><output id="CFG1_C1V_Cmax"></output> at C<sub>max</sub><br>
@@ -106,7 +105,6 @@ output {
       <strong>Capacitance range at C<sub>out</sub>:</strong><br>
       <label>C<sub>min</sub>:</label><output id="CFG2_Cmin"></output><br>
       <label>C<sub>max</sub>:</label><output id="CFG2_Cmax"></output><br>
-      <br>
       <strong>Max voltage, % of voltage at C<sub>out</sub>:</strong><br>
       <label>CV:</label><output id="CFG2_CVV_Cmin"></output> at C<sub>min</sub><br>
       <label>C1:</label><output id="CFG2_C1V_Cmax"></output> at C<sub>max</sub><br>
