@@ -77,6 +77,7 @@ output {
       <strong>Configuration a)</strong><br>
         <label>C1</label><input type="text" id="CFG1_C1Used" onchange="EvaluatePadding()" />
         <label>C2</label><input type="text" id="CFG1_C2Used" onchange="EvaluatePadding()" />
+        <!-- inline CSS bacause Jekyll adds margin and padding to img that seems not to be overridden by <style> section -->
         <img style="padding: 0px; margin: 0px; margin-top: 5px; width: 100%;" src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%201.png"/>
     </div>
 
@@ -94,6 +95,7 @@ output {
       <strong>Configuration b)</strong><br>
       <label>C1</label><input type="text" id="CFG2_C1Used" onchange="EvaluatePadding()" />
       <label>C2</label><input type="text" id="CFG2_C2Used" onchange="EvaluatePadding()" />
+      <!-- inline CSS bacause Jekyll adds margin and padding to img that seems not to be overridden by <style> section -->
       <img style="padding: 0px; margin: 0px; margin-top: 5px; width: 100%;" src="https://g1ojs.github.io/assets/img/Capacitor%20padding%20circuit%202.png"/>
     </div>
 
