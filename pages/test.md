@@ -64,13 +64,11 @@ output {
 }
 </style>
 
-<meta name="viewport" content="width=640">
-
 <body onload="CalcPadding()">
 
 <div class="calcblock">
     <div class="top1">
-      Requirements:
+      <h4>Requirements:</h4>
       <br><span style="display: inline-block; width: 200px;"> Variable Capacitor Range </span>
       <label>Min</label><input type="text" id="Alpha" value="10" onchange="CalcPadding()" />
       <label>Max</label><input type="text" id="Beta" value="250" onchange="CalcPadding()" />
