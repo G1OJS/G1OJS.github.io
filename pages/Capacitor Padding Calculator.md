@@ -182,9 +182,9 @@ function EvaluatePadding() {
 
 // Max voltages across capacitors
     CFG1_C1V_Cmax=CFG1_Cmax/CFG1_C1Used
-    CFG1_CVV_Cmin=CFG1_Cmax/(Beta+CFG1_C2Used)    
+    CFG1_CVV_Cmin=CFG1_Cmin/(Alpha+CFG1_C2Used)    
     CFG2_C1V_Cmax=(CFG2_Cmax-CFG2_C2Used)/CFG2_C1Used
-    CFG2_CVV_Cmin=1-CFG2_C1V_Cmax
+    CFG2_CVV_Cmin=1-(CFG2_Cmin-CFG2_C2Used)/CFG2_C1Used
     document.getElementById("CFG1_C1V_Cmax").value = CFG1_C1V_Cmax.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
     document.getElementById("CFG1_CVV_Cmin").value = CFG1_CVV_Cmin.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
     document.getElementById("CFG1_C2V_Cmin").value = CFG1_CVV_Cmin.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
