@@ -19,7 +19,7 @@ Edit the values in the first four boxes. The calculator will then show the value
   'top1  top1'
   'left1 right1'
   'left2 right2';
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1.7fr;
   grid-gap: 5px;
   background-color: #2196F3;
   padding: 5px;
@@ -37,7 +37,7 @@ Edit the values in the first four boxes. The calculator will then show the value
 .top1 { grid-area: top1; }
 
 img {
-    width: 95%;
+    width: 100%;
     margin-top: 5px;
 }
 
@@ -58,10 +58,11 @@ label {
 output {
     display: inline-block;
     margin-left: 0px;
-    margin-right: 10px;
-    width: 40px;
+    margin-right: 5px;
+    width: 35px;
     text-align: right;
 }
+
 </style>
 
 <body onload="CalcPadding()">
@@ -89,9 +90,9 @@ output {
         <label>C<sub>min</sub>:</label><output id="CFG1_Cmin"></output><br>
         <label>C<sub>max</sub>:</label><output id="CFG1_Cmax"></output><br>
         <strong>Max voltage, % of voltage at C<sub>out</sub>:</strong><br>
-        <label>CV:</label><output id="CFG1_CVV_Cmin"></output> at C<sub>min</sub><br>
-        <label>C1:</label><output id="CFG1_C1V_Cmax"></output> at C<sub>max</sub><br>
-        <label>C2:</label><output id="CFG1_C2V_Cmin"></output> at C<sub>min</sub>
+        <label>CV:</label><output id="CFG1_CVV_Cmax"></output>-<output id="CFG1_CVV_Cmin"></output>(C<sub>min</sub>)<br>
+        <label>C1:</label><output id="CFG1_C1V_Cmin"></output>-<output id="CFG1_C1V_Cmax"></output>(C<sub>max</sub>)<br>
+        <label>C2:</label><output id="CFG1_C2V_Cmax"></output>-<output id="CFG1_C2V_Cmin"></output>(C<sub>min</sub>)
     </div>
 
     <div class="left2">
@@ -106,9 +107,9 @@ output {
       <label>C<sub>min</sub>:</label><output id="CFG2_Cmin"></output><br>
       <label>C<sub>max</sub>:</label><output id="CFG2_Cmax"></output><br>
       <strong>Max voltage, % of voltage at C<sub>out</sub>:</strong><br>
-      <label>CV:</label><output id="CFG2_CVV_Cmin"></output> at C<sub>min</sub><br>
-      <label>C1:</label><output id="CFG2_C1V_Cmax"></output> at C<sub>max</sub><br>
-      <label>C2:</label><output>100%</output> always
+      <label>CV:</label><output id="CFG2_CVV_Cmax"></output>-<output id="CFG2_CVV_Cmin"></output>(C<sub>min</sub>)<br>
+      <label>C1:</label><output id="CFG2_C1V_Cmin"></output>-<output id="CFG2_C1V_Cmax"></output>(C<sub>max</sub>)<br>
+      <label>C2:</label><output>100%</output> (always)
     </div>
 
 </div>
@@ -116,6 +117,8 @@ output {
 </body>
 
 <script>
+
+
 function CalcPadding() {
 
 //Calculate required C1 and C2 from input values
@@ -181,15 +184,28 @@ function EvaluatePadding() {
 
 
 // Max voltages across capacitors
+    CFG1_C1V_Cmin=CFG1_Cmin/CFG1_C1Used
     CFG1_C1V_Cmax=CFG1_Cmax/CFG1_C1Used
-    CFG1_CVV_Cmin=CFG1_Cmin/(Alpha+CFG1_C2Used)    
+    CFG1_CVV_Cmin=CFG1_Cmin/(Alpha+CFG1_C2Used)
+    CFG1_CVV_Cmax=CFG1_Cmax/(Beta+CFG1_C2Used)
+    
+    CFG2_C1V_Cmin=(CFG2_Cmin-CFG2_C2Used)/CFG2_C1Used
     CFG2_C1V_Cmax=(CFG2_Cmax-CFG2_C2Used)/CFG2_C1Used
     CFG2_CVV_Cmin=1-(CFG2_Cmin-CFG2_C2Used)/CFG2_C1Used
+    CFG2_CVV_Cmax=1-(CFG2_Cmax-CFG2_C2Used)/CFG2_C1Used
+   
+   
+    document.getElementById("CFG1_C1V_Cmin").value = CFG1_C1V_Cmin.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});    
     document.getElementById("CFG1_C1V_Cmax").value = CFG1_C1V_Cmax.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
     document.getElementById("CFG1_CVV_Cmin").value = CFG1_CVV_Cmin.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
+    document.getElementById("CFG1_CVV_Cmax").value = CFG1_CVV_Cmax.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
     document.getElementById("CFG1_C2V_Cmin").value = CFG1_CVV_Cmin.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
+    document.getElementById("CFG1_C2V_Cmax").value = CFG1_CVV_Cmax.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
+    
+    document.getElementById("CFG2_C1V_Cmin").value = CFG2_C1V_Cmin.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
     document.getElementById("CFG2_C1V_Cmax").value = CFG2_C1V_Cmax.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
-    document.getElementById("CFG2_CVV_Cmin").value = CFG2_CVV_Cmin.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
+    document.getElementById("CFG2_CVV_Cmin").value = CFG2_CVV_Cmin.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});    
+    document.getElementById("CFG2_CVV_Cmax").value = CFG2_CVV_Cmax.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
     
  
 }
