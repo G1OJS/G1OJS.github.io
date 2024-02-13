@@ -13,7 +13,7 @@ permalink: /calculating-padding-capacitors-maths/
 It's easy to work out the range of capacitance achieved given the available range of the variable capacitor (e.g. 5pF to 250pf) and the values of the added capacitors, by using the well-known formulas for combining capacitors. However, it's not so easy to work out what values you need for C1 and C2 in order to achieve a particular desired capacitance range. This requires a bit more as explained below.
 
 ## Calculating the output capacitance
-<details>
+<details markdown=1><summary markdown="span">Click to expand</summary>
   <summary>Click to expand</summary>
   We can use the well-known formulas for capacitors in parallel $$C=C1+C2$$ and series $$\frac{1}{C}=\frac{1}{C1}+\frac{1}{C2}$$ to work out the outpot capacitance of each configuration for a particular value of its variable capacitor CV:
 
@@ -41,8 +41,7 @@ So, the voltages as a fraction of the voltage across Cout are:
 </details>
 
 ## Working out C1 and C2
-<details>
-<summary>Click to expand</summary>
+<details markdown=1><summary markdown="span">Click to expand</summary>
 
 ### Configuration a)
 
