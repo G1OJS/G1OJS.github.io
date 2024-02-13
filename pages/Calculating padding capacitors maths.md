@@ -14,16 +14,16 @@ It's easy to work out the range of capacitance achieved given the available rang
 
 ## Calculating the output capacitance
 <details markdown=1><summary markdown="span">Click to expand</summary>
-  We can use the well-known formulas for capacitors in parallel $$C=C1+C2$$ and series $$\frac{1}{C}=\frac{1}{C1}+\frac{1}{C2}$$ to work out the output capacitance of each configuration for a particular value of its variable capacitor CV:
+  We can use the well-known formulas for capacitors in parallel $$C=C1+C2$$ and series $$\frac{1}{C}=\frac{1}{C1}+\frac{1}{C2}$$ to work out the output capacitance of each configuration for a particular value of its variable capacitor CV.
 
+For Configuration a):
+  
+$$Cout=\frac{1}{\frac{1}{CV+C2}+\frac{1}{C1}}$$
+  
+For Configuration b):
+  
+$$Cout=C2 + \frac{1}{\frac{1}{CV}+\frac{1}{C1}}$$
 
-  For Configuration a):
-  
-      $$Cout=\frac{1}{\frac{1}{CV+C2}+\frac{1}{C1}}$$
-  
-  For Configuration b):
-  
-      $$Cout=C2 + \frac{1}{\frac{1}{CV}+\frac{1}{C1}}$$
 </details>
 
 ## Voltages across each capacitor
