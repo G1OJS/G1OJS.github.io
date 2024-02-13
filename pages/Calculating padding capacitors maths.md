@@ -16,6 +16,8 @@ It's easy to work out the range of capacitance achieved given the available rang
 <details>
   <summary>Click to expand</summary>
   We can use the well-known formulas for capacitors in parallel $$C=C1+C2$$ and series $$\frac{1}{C}=\frac{1}{C1}+\frac{1}{C2}$$ to work out the outpot capacitance of each configuration for a particular value of its variable capacitor CV:
+
+
   For Configiguration a):
       $$Cout=\frac{1}{\frac{1}{CV+C2}+\frac{1}{C1}}$$
   For Configiguration b):
@@ -25,7 +27,18 @@ It's easy to work out the range of capacitance achieved given the available rang
 ## Voltages across each capacitor
 <details>
   <summary>Click to expand</summary>
-Vi = Vin * (Ctotal / Ci)
+  A capacitive divider is very similar to a resistive divider in that voltages divide according to the ratios of the impedances; higher voltages across higher impedances and vice versa. The maths looks different though because the reactance (equal to the impedance if the capacitor is perfect) is proportinal to the reciprocal of the capacitance. So, for a simple capacitive divider comprising two capacitors C1 and C2 in series, the voltage across C1 is $V1 = Vin\frac{Ctotal}{C1}$ where $Ctotal=\frac{1}{\frac{1}{C1}+\frac{1}{C2}}$
+i.e.
+  $$V1=\frac{Vin}{1+\frac{C1}{C2}}$$
+
+So, the voltages as a fraction of the voltage across Cout are:
+
+| Capacitor  | Configuration a)  | Configuration b) |
+| ------------- | ------------- | ------------- |
+| CV | $$\frac{1}{1+\frac{C2+CV}{C1}}$$ | $$\frac{1}{1+\frac{CV}{C1}}$$ |
+| C1 | $$\frac{1}{1+\frac{C1}{C2+CV}}$$ | $$\frac{1}{1+\frac{C1}{CV}}$$ |
+| C2 | same as V at CV | same as V at Cout |
+  
 </details>
 
 ## Working out C1 and C2
