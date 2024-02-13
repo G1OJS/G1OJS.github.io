@@ -179,18 +179,16 @@ function EvaluatePadding() {
     document.getElementById("CFG2_Cmin").value = Math.round(CFG2_Cmin).toString();
     document.getElementById("CFG2_Cmax").value = Math.round(CFG2_Cmax).toString();
 
-
 // Max voltages across capacitors
-    CFG1_C1V_Cmin=CFG1_Cmin/CFG1_C1Used
-    CFG1_C1V_Cmax=CFG1_Cmax/CFG1_C1Used
-    CFG1_CVV_Cmin=CFG1_Cmin/(Alpha+CFG1_C2Used)
-    CFG1_CVV_Cmax=CFG1_Cmax/(Beta+CFG1_C2Used)
+    CFG1_C1V_Cmin=1/(1+(CFG1_C2Used+Alpha)/CFG1_C1Used)
+    CFG1_C1V_Cmax=1/(1+(CFG1_C2Used+Beta)/CFG1_C1Used)
+    CFG1_CVV_Cmin=1/(1+CFG1_C1Used/(CFG1_C2Used+Alpha))
+    CFG1_CVV_Cmax=1/(1+CFG1_C1Used/(CFG1_C2Used+Beta))
     
-    CFG2_C1V_Cmin=(CFG2_Cmin-CFG2_C2Used)/CFG2_C1Used
-    CFG2_C1V_Cmax=(CFG2_Cmax-CFG2_C2Used)/CFG2_C1Used
-    CFG2_CVV_Cmin=1-(CFG2_Cmin-CFG2_C2Used)/CFG2_C1Used
-    CFG2_CVV_Cmax=1-(CFG2_Cmax-CFG2_C2Used)/CFG2_C1Used
-   
+    CFG2_C1V_Cmin=1/(1+(CFG2_C1Used/Alpha))
+    CFG2_C1V_Cmax=1/(1+(CFG2_C1Used/Beta))
+    CFG2_CVV_Cmin=1/(1+(Alpha/CFG2_C1Used))
+    CFG2_CVV_Cmax=1/(1+(Beta/CFG2_C1Used))
    
     document.getElementById("CFG1_C1V_Cmin").value = CFG1_C1V_Cmin.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});    
     document.getElementById("CFG1_C1V_Cmax").value = CFG1_C1V_Cmax.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0});
