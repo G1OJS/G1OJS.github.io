@@ -14,6 +14,9 @@ It's easy to work out the range of capacitance achieved given the available rang
 
 However, it's not so easy to work out what values you need for C1 and C2 in order to achieve a particular desired capacitance range. This requires a bit more as explained below.
 
+<details>
+<summary>## Working out C1 and C2</summary>
+
 ### Configuration a)
 
 Let's look first at the first configuration with the parallel capacitor connected directly across the variable one:
@@ -69,6 +72,8 @@ $$c=\alpha\beta(B-A)$$
 This time we use the *negative* result of the square root to find C1:
 
 $$C1=\frac{-b-\sqrt{b^2-4ac}}{2a}$$
+
+</details>
 
 ... and then get C2 from 
 
