@@ -4,18 +4,25 @@ mathjax: true
 title: "Calculating Padding Capacitors"
 permalink: /calculating-padding-capacitors-maths/
 ---
+# Maths for Calculating Padding Capacitors
 
-## Maths for Calculating Padding Capacitors
-It's easy to work out the range of capacitance achieved given the available range of the variable capacitor (e.g. 5pF to 250pf) and the values of the added capacitors, by using the well-known formulas for combining capacitors:
-
-| Capacitors in Parallel  | Capacitors in Series|
+| Configuration a)  | Configuration b) |
 | ------------- | ------------- |
-| $$C=C1+C2$$ | $$\frac{1}{C}=\frac{1}{C1}+\frac{1}{C2}$$ |
+| ![Padding capacitors config 1]({{ site.baseurl }}/assets/img/Capacitor padding circuit 1.png "Configuration a)" )  | ![Padding capacitors config 2]({{ site.baseurl }}/assets/img/Capacitor padding circuit 2.png "Configuration b)" )  |
 
-However, it's not so easy to work out what values you need for C1 and C2 in order to achieve a particular desired capacitance range. This requires a bit more as explained below.
+It's easy to work out the range of capacitance achieved given the available range of the variable capacitor (e.g. 5pF to 250pf) and the values of the added capacitors, by using the well-known formulas for combining capacitors. However, it's not so easy to work out what values you need for C1 and C2 in order to achieve a particular desired capacitance range. This requires a bit more as explained below.
 
+## Calculating the output capacitance
 <details>
-<summary>## Working out C1 and C2</summary>
+  <summary>Click to expand</summary>
+$$C=C1+C2$$ $$\frac{1}{C}=\frac{1}{C1}+\frac{1}{C2}$$ 
+</details>
+
+
+
+## Working out C1 and C2
+<details>
+<summary>Click to expand</summary>
 
 ### Configuration a)
 
@@ -73,9 +80,10 @@ This time we use the *negative* result of the square root to find C1:
 
 $$C1=\frac{-b-\sqrt{b^2-4ac}}{2a}$$
 
-</details>
+
 
 ... and then get C2 from 
 
 $$C2=B-\frac{1}{(\frac{1}{C1}+\frac{1}{\beta})}$$
 
+</details>
