@@ -35,6 +35,13 @@ So, the voltages as a fraction of the voltage across Cout are:
 
 | Capacitor  | Configuration a)  | Configuration b) |
 | ------------- | ------------- | ------------- |
+| CV | A | B |
+| C1 | C | D |
+| C2 | E | F |
+
+
+| Capacitor  | Configuration a)  | Configuration b) |
+| ------------- | ------------- | ------------- |
 | CV | $$\frac{1}{1+\frac{C2+CV}{C1}}$$ | $$\frac{1}{1+\frac{CV}{C1}}$$ |
 | C1 | $$\frac{1}{1+\frac{C1}{C2+CV}}$$ | $$\frac{1}{1+\frac{C1}{CV}}$$ |
 | C2 | same as V at CV | same as V at Cout |
