@@ -19,8 +19,11 @@ It's easy to work out the range of capacitance achieved given the available rang
 
 
   For Configuration a):
+  
       $$Cout=\frac{1}{\frac{1}{CV+C2}+\frac{1}{C1}}$$
+  
   For Configuration b):
+  
       $$Cout=C2 + \frac{1}{\frac{1}{CV}+\frac{1}{C1}}$$
 </details>
 
