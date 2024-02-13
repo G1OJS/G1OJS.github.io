@@ -25,20 +25,12 @@ It's easy to work out the range of capacitance achieved given the available rang
 </details>
 
 ## Voltages across each capacitor
-<details>
-  <summary>Click to expand</summary>
+<details markdown=1><summary markdown="span">Click to expand</summary>
   A capacitive divider is very similar to a resistive divider in that voltages divide according to the ratios of the impedances; higher voltages across higher impedances and vice versa. The maths looks different though because the reactance (equal to the impedance if the capacitor is perfect) is proportinal to the reciprocal of the capacitance. So, for a simple capacitive divider comprising two capacitors C1 and C2 in series, the voltage across C1 is $V1 = Vin\frac{Ctotal}{C1}$ where $Ctotal=\frac{1}{\frac{1}{C1}+\frac{1}{C2}}$
 i.e.
   $$V1=\frac{Vin}{1+\frac{C1}{C2}}$$
 
 So, the voltages as a fraction of the voltage across Cout are:
-
-| Capacitor  | Configuration a)  | Configuration b) |
-| ------------- | ------------- | ------------- |
-| CV | A | B |
-| C1 | C | D |
-| C2 | E | F |
-
 
 | Capacitor  | Configuration a)  | Configuration b) |
 | ------------- | ------------- | ------------- |
