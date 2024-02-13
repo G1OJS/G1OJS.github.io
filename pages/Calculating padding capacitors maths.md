@@ -15,10 +15,18 @@ It's easy to work out the range of capacitance achieved given the available rang
 ## Calculating the output capacitance
 <details>
   <summary>Click to expand</summary>
-$$C=C1+C2$$ $$\frac{1}{C}=\frac{1}{C1}+\frac{1}{C2}$$ 
+  We can use the well-known formulas for capacitors in parallel $$C=C1+C2$$ and series $$\frac{1}{C}=\frac{1}{C1}+\frac{1}{C2}$$ to work out the outpot capacitance of each configuration for a particular value of its variable capacitor CV:
+  For Configiguration a):
+      $$Cout=\frac{1}{\frac{1}{CV+C2}+\frac{1}{C1}}$$
+  For Configiguration b):
+      $$Cout=C2 + \frac{1}{\frac{1}{CV}+\frac{1}{C1}}$$
 </details>
 
-
+## Voltages across each capacitor
+<details>
+  <summary>Click to expand</summary>
+Vi = Vin * (Ctotal / Ci)
+</details>
 
 ## Working out C1 and C2
 <details>
@@ -79,8 +87,6 @@ $$c=\alpha\beta(B-A)$$
 This time we use the *negative* result of the square root to find C1:
 
 $$C1=\frac{-b-\sqrt{b^2-4ac}}{2a}$$
-
-
 
 ... and then get C2 from 
 
