@@ -4,7 +4,7 @@ title: "High Performance Magloop"
 permalink: /QRO-magloop-no-VVC/
 ---
 
-# A High Performance QRO Magloop without a Vacuum Capacitor
+# A High Performance QRO Magloop without a Vacuum Capacitor?
 I've been experimenting with "magnetic" loop antennas for a few years now and running tests using WSPR (with hundreds of spots & statistical analysis) to drive out the losses from my antenna.
 I know from the "Ham Radio Web" that Vaccuum Variable Capacitors (VVC) are the gold standard for low loss capacitors in magloops, but I've achieved good results with air spaced variables and wanted to see how far I could push this without "giving in" and buying a VVC.
 Lessons learned with air spaced capacitors:
