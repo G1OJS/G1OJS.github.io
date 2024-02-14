@@ -13,10 +13,17 @@ Lessons learned with air spaced capacitors:
  - It's not always easy to notice capacitor arcing from a remote position, especially with SSB operation.
  - However, with good connections, limited trials tell me that my air spaced capacitor is comparable with a VVC (which I finally gave in to buy and test) in terms of the impact on the gain of the antenna.
 
-The remaining problem with air spaced capacitors is power handling;my air spaced capacitor will arc at about 20W on 80m and about 40W on 40m. 
-Also, VVCs are expensive and need more torque to turn than a typical air spaced capacitor, which means more mechanical design effort for the controller.
+The remaining problem with air spaced capacitors is power handling;my air spaced capacitor will arc at about 20W on 80m and about 40W on 40m. If you can live with that, there's no need for the VVC unless you're tempted by the higher max:min capacitance ratio to squeeze in more bands. Also, VVCs are expensive and need more torque to turn than a typical air spaced capacitor, which means more mechanical design effort for the controller.
+
 So I have been wondering - is there a way to use an air spaced capacitor in conjunction with fixed capacitors to improve the power handling?
 
-The answer is "yes" - but it depends how 
+The answer is "yes" - but it depends how far you want to push it and what other design compromises you're willing to accept (notably, more limited tuning range).
 
- - 
+Consider a magloop optimised for a single band, for which you only need a small swing of capacitance. What about providing the main capacitance by building a really high-Q air spaced capacitor out of fixed plates, with enough spacing for your max power, and using an air spaced variable to fine tune across the band? Potential advantages:
+
+ - Absolute design control over the main capacitor which can even potentially be mechanically integrated into the main loop as done with the Cirio loops
+ - Lower voltage across the air spaced variable so better power handling
+ - Less current flowing through the air spaced variable, so lower losses caused by it
+ - More relaxed tuning (bandspread effect)
+
+I did some experiments using doorknob capacitors to pad my air spaced variable. I
