@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "High Performance Magloop"
-permalink: /calculating-padding-capacitors/
+permalink: /QRO-magloop-no-VVC/
 ---
 
 # A High Performance QRO Magloop without a Vacuum Capacitor
@@ -26,4 +26,22 @@ Consider a magloop optimised for a single band, for which you only need a small 
  - Less current flowing through the air spaced variable, so lower losses caused by it
  - More relaxed tuning (bandspread effect)
 
-I did some experiments using doorknob capacitors to pad my air spaced variable. I
+I did some experiments using doorknob capacitors to pad my air spaced variable. It took a while for me to work out how to combine a 10-250pF variable with two 240pF doorknobs and two 47pF doorknobs to get operation on a suitable band to test versus the directly connected air spaced capacitor. This inspired me to create a calculator targetted at solving this kind of problem. Google searches reveal a few calculators for bandspread purposes on receivers, but nothing where you can enter a desired capacitance range and certainly nothing that will also conveniently show the reduction in voltage across the variable when used in a magloop. So, I created a calculator.
+
+The screenshots below show 
+ - the doorknob capacitors in use (this was on 80m and was a reasonable proof of concept but the values were never going to give much advantage).
+ - a calculation for padding a 10-250pF variable for use on 40m with a large (7.5m circumference) magloop, showing a worthwhile improvement
+
+| 80m test  | 40m calculation |
+| ------------- | ------------- |
+| ![Padding capacitors config 1]({{ site.baseurl }}/assets/img/80m padding example.jpg)  | ![Padding capacitors config 2]({{ site.baseurl }}/assets/img/40m example 7.5m loop.PNG)  |
+
+Hopefully the calculator is useful to you!
+
+Click the links below to get to the calculator and the mathematical explanation
+
+## [📱 Calculator]({{ site.baseurl }}/Capacitor-Padding-Calc)
+
+## [📱 Maths]({{ site.baseurl }}/calculating-padding-capacitors-maths)
+
+
