@@ -21,12 +21,12 @@ The answer is "yes" - but it depends how far you want to push it and what other 
 
 Consider a magloop optimised for a single band, for which you only need a small swing of capacitance. What about providing the main capacitance by building a really high-Q air spaced capacitor out of fixed plates, with enough spacing for your max power, and using an air spaced variable to fine tune across the band? Potential advantages:
 
- - Absolute design control over the main capacitor which can even potentially be mechanically integrated into the main loop as done with the Cirio loops
+ - Absolute design control over the main capacitor which can even potentially be mechanically integrated into the main loop as done with the Cirio Mazzoni Baby and Midi loops
  - Lower voltage across the air spaced variable so better power handling
  - Less current flowing through the air spaced variable, so lower losses caused by it
  - More relaxed tuning (bandspread effect)
 
-I did some experiments using doorknob capacitors to pad my air spaced variable. It took a while for me to work out how to combine a 10-250pF variable with two 240pF doorknobs and two 47pF doorknobs to get operation on a suitable band to test versus the directly connected air spaced capacitor. This inspired me to create a calculator targetted at solving this kind of problem. Google searches reveal a few calculators for bandspread purposes on receivers, but nothing where you can enter a desired capacitance range and certainly nothing that will also conveniently show the reduction in voltage across the variable when used in a magloop. So, I created a calculator.
+I did some experiments using doorknob capacitors to pad my air spaced variable. It took a while for me to work out how to combine a 10-250pF variable with two 240pF doorknobs and two 47pF doorknobs to get operation on a suitable band to test versus the directly connected air spaced capacitor. This inspired me to create a calculator targetted at solving this kind of problem. Google searches reveal a few calculators for bandspread purposes on receivers, but nothing where you can enter a desired capacitance range and certainly nothing that will also conveniently show the reduction in voltage across the variable when used in a magloop. So, I created a calculator - link at the bottom of this page.
 
 The screenshots below show 
  - the doorknob capacitors in use (this was on 80m and was a reasonable proof of concept but the values were never going to give much advantage).
