@@ -8,9 +8,9 @@ permalink: /QRO-magloop-no-VVC/
 
 ![Padding capacitors config 1]({{ site.baseurl }}/assets/img/80m padding example.jpg) 
 
-I've been experimenting with "magnetic" loop antennas for a few years now and running tests using WSPR (with hundreds of spots & statistical analysis) to drive out the losses from my antenna.
+I've been experimenting with "magnetic" loop antennas for a few years now and running tests using WSPR (with hundreds of spots & statistical analysis) to drive out the losses from my antenna. I've had a lot of success using a largeish (7.5m circumference) loop antenna in the loft for 80m and 40m, where it easily outperforms -especially on low angle DX- any kind of wire antenna (loaded dipole, EFHW) that I can get into the available space.
 
-In passing, a note on using thick conductors to maximise loop efficiency: 
+>In passing, a note on using thick conductors to maximise loop efficiency: 
 Thick conductors can help reduce skin effect losses but "diminishing returns" apply after a reasonable thickness, especially in the presence of other losses such as connections, nearby lossy material etc. I have found 10mm soft copper tube to be a good compromise between losses, expense, and ease of handling / construction. The additional performance of thicker material, even going to 40mm diameter which would cost hundreds of £ for a 7.5m loop, is only about 1 to 1.5 dB.
 
 I know from the "Ham Radio Web" that Vaccuum Variable Capacitors (VVC) are the gold standard for low loss capacitors in magloops, but I've achieved good results with air spaced variables and wanted to see how far I could push this without "giving in" and buying a VVC.
