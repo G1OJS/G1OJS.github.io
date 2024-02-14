@@ -18,7 +18,7 @@ Lessons learned with air spaced capacitors:
 
 The remaining problem with air spaced capacitors is power handling;my air spaced capacitor will arc at about 20W on 80m and about 40W on 40m. If you can live with that, there's no need for the VVC unless you're tempted by the higher max:min capacitance ratio to squeeze in more bands. Also, VVCs are expensive and need more torque to turn than a typical air spaced capacitor, which means more mechanical design effort for the controller.
 
-So I have been wondering - is there a way to use an air spaced capacitor in conjunction with fixed capacitors to improve the power handling?
+So I have been wondering - is there a way to use an air spaced capacitor in conjunction with fixed capacitors to improve the power handling? 
 
 The answer is "yes" - but it depends how far you want to push it and what other design compromises you're willing to accept (notably, more limited tuning range).
 
