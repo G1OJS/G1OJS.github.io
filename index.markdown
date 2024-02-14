@@ -12,7 +12,7 @@ I'm just getting to grips with building a site using Jekyll hosted on GitHub, so
 
 You can find quite a lot of ham radio content from me on my [G1OJS pages at Instagram](https://www.instagram.com/g1ojs_alan/), and more about me on my [G1OJS page at QRZ.com](https://www.qrz.com/db/G1OJS).
 
-Until I get more content here and work out what navigation I'm going to use, here's the first bit of content:
+Until I get more content here and work out what navigation I'm going to use, here's the first bit of content: 
 
 ### [A High Performance QRO Magloop without a Vacuum Capacitor?]({{ site.baseurl }}/QRO-magloop-no-VVC)
 
