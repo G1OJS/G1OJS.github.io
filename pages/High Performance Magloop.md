@@ -14,9 +14,9 @@ Lessons learned with air spaced capacitors:
  - Don't rely on the wiper contact to connect to the moving plates. The wiper is a source of loss resistance - enough to make it melt & fail with just a bit of power! Instead, clamp a flexible wire to the spindle or solder one to the final moving plate.
  - Use copper or aluminium for all connections - avoid steel and galvanized pieces (again, sources of loss resistance).
  - It's not always easy to notice capacitor arcing from a remote position, especially with SSB operation.
- - However, with good connections, limited trials tell me that my air spaced capacitor is comparable with a VVC (which I finally gave in to buy and test) in terms of the impact on the gain of the antenna.
+ - However, with good connections, [limited trials](https://www.instagram.com/p/C3Tm9haIy70/?utm_source=ig_web_copy_link) tell me that my air spaced capacitor is comparable with a VVC (which I finally gave in to buy and test) in terms of the impact on the gain of the antenna.
 
-The remaining problem with air spaced capacitors is power handling;my air spaced capacitor will arc at about 20W on 80m and about 40W on 40m. If you can live with that, there's no need for the VVC unless you're tempted by the higher max:min capacitance ratio to squeeze in more bands. Also, VVCs are expensive and need more torque to turn than a typical air spaced capacitor, which means more mechanical design effort for the controller.
+The remaining problem with air spaced capacitors is power handling; my air spaced capacitor will arc at about 20W on 80m and about 40W on 40m. If you can live with that, there's no need for the VVC unless you're tempted by the higher max:min capacitance ratio to squeeze in more bands. Also, VVCs are expensive and need more torque to turn than a typical air spaced capacitor, which means more mechanical design effort for the controller.
 
 So I have been wondering - is there a way to use an air spaced capacitor in conjunction with fixed capacitors to improve the power handling? 
 
