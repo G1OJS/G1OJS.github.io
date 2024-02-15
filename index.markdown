@@ -18,3 +18,5 @@ Until I get more content here and work out what navigation I'm going to use, her
 
 ### [Calculating padding capacitors]({{ site.baseurl }}/calculating-padding-capacitors)
 
+### [4nec2 stuff]({{ site.baseurl }}/4nec2)
+
