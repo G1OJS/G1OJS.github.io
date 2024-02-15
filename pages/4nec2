@@ -1,3 +1,9 @@
+---
+layout: default
+title: "4nec2"
+permalink: /4nec2/
+---
+
 #4nec2
 I'm going to collect some useful things I've been doing with 4nec2 on this page. There's not much here at the moment; I'm just starting this page off with a Python script
 I wrote to harmonise the ground definition in all my nec input files, which has varied a bit as I've developed expertise in writing nec input files.
