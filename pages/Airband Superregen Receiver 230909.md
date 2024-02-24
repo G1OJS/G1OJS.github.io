@@ -1,33 +1,32 @@
 ---
 layout: default
-title: "VHF AM Superhet"
-permalink: /VHF-AM-Superhet/
+title: "VHF AM Superregen Receiver"
+permalink: /VHF-AM-SuperRegen/
 ---
-# G1OJS VHF Airband Superhet Receiver
+# G1OJS VHF Airband Superregen Receiver
 Last summer (2023) I got the construction bug and wanted to build an airband receiver free from microprocessors. Something with an "analogue feel". 
 So I set about Googling and found quite a few designs for superregen receivers and a particular superhet kit that comes up very often based around
-the NE602 oscillator/mixer and several op-amps, plus an "IF can" transformer. I wanted to make something that was as close to an all-transistor all-solid-state
-design as I could (in other words, things I had to hand!). I ended up investigating superregen ideas too. This page is about the superhet version.
+the NE602 oscillator/mixer and several op-amps, plus an "IF can" transformer. I wanted to make something that was as close to an all-transistor all-solid-state design as I could (in other words, things I had to hand!). 
 
-![Airband Superhet 230811 Modular Build]({{ site.baseurl }}/assets/img/2023-08-11 Build VHF AM.jpg)
+At the time (despite being a Ham since 1984 and an electronics engineering graduate) I hadn't realised that a SuperRegenerative receiver is very different from a Regenerative Receiver. Key things I leaned straightaway - a superregen receiver:
 
-Apologies for the first version of this page having very little explanation - I just wanted to get the circuit onto the website.
+- doesn't have a "regen" control that allows the circuit to behave as a high Q AM receiver which can tip into self oscillation and become a DSB receiver. A superregen is an AM receiver (which can also be used on FM via slope detection), and its operating point is set internally.
+- has a kind of "capture effect" which causes the receiver to focus on the strongest signal in the passband
+- can be almost as sensitive as any other receiver 
 
-Also note that the circuit was designed mainly by trial and error, borrowing a few ideas (e.g. the input filter) from other designs
-and arriving at component values experimentally in the main, so although I believe the component values are *good*, they may not be optimum.
+![Airband Superregen Receiver Build 230909]({{ site.baseurl }}/assets/img/Airband Superregen Receiver Build 230909.jpg)
 
-## The circuit
-The circuit diagram is shown below. The only "special" components needed are:
-- NE602 local oscillator / mixer IC
-- Two ceramic resonator type filters 10.7MHz +/- 10 kHz e.g. TOKEN LT10.7MFP
-- Varicap diode BB910 or similar
+The circuit used above started off as my build of a circuit found at lots of places online, all variants of this one described in [Radio Builder](https://radiobuilder.blogspot.com/2012/10/airbandregen1t.html). Some of the variants have quite strange and unnecessary variations! 
 
-Obviously, performance isn't going to rival commercial receivers (even cheap scanner radios) but it is a fun build and sensitivity is quite reasonable
-(somewhere around -110 dBm MDS from memory). It could still do with a bit more end-to-end gain, but as it is it doesn't really need a squelch circuit
-as it's very quiet on background noise only.
+I added an RF gain stage and two-transistor audio amplifier, and spent *a lot* of time investigating the effect of changing the component values in the quench frequency components and audio tap. The circuit I ended up with is below, and it works really well:
 
-![Airband Superhet 230801 Schematic]({{ site.baseurl }}/assets/img/Airband Superhet Max Transistors No IF Can Narrow Filters 230811.png)
+![Airband Superregen Receiver 230909]({{ site.baseurl }}/assets/img/Airband Superregen Receiver Build 230909.jpg)
 
-This circuit is presented as a starting point for your own experimentation - but in my opinion it's a better starting point than some of the other circuits on the web! The development story with build pictures is on my G1OJS Instagram starting around [here](https://www.instagram.com/p/CvAnG36NHw5/) and ending about [here](https://www.instagram.com/p/Cvy-pRIoMbK/). I started off with a circuit using an IF Can - which I wound myself - and eliminating that from the design was a good move, I think. If I were rebuilding it, I would put a ceramic resonator in every IF stage not just before the first and last.
+This little receiver has quite a few advantages:
+- Current draw only about 9 mA
+- Capture effect combined with wide passband makes for easy yet selective tuning
+- Fun to build with only 4 transistors & a handful of R, L, C.
+- Almost as sensitive as any other receiver
+- No IF frequency therefore no image filtering required & no problems with pager system images etc
 
-There are two ways to handle fine tuning - one is to use a reasonably large knob on the tuning pot (~50mm diameter) and the other is to use the fine tuning circuit shown in the schematic above.
+Note: as with all superregen receivers, the superregen stage oscillates with a lot of amplitude at the receive frequency and across a lot of adjacent spectrum. If used close to airports, it must be in a screened box and any antenna must be isolated by using an input amplifier/isolator as shown.
