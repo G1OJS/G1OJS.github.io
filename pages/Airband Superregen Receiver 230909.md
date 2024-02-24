@@ -15,6 +15,7 @@ At the time (despite being a Ham since 1984 and an electronics engineering gradu
 - doesn't have a "regen" control that allows the circuit to behave as a high Q AM receiver which can tip into self oscillation and become a DSB receiver. A superregen is an AM receiver (which can also be used on FM via slope detection), and its operating point is set internally.
 - has a kind of "capture effect" which causes the receiver to focus on the strongest signal in the passband
 - can be almost as sensitive as any other receiver
+- has a log law response to RF signal level, meaning good dynamic range without need of an AGC
 
 One of the best explanations of how these receivers actually *work* is a paper called "Designing Super-Regenerative Receivers" by Dr Eddie Insam. There is a copy [here](https://www.qsl.net/l/lu7did/docs/QRPp/Receptor%20Regenerativo.pdf).
 
