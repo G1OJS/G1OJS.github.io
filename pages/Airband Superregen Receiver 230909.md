@@ -33,6 +33,6 @@ This little receiver has quite a few advantages:
 - Almost as sensitive as any other receiver
 - No IF frequency therefore no image filtering required & no problems with pager system images etc
 
-It does of course have disadvantages. One is that it can be overwhelmed by strong signals if connected to a large antenna. But for a hand portable with a quarter wave whip, it's a lot of fun.
+It does of course have disadvantages. One is that it can be overwhelmed by strong signals if connected to a large antenna. Another is that stray capacitance and lead inductance play affect the performance such that different layouts will behave slightly differently. But for a hand portable with a quarter wave whip, it's a lot of fun. It's even possible to add a squelch circuit, but this requires a whole IC and Rs and Cs & is a bit fiddly to operate, though it does work (page coming on this soon, maybe).
 
 Note: as with all superregen receivers, the superregen stage oscillates with a lot of amplitude at the receive frequency and across a lot of adjacent spectrum. If used close to airports, it must be in a screened box and any antenna must be isolated by using an input amplifier/isolator as shown.
