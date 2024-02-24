@@ -24,8 +24,11 @@ description: >- # this means to ignore newlines until "baseurl:"
  Adventures in electronics, ham radio and antennas
 baseurl: "" # the subpath of your site, e.g. /docs
 url: "https://G1OJS.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: jekyllrb
 github_username:  G1OJS
+
+# top navigation
+header_pages:
+  - index.md
 
 # Build settings
 remote_theme: pages-themes/slate@v0.2.0
