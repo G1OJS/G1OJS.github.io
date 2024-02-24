@@ -9,6 +9,8 @@ So I set about Googling and found quite a few designs for superregen receivers a
 the NE602 oscillator/mixer and several op-amps, plus an "IF can" transformer. I wanted to make something that was as close to an all-transistor all-solid-state
 design as I could (in other words, things I had to hand!). I ended up investigating superregen ideas too. This page is about the superhet version.
 
+![Airband Superhet 230811 Modular Build]({{ site.baseurl }}/assets/img/2023-08-11 Build VHF AM.jpg)
+
 Apologies for the first version of this page having very little explanation - I just wanted to get the circuit onto the website.
 
 Also note that the circuit was designed mainly by trial and error, borrowing a few ideas (e.g. the input filter) from other designs
@@ -24,7 +26,7 @@ Obviously, performance isn't going to rival commercial receivers (even cheap sca
 (somewhere around -110 dBm MDS from memory). It could still do with a bit more end-to-end gain, but as it is it doesn't really need a squelch circuit
 as it's very quiet on background noise only.
 
-![Airband Superhet V1,0]({{ site.baseurl }}/assets/img/Airband Superhet Max Transistors No IF Can Narrow Filters 230811.png)
+![Airband Superhet 230801 Schematic]({{ site.baseurl }}/assets/img/Airband Superhet Max Transistors No IF Can Narrow Filters 230811.png)
 
 This circuit is presented as a starting point for your own experimentation - but in my opinion it's a better starting point than some of the other circuits on the web! The development story with build pictures is on my G1OJS Instagram starting around [here](https://www.instagram.com/p/CvAnG36NHw5/) and ending about [here](https://www.instagram.com/p/Cvy-pRIoMbK/). I started off with a circuit using an IF Can - which I wound myself - and eliminating that from the design was a good move, I think. If I were rebuilding it, I would put a ceramic resonator in every IF stage not just before the first and last.
 
