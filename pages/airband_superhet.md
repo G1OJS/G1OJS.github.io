@@ -19,3 +19,5 @@ Obviously, performance isn't going to rival commercial receivers (even cheap sca
 as it's very quiet on background noise only.
 
 ![Airband Superhet V1,0]({{ site.baseurl }}/assets/img/Airband Superhet Max Transistors No IF Can Narrow Filters V1.0.png)
+
+This circuit is presented as a starting point for your own experimentation - but in my opinion it's a better starting point than some of the other circuits on the web! The development story with build pictures is on my G1OJS Instagram starting around [here](https://www.instagram.com/p/CvAnG36NHw5/) and ending about [here](https://www.instagram.com/p/Cvy-pRIoMbK/). I started off with a circuit using an IF Can - which I wound myself - and eliminating that from the design was a good move, I think. If I were rebuilding it, I would put a ceramic resonator in every IF stage not just before the first and last.
