@@ -16,6 +16,8 @@ Until I get more content here and work out what navigation I'm going to use, her
 
 ### [G1OJS VHF Airband Superhet Receiver]({{ site.baseurl }}/VHF-AM-Superhet)
 
+### [G1OJS VHF Airband Superregen Receiver]({{ site.baseurl }}/VHF-AM-SuperRegen)
+
 ### [A High Performance QRO Magloop without a Vacuum Capacitor?]({{ site.baseurl }}/QRO-magloop-no-VVC)
 
 ### [Calculating padding capacitors]({{ site.baseurl }}/calculating-padding-capacitors)
