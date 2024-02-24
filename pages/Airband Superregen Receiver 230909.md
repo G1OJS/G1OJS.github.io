@@ -18,7 +18,7 @@ At the time (despite being a Ham since 1984 and an electronics engineering gradu
 
 One of the best explanations of how these receivers actually *work* is a paper called "Designing Super-Regenerative Receivers" by Dr Eddie Insam. There is a copy [here](https://www.qsl.net/l/lu7did/docs/QRPp/Receptor%20Regenerativo.pdf).
 
-The circuit used above started off as my build of a circuit found at lots of places online, all variants of this one described in [Radio Builder](https://radiobuilder.blogspot.com/2012/10/airbandregen1t.html). Some of the variants have quite strange and unnecessary variations! 
+The circuit used above started off as my build of a circuit found at lots of places online, all variants of this one described in [Radio Builder](https://radiobuilder.blogspot.com/2012/10/airbandregen1t.html). Some of the variants have quite strange and unnecessary variations! There is nothing critical - nor magical - about the twisted and folded antenna found in some versions that don't have the RF isolator/amplifier. 
 
 I added an RF gain stage and two-transistor audio amplifier, and spent *a lot* of time investigating the effect of changing the component values in the quench frequency components and audio tap. The circuit I ended up with is below, and it works really well:
 
