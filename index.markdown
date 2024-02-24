@@ -14,6 +14,8 @@ You can find quite a lot of ham radio content from me on my [G1OJS pages at Inst
 
 Until I get more content here and work out what navigation I'm going to use, here's the first bit of content: 
 
+### [G1OJS VHF Airband Superhet Receiver]({{ site.baseurl }}/VHF-AM-Superhet)
+
 ### [A High Performance QRO Magloop without a Vacuum Capacitor?]({{ site.baseurl }}/QRO-magloop-no-VVC)
 
 ### [Calculating padding capacitors]({{ site.baseurl }}/calculating-padding-capacitors)
