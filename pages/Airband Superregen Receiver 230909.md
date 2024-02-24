@@ -24,11 +24,15 @@ I added an RF gain stage and two-transistor audio amplifier, and spent *a lot* o
 
 ![Airband Superregen Receiver 230909]({{ site.baseurl }}/assets/img/Airband Superregen Receiver 230909.png)
 
+Construction note: keep leads short as possible in the RF parts (first two transistors). If you find the 10pF capacitor connected to the varicap diode in the photo above, you'll see that the path to ground is a lot shorter than it appears from the circuit diagram.
+
 This little receiver has quite a few advantages:
 - Current draw only about 9 mA
 - Capture effect combined with wide passband makes for easy yet selective tuning
 - Fun to build with only 4 transistors & a handful of R, L, C.
 - Almost as sensitive as any other receiver
 - No IF frequency therefore no image filtering required & no problems with pager system images etc
+
+It does of course have disadvantages. One is that it can be overwhelmed by strong signals if connected to a large antenna. But for a hand portable with a quarter wave whip, it's a lot of fun.
 
 Note: as with all superregen receivers, the superregen stage oscillates with a lot of amplitude at the receive frequency and across a lot of adjacent spectrum. If used close to airports, it must be in a screened box and any antenna must be isolated by using an input amplifier/isolator as shown.
