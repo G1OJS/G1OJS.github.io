@@ -22,7 +22,7 @@ The circuit used above started off as my build of a circuit found at lots of pla
 
 I added an RF gain stage and two-transistor audio amplifier, and spent *a lot* of time investigating the effect of changing the component values in the quench frequency components and audio tap. The circuit I ended up with is below, and it works really well:
 
-![Airband Superregen Receiver 230909]({{ site.baseurl }}/assets/img/Airband Superregen Receiver Build 230909.jpg)
+![Airband Superregen Receiver 230909]({{ site.baseurl }}/assets/img/Airband Superregen Receiver 230909.jpg)
 
 This little receiver has quite a few advantages:
 - Current draw only about 9 mA
