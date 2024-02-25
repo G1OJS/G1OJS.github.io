@@ -24,3 +24,4 @@ Until I get more content here and work out what navigation I'm going to use, her
 
 ### [4nec2 stuff]({{ site.baseurl }}/4nec2)
 
+### [WSJT-X and WSPR stuff]({{ site.baseurl }}/WSJT-X-WSPR)
