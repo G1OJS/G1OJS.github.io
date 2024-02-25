@@ -7,4 +7,4 @@ permalink: /WSJT-X-WSPR/
 # WSJT-X and WSPR Utilities
 Useful stuff to use alongside WSJT-X:
 
-### [💻 Python Script to split ALL.TXT into month-sized files](scripts/Split_ALL.py)
+### [💻 Python Script to split ALL.TXT into month-sized files](https://github.com/G1OJS/WSJT-X-and-WSPR-Utilities/blob/main/scripts/Split_ALL.py)
