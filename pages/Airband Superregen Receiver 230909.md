@@ -25,7 +25,7 @@ I added an RF gain stage and two-transistor audio amplifier, and spent *a lot* o
 
 ![Airband Superregen Receiver 230909]({{ site.baseurl }}/assets/img/Airband Superregen Receiver 230909.png)
 
-Construction note: keep leads short as possible in the RF parts (first two transistors). If you find the 10pF capacitor connected to the varicap diode in the photo above, you'll see that the path to ground is a lot shorter than it appears from the circuit diagram. Note also that some components in the picture above are slightly different to those in the circuit diagram as the photo is of an older build.
+Construction note: keep leads short as possible in the RF parts (first two transistors). If you find the 10pF capacitor connected to the varicap diode in the photo above, you'll see that the path to ground via that capacitor and the varicap diode is a lot shorter than it appears from the circuit diagram. Note also that some components in the picture above are slightly different to those in the circuit diagram as the photo is of an older build.
 
 This little receiver has quite a few advantages:
 - Current draw only about 9 mA
