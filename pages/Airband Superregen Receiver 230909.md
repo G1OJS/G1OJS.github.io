@@ -8,7 +8,7 @@ Last summer (2023) I got the construction bug and wanted to build an airband rec
 So I set about Googling and found quite a few designs for superregen receivers and a particular superhet kit that comes up very often based around
 the NE602 oscillator/mixer and several op-amps, plus an "IF can" transformer. I wanted to make something that was as close to an all-transistor all-solid-state design as I could (in other words, things I had to hand!). 
 
-![Airband Superregen Receiver Build 230909]({{ site.baseurl }}/assets/img/Airband Superregen Receiver Build 230909.jpg)
+![Airband Superregen Receiver Build 230909]({{ site.baseurl }}/assets/img/Airband Superregen Receiver 230909.jpg)
 
 At the time (despite being a Ham since 1984 and an electronics engineering graduate) I hadn't realised that a SuperRegenerative receiver is very different from a Regenerative Receiver. Key things I leaned straightaway - a superregen receiver:
 
