@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "VHF AM Superregen Receiver"
-permalink: /VHF-AM-SuperRegen/
+permalink: /VHF-AM-SuperRegen Earpiece/
 ---
 # G1OJS VHF Airband Superregen Receiver
 Last summer (2023) I got the construction bug and wanted to build an airband receiver free from microprocessors. Something with an "analogue feel". 
