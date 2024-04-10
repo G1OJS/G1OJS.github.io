@@ -16,7 +16,9 @@ Until I get more content here and work out what navigation I'm going to use, her
 
 ### [G1OJS VHF Airband Superhet Receiver]({{ site.baseurl }}/VHF-AM-Superhet)
 
-### [G1OJS VHF Airband Superregen Receiver]({{ site.baseurl }}/VHF-AM-SuperRegen Earpiece)
+### [G1OJS VHF Airband Superregen Receiver Altoids Tin]({{ site.baseurl }}/VHF-AM-SuperRegen Earpiece)
+
+### [G1OJS VHF Airband Superregen Receiver with Speaker and Squelch]({{ site.baseurl }}/VHF-AM-SuperRegen Speaker)
 
 ### [A High Performance QRO Magloop without a Vacuum Capacitor?]({{ site.baseurl }}/QRO-magloop-no-VVC)
 
