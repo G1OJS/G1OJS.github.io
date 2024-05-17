@@ -21,7 +21,11 @@ The detector is Q3 & based on the configuration recommended in Dr Eddie Insam's 
 
 ## Squelch Circuit Background
 <details markdown=1><summary markdown="span">Click to expand</summary>
-Squelch circuits can be quite tricky to implement in SRO receivers because the background noise under "no signal" conditions can be almost as loud as wanted signals when a carrier is present. There are several ways around this problem, as described in the subsections below.
+Squelch circuits can be quite tricky to implement in SRO receivers because the background noise under "no signal" conditions can be almost as loud as wanted signals when a carrier is present. The figure below shows the audio spectrum measured at the emitter of Q5. The blue trace shows the receiver tuned to no signal, and the black trace shows the receiver tuned to a continuously broadcasting VOLMET station. It can be seen that, using the traditional audio squelch method of measuring the received level over the range containing demodulated audio (up to approx 2.5kHz in this design), it would be difficult to discriminate between no signal and wanted signal cases.
+ 
+![G1OJS Airband Superregen 17-05-24 Audio Spectra]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen 17-05-24 Audio Spectra.png) 
+ 
+However, there are several ways around this problem, as described in the subsections below.
 
 ### Channel Quieting Squelch
 This approach is to monitor the "no signal" noise above the highest modulation frequency and watch for the amplitude of this to fall when a carrier is present.
