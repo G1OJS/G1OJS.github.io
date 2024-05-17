@@ -78,6 +78,8 @@ A diode pump circuit feeds a JFET (Q102) in a way that provides a fast rise time
 
 Unfortunately, this latter state would also arise when strongly modulated carriers are received, resulting in the squelch *closing* on strong audio (not good!), although (due to the fast time constants in the diode pump) this is confined to voice peaks only. To create a useable squelch circuit, all that is needed is a way to keep the squelch open across strong voice peaks. A simple capacitor across the base-emitter junction of Q103 is sufficient to do this, by providing a "pulse stretching" or monostable function which maintains the "squelch open" condition across voice peaks, and also provides a short (but not too long) "hang time" for the overall squelch action.
 
+Note - with R103 at 470k, Q103 doesn't fully saturate when the squelch is closed. This allows a small level of audio signal to pass the closed squelch, which can provide useful reassurance that the radio isn't missing any wanted signals. If this is not desired, change this resistor to about 100k and, to keep the "hang time" unchanged, change C104 to 22u.
+
 Number of components required is about 13.
 
  
