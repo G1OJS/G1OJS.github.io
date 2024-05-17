@@ -4,6 +4,8 @@ title: "VHF AM Airband Superregen Receiver with Speaker and Squelch Circuit"
 permalink: /VHF-AM-SuperRegen Speaker/
 ---
 # VHF AM Superregen Airband Receiver with Squelch Circuit
+![]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen Speaker Version BJT SK Filter LM386 Outside.png){: .align-right}
+
 This page describes my Superregen VHF AM Airband receiver with Squelch, and provides some background around approaches to solving the problems of designing squelch circuits for superregen receivers. 
 
 This circuit has several advantages over a superhet design:
@@ -12,6 +14,8 @@ This circuit has several advantages over a superhet design:
 - Easy tuning
 - AGC action inherent in the superregen circuit, so no AGC circuit needed
 - Superregen "capture effect"
+
+{:style="clear: right"}
 
 # Circuit description
 The diagram below shows the entire circuit diagram. The subsections below describe the operation of the various parts.
