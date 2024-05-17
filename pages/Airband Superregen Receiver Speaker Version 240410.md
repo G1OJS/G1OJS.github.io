@@ -3,7 +3,10 @@ layout: default
 title: "VHF AM Superregen Receiver with Speaker and Optional Squelch Circuit"
 permalink: /VHF-AM-SuperRegen Speaker/
 ---
-This page describes my Superregen VHF AM receiver with Squelch. It has several advantages over a superhet design:
+# VHF AM Superregen Receiver with Squelch Circuit
+This page describes my Superregen VHF AM receiver with Squelch, and provides some background around approaches to solving the problems of designing squelch circuits for superregen receivers. 
+
+This circuit has several advantages over a superhet design:
 - Fewer components
 - No alignment required
 - Easy tuning
