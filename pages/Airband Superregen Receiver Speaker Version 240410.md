@@ -39,6 +39,11 @@ Examples of all three circuits are shown below.
 
 The squelch circuit is based around a fairly traditional diode pump. It monitors the "no signal" noise above the highest modulation frequency and watches for the amplitude of this to fall when a carrier is present. When the audi level falls below a threshold, the squelch opens (this is option 1 in the "Squelch Circuit Background" section above).
 
+Rather than use a narrow bandpass filter to monitor the hiss above the max audio frequency, this circuit takes advantage of the (uncommon) 2nd order low pass filtering provided by the Sallen-Key filter around Q5, and uses a fairly basic high pass filter (C101 working against the input impedance of Q101) to work with this and create a bandpass filter in aggregate. Even so, some audio does make it through especially on loud signals, which is problematic as this is hard for a simple level detector to distinguish from the level of "no signal" hiss; remember we are looking for "quiet" to open the squelch.
+
+A diode pump circuit feeds a JFET (Q102) in a way that provides a fast rise time & fall time response at the drain of the JFET when audio levels drop below a threshold set by RV101. The pump produces more negative voltages as audio levels increase, and large negative voltages cause the JFET to turn off, biasing Q103 into conduction and shorting out the audio at the input to the LM386 amplifier.
+
+The diode pump circuit feeding the JFET Q102 is designed to be fast acting, with the squelch "hang" provided by a parallel capacitor *after* the JFET. 
 
 
 </details>
