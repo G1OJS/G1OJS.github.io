@@ -38,14 +38,21 @@ A good example of this technique using a multiple-feedback narrowband bandpass f
 ### Traditional Audio Level Squelch
 A traditional approach can be used if the demodulated audio is filtered tightly enough to remove the quency signal and as much of the "no signal" SRO noise as possible. This is in some ways the opposite of the Channel Queiting approach (looking for a strong wanted signal rather than quieted unwanted noise). I had some successwith the circuit below, usign two op-amps to do the tight filtering and gain, and an NE555 to act as the squelch trigger & hang time circuit.
 
+![Airband Superregen Receiver Schematic Audio Squelch Circuit]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Audio Squelch Circuit.png)
 
 ### Voice Cadence Squelch
 My own invention as far as I know: monitor the audio spectrum (again tightly filtered as in 2) but instead of triggering the squelch based on the *level* of the audio, watch for *changes* in the audio level. This way, the squelch responds to the transition between "no signal" hiss and the quieted audio on reception of an unmodulated carrier, and also responds to the cadence of voice signals (the increase and decrease in volume across speech sounds is itself a signal that can be monitored).
+
+In the circuit snippet below, Q101 amplifies ~50mVpp audio at R22 to ~2Vpp. C103,R103,D102,D103,C104 form a Greinacher voltage doubler whose output follows the cadence of voice signals.Time constants are ~50mS (~20Hz). The trailing edge TC is affected by RV101, which sets sensitivity of Q102 to the cadence signal, but this is not critical. Q102 drives another Greinacher circuit whose output voltage represents the amplitude of the cadence signal (not the amplitude of the audio signal) - this amplitude is zero on constant carrier, constant noise or constant QRM equivalently as there is no variation in the cadence signal. Q102 is chosen to be PNP in order to provide a strong pull up on leading edges of the voice cadence signal. C106 & R106 set the squelch hang time (~1000mS) and drive Q103 to turn on and hence Q104 to turn off whenever there is *activity* (as opposed to *level*) on the audio. D106 and D107 limit the charging of C106 to prevent the squelch hang depending on the amount/amplitude of activity prior to quiet.
+
+![Airband Superregen Receiver Schematic Cadence Squelch Circuit]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Cadence Squelch Circuit.png)
 
 </details>
 
 ## Squelch Circuit
 The squelch circuit is based around a fairly traditional diode pump (Greinacher circuit). It monitors the "no signal" noise above the highest modulation frequency and watches for the amplitude of this to fall when a carrier is present. When the audi level falls below a threshold, the squelch opens (this is option 1 in the "Squelch Circuit Background" section above).
+
+![Airband Superregen Receiver Schematic Noise Squelch Circuit]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Noise Squelch Circuit.png)
 
 Rather than use a narrow bandpass filter to monitor the hiss above the max audio frequency, this circuit takes advantage of the (uncommon) 2nd order low pass filtering provided by the Sallen-Key filter around Q5, and uses a fairly basic high pass filter (C101 working against the input impedance of Q101) to work with this and create a bandpass filter in aggregate. Even so, some audio does make it through especially on loud signals, which is problematic as this is hard for a simple level detector to distinguish from the level of "no signal" hiss; remember we are looking for "quiet" audio to open the squelch.
 
