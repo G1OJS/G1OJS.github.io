@@ -69,7 +69,7 @@ The circuit operates as follows:
 - C106 & R106 set the squelch hang time (~1000mS) and drive Q103 to turn on whenever there is *activity* (as opposed to *level*) on the audio. The collector voltage of Q103 is used to control a pass component (such as a biased diode) between the volume control and output amplifier.
 - D106 and D107 limit the charging of C106 to prevent the squelch hang depending on the amount/amplitude of activity prior to quiet.
 
-An advantage of this circuit is that squelch closes on constant strong interference and constant carriers with no modulation as well as on "no signal".
+An advantage of this circuit is that in addition to closing on "no signal" conditions, the squelch also closes on a) constant strong interference and b) constant carriers with no modulation.
 
 Number of components required is about 22.
 
