@@ -16,8 +16,12 @@ This page describes my Superregen VHF AM receiver with Squelch. It has several a
 ## Superregen Receiver Section
 The Superregen circuit based around Q2 is nothhing new, and follows several designs available on the web. As with all superregenerative oscillators (SROs), it is necessary to precede the circuit by an amplifier stage to avoid radiation of the oscillations produced by the SRO. Q1 performs this function and provides sufficient gain to allow the SRO to detect signals as low as -110 dBm.
 
+![Airband Superregen Receiver Schematic SRO Section]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 SRO Section.png)
+
 The detector is Q3 & based on the configuration recommended in Dr Eddie Insam's paper [Designing Super-Regenerative Receivers]
 (https://www.qsl.net/l/lu7did/docs/QRPp/Receptor%20Regenerativo.pdf). As Dr Insam states, this configuration does seem to improve the sensitivity of the SuperRegen Oscillator (SRO). After that the buffer Q5 feeds a single stage BJT [Sallen Key](https://en.wikipedia.org/wiki/Sallen%E2%80%93Key_topology) Filter Q4 , and this provides enough signal level to present to the volume control and then on to the LM386 audio amp. 
+
+![Airband Superregen Receiver Schematic Audio Section]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Audio Section.png)
 
 ## Squelch Circuit Background
 <details markdown=1><summary markdown="span">Click to expand</summary>
