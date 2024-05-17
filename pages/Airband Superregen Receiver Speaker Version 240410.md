@@ -3,16 +3,40 @@ layout: default
 title: "VHF AM Superregen Receiver with Speaker and Optional Squelch Circuit"
 permalink: /VHF-AM-SuperRegen Speaker/
 ---
-# G1OJS VHF Airband Superregen Receiver
-Following success with the [Earpiece version Superregen Receiver]({{ site.baseurl }}/VHF-AM-SuperRegen Earpiece) I designed the following circuit with a decent detector and Sallen Key filter.
+# G1OJS VHF Airband Superregen Receiver with Squelch
+This page describes my Superregen VHF AM receiver with Squelch. It has several advantages over a superhet design:
+- Fewer components
+- No alignment required
+- Easy tuning
+- AGC action inherent in the superregen circuit, so no AGC circuit needed
+- Superregen "capture effect"
 
-![Airband Superregen Receiver Schematic]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen Speaker Version BJT SK Filter LM386 Rev 3 240409.png)
+## Circuit description
+<details markdown=1><summary markdown="span">Click to expand</summary>
 
-The squelch circuit below is optional and works by tighly filtering the strongest audio frequencies produced by the detector and using the level to trigger a monostable to open the squelch. I couldn't get the alternative method - [looking at the noise between the audio and quench frequencies & watching for quieting](https://www.theradioboard.org/forum/solid-state-radios/solid-state-superregenerative-rx-with-squelch) - to work, I think, because I'm using a relatively low quench frequency in this design and it was too hard to separate this out.
+![Airband Superregen Receiver Schematic]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24.png)
 
-The detector is Q3 & based on the configuration recommended in Dr Eddie Insam's paper [Designing Super-Regenerative Receivers](https://www.qsl.net/l/lu7did/docs/QRPp/Receptor%20Regenerativo.pdf). As Dr Insam states, this configuration does seem to improve the sensitivity of the SuperRegen Oscillator (SRO), and the radio can detect signals as low as about -110dBm. After that the buffer Q5 feeds a single stage BJT [Sallen Key](https://en.wikipedia.org/wiki/Sallen%E2%80%93Key_topology) Filter Q4 , and this provides enough signal level to present to the volume control and then on to the LM386 audio amp. The two plots on the schematic show the output audio spectrum at the headphone jack (no load) with no antenna connected (left) and with a signal present (right).
+The Superregen circuit based around Q2 is nothhing new, and follows several designs available on the web. As with all superregenerative oscillators (SROs), it is necessary to precede the circuit by an amplifier stage to avoid radiation of the oscillations produced by the SRO. Q1 performs this function and provides sufficient gain to allow the SRO to detect signals as low as -110 dBm.
 
-The squelch circuit works by monitoring the audio at around 350 Hz with a Q=1.6 filter (LM358b) fed by a low pass gain stage (LM358a). As the spectrum plots show, the audio in this range is about 10dB higher when a signal is present. When audio levels increase at the output of LM358b, the negative peaks of the audio fall below Vcc/2 and trigger the NE555P monostable. The rest of the circuit shapes the NE555P output to remove sharp edges and controls the audio pass diode D2. Unfortunately setting the gain and reference level is best done with an oscilloscope, but could feasibly be done by trial and error. The trick is to set RV4 as high gain as possible without clipping in LM358a on either signal or noise, then adjust the level pot RV6 so that the squelch *just* stays closed on a no-signal condition.
+The detector is Q3 & based on the configuration recommended in Dr Eddie Insam's paper [Designing Super-Regenerative Receivers]
+(https://www.qsl.net/l/lu7did/docs/QRPp/Receptor%20Regenerativo.pdf). As Dr Insam states, this configuration does seem to improve the sensitivity of the SuperRegen Oscillator (SRO). After that the buffer Q5 feeds a single stage BJT [Sallen Key](https://en.wikipedia.org/wiki/Sallen%E2%80%93Key_topology) Filter Q4 , and this provides enough signal level to present to the volume control and then on to the LM386 audio amp. 
+
+Squelch circuits can be quite tricky to implement in SRO receivers because the background noise under "no signal" conditions can be almost as loud as wanted signals when a carrier is present. There are several ways around this problem:
+
+1) Monitor the "no signal" noise above the highest modulation frequency and watch for the amplitude of this to fall when a carrier is present.
+2) Tightly fitler the audio and use a traditional audio squelch, hoping to exclude as much "no signal" noise as possible via the filtering (i.e. the opposite approach to 1).
+3) My own invention as far as I know: monitor the audio spectrum (again tightly filtered as in 2) but instead of triggering the squelch based on the *level* of the audio, watch for *changes* in the audio level. This way, the squelch responds to the transition between "no signal" hiss and the quieted audio on reception of an unmodulated carrier, and also responds to the cadence of voice signals (the increase and decrease in volume across speech sounds is itself a signal that can be monitored).
+
+Examples of all three circuits are shown below.
+The squelch circuit is based around a fairly traditional diode pump, with several important features.
+
+</details>
+
+
+
+
+
+
 
 Once set however, the squelch works well enough that I didn't feel the need to add a front panel squelch level control or switch, and is insensitive to variations in the SRO output that occur as the tuning control is swept across the band (which is a problem with the other methods of squelch I think). 
 
