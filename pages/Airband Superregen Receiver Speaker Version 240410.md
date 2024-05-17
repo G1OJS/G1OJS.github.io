@@ -68,7 +68,7 @@ Number of components required is about 22.
 </details>
 
 ## Squelch Circuit
-The squelch circuit is based around a fairly traditional diode pump ([Greinacher voltage doubler circuit](https://en.wikipedia.org/wiki/Voltage_doubler#Greinacher_circuit)). It monitors the "no signal" noise above the highest modulation frequency and watches for the amplitude of this to fall when a carrier is present. When the audio level falls below a threshold, the squelch opens. This is the "Chanel Quieting Squelch" approach in the "Squelch Circuit Background" section above, but is implemented with fewer components (and no op-amp ICs) by using a single capacitor to overcome the problem of voice peaks re-closing the squelch if the "probe" fitering is not tight enough, as described below.
+The squelch circuit is based around a fairly traditional diode pump ([Greinacher voltage doubler circuit](https://en.wikipedia.org/wiki/Voltage_doubler#Greinacher_circuit)). It monitors the "no signal" noise above the highest modulation frequency and watches for the amplitude of this to fall when a carrier is present. When the audio level falls below a threshold, the squelch opens. This is the "Chanel Quieting Squelch" approach in the "Squelch Circuit Background" section above, but is implemented with fewer components (and no op-amp ICs). This is achieved by omitting the tight bandpass filter and gain stage, allowing some voice peaks to disturb the squelching signal, and using a monostable (using a single capacitor as described below) to ensure that the squelch stays open in the presence of those strong voice peaks. 
 
 ![Airband Superregen Receiver Schematic Noise Squelch Circuit]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Noise Squelch Circuit.png)
 
