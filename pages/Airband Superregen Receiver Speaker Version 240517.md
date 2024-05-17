@@ -34,7 +34,6 @@ The detector is Q3 & based on the configuration recommended in Dr Eddie Insam's 
 
 
 ## Squelch Circuit Background
-<details markdown=1><summary markdown="span">Click to expand</summary>
 Squelch circuits can be quite tricky to implement in SRO receivers because the background noise under "no signal" conditions can be almost as loud as wanted signals when a carrier is present. The figure below shows the audio spectrum measured (averaged over 10s of seconds) at the emitter of Q5 - the output of the Sallen Key filter. The blue trace shows the receiver tuned to no signal, and the black trace shows the receiver tuned to a continuously broadcasting VOLMET station. It can be seen that, using the traditional audio squelch method of measuring the received level over the range containing demodulated audio (up to approx 2.5kHz in this design), it would be difficult to discriminate between no signal and wanted signal cases.
  
 ![G1OJS Airband Superregen 17-05-24 Audio Spectra]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen 17-05-24 Audio Spectra.jpg) 
@@ -65,9 +64,7 @@ Number of components required is about 22.
 
 ![Airband Superregen Receiver Schematic Cadence Squelch Circuit]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Cadence Squelch Circuit.png)
 
-</details>
-
-## Squelch Circuit
+## Squelch Circuit Used
 The squelch circuit monitors the "no signal" noise above the highest modulation frequency and watches for the amplitude of this to fall when a carrier is present (quieting). When this audio level falls below a threshold, the squelch opens. This is the "Chanel Quieting Squelch" approach in the "Squelch Circuit Background" section above, but is implemented with fewer components (and no op-amp ICs). This is achieved by omitting the tight bandpass filter and gain stage, and dealing with the implications of this as described below.
 
 ![Airband Superregen Receiver Schematic Noise Squelch Circuit]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Noise Squelch Circuit.png)
@@ -76,7 +73,7 @@ Although the sharp bandpass filter is omitted, this circuit takes advantage of t
 
 A diode pump ([Greinacher voltage doubler circuit](https://en.wikipedia.org/wiki/Voltage_doubler#Greinacher_circuit)) feeds a JFET (Q102) in a way that provides a fast rise time & fall time binary response at the drain of the JFET when audio levels drop below a threshold set by RV101. With very quiet audio (dead carrier or carrier with low level audio modulation) the diode pump produces an output close to zero volts; this leaves the JFET conducting and Q103 turned off, allowing audio to pass unhindered from the volume control to the LM386 amplifier. In the "no signal" condition, the background noise levels increase, and the diode pump produdes larger negative voltages which cause the JFET to turn off, biasing Q103 into conduction and shorting out the audio at the input to the LM386 amplifier.
 
-The lack of a sharp bandpass filter means that strongly modulated carriers cause the squelch to *close* on strong audio peaks, which is not desired. This is dealt with as follows:
+The lack of a sharp bandpass filter means that strongly modulated carriers would cause the squelch to *close* on strong audio peaks unless other measures were taken in the squelch circuit design. This is dealt with as follows:
 1) using fast time constants in the diode pump means that any potential unwanted squelch closed periods are not unnecessarily extended in time, and are confined to short periods on voice peaks only.
 2) A simple capacitor across the base-emitter junction of Q103 provides a "pulse stretching" or monostable function which maintains the "squelch open" condition across these short voice peaks, and also provides a short (but not too long) "hang time" for the overall squelch action.
 
