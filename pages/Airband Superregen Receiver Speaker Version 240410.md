@@ -36,23 +36,17 @@ Examples of all three circuits are shown below.
 
 </detail>
 
-
+### Squelch Circuit Used
+<details markdown=1><summary markdown="span">Click to expand</summary>
 The squelch circuit is based around a fairly traditional diode pump (Greinacher circuit). It monitors the "no signal" noise above the highest modulation frequency and watches for the amplitude of this to fall when a carrier is present. When the audi level falls below a threshold, the squelch opens (this is option 1 in the "Squelch Circuit Background" section above).
 
 Rather than use a narrow bandpass filter to monitor the hiss above the max audio frequency, this circuit takes advantage of the (uncommon) 2nd order low pass filtering provided by the Sallen-Key filter around Q5, and uses a fairly basic high pass filter (C101 working against the input impedance of Q101) to work with this and create a bandpass filter in aggregate. Even so, some audio does make it through especially on loud signals, which is problematic as this is hard for a simple level detector to distinguish from the level of "no signal" hiss; remember we are looking for "quiet" audio to open the squelch.
 
 A diode pump circuit feeds a JFET (Q102) in a way that provides a fast rise time & fall time binary response at the drain of the JFET when audio levels drop below a threshold set by RV101. With very quiet audio (dead carrier or carrier with low level audio modulation) the diode pump produces an output close to zero volts; this leaves the JFET conducting and Q103 turned off, allowing audio to pass unhindered from the volume control to the LM386 amplifier. In the "no signal" condition, the background noise levels increase, and the diode pump produdes larger negative voltages which cause the JFET to turn off, biasing Q103 into conduction and shorting out the audio at the input to the LM386 amplifier.
 
-Unfortunately, this latter state would also arise when strongly modulated carriers are received, resulting in the squelch *closing* on strong audio (not good!). Fortunately, due to the fast time constants in the diode pump, this is confined to voice peaks only, which provides a way to keep the squelch open across strong voice peaks; use a monostable/pulse stretcher *after* the trigger JFET. A simple capacitor across the base-emitter junction of Q103 is sufficient to do this, carrying the squelch open across voice peaks, and providing a short (but not too long) "hang time" for the overall squelch action.
+Unfortunately, this latter state would also arise when strongly modulated carriers are received, resulting in the squelch *closing* on strong audio (not good!), although (due to the fast time constants in the diode pump) this is confined to voice peaks only. To create a useable squelch circuit, all that is needed is a way to keep the squelch open across strong voice peaks. A simple capacitor across the base-emitter junction of Q103 is sufficient to do this, by providing a "pulse stretching" or monostable function which maintains the "squelch open" condition across voice peaks, and also provides a short (but not too long) "hang time" for the overall squelch action.
 
 </details>
 
+ 
 
-
-
-
-
-
-Once set however, the squelch works well enough that I didn't feel the need to add a front panel squelch level control or switch, and is insensitive to variations in the SRO output that occur as the tuning control is swept across the band (which is a problem with the other methods of squelch I think). 
-
-![Airband Superregen Receiver Squelch Circuit Schematic]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen Speaker Version BJT SK Filter LM386 Squelch Rev 1 240409.png)
