@@ -44,8 +44,12 @@ Note: the spectrum plot above also shows the strong signal at the quench frequen
 This approach is to monitor the "no signal" noise above the highest modulation frequency and watch for the amplitude of this to fall when a carrier is present.
 A good example of this technique using a multiple-feedback narrowband bandpass filter based around an op-amp is described by Dayle Edwards on The RadioBoard [here](https://www.theradioboard.org/forum/solid-state-radios/solid-state-superregenerative-rx-with-squelch). Dayle's implementation uses a narrow bandpass filter to "pick out" the background hiss somewhere above the highest modulated audio frequency and the "quench frequency" (see spectrum plot above). It is necessary to use a tight filter to "probe" this "gap" in the frequency spectrum because both the demodulated audio and the signal coming from the residue of the quench operation are very strong and would otherwise make this technique unworkable.
 
+Number of components required is about 16 plus two ICs.
+
 ### Traditional Audio Level Squelch
 A traditional approach can be used if the demodulated audio is filtered tightly enough to remove the quency signal and as much of the "no signal" SRO noise as possible. This is in some ways the opposite of the Channel Queiting approach (looking for a strong wanted signal rather than quieted unwanted noise). I had some successwith the circuit below, usign two op-amps to do the tight filtering and gain, and an NE555 to act as the squelch trigger & hang time circuit. The NE555 is triggered directly off the audio signal. It is not necessary to use any kind of envelope detector here, as the NE555 has a precise trigger threshold and the monostable action ensures that even a brief excursion of the audio waveform across the trigger threshold is enough to open the squelch for the "hang time" set by C30 and R26. Any further excursions re-trigger the monostable and the squelch only closes one "hang time" after the very last such excursion.
+
+Number of components required is about 19 plus two ICs.
 
 ![Airband Superregen Receiver Schematic Audio Squelch Circuit]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Audio Squelch Circuit.png)
 
@@ -53,6 +57,8 @@ A traditional approach can be used if the demodulated audio is filtered tightly 
 My own invention as far as I know: monitor the audio spectrum (again tightly filtered as in 2) but instead of triggering the squelch based on the *level* of the audio, watch for *changes* in the audio level. This way, the squelch responds to the transition between "no signal" hiss and the quieted audio on reception of an unmodulated carrier, and also responds to the cadence of voice signals (the increase and decrease in volume across speech sounds is itself a signal that can be monitored).
 
 In the circuit snippet below, Q101 amplifies ~50mVpp audio at R22 to ~2Vpp. C103,R103,D102,D103,C104 form a [Greinacher voltage doubler](https://en.wikipedia.org/wiki/Voltage_doubler#Greinacher_circuit) whose output follows the cadence of voice signals.Time constants are ~50mS (~20Hz). The trailing edge TC is affected by RV101, which sets sensitivity of Q102 to the cadence signal, but this is not critical. Q102 drives another Greinacher circuit whose output voltage represents the amplitude of the cadence signal (not the amplitude of the audio signal) - this amplitude is zero on constant carrier, constant noise or constant QRM equivalently as there is no variation in the cadence signal. Q102 is chosen to be PNP in order to provide a strong pull up on leading edges of the voice cadence signal. C106 & R106 set the squelch hang time (~1000mS) and drive Q103 to turn on and hence Q104 to turn off whenever there is *activity* (as opposed to *level*) on the audio. D106 and D107 limit the charging of C106 to prevent the squelch hang depending on the amount/amplitude of activity prior to quiet.
+
+Number of components required is about 22.
 
 ![Airband Superregen Receiver Schematic Cadence Squelch Circuit]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Cadence Squelch Circuit.png)
 
@@ -68,6 +74,8 @@ Rather than use a narrow bandpass filter to monitor the hiss above the max audio
 A diode pump circuit feeds a JFET (Q102) in a way that provides a fast rise time & fall time binary response at the drain of the JFET when audio levels drop below a threshold set by RV101. With very quiet audio (dead carrier or carrier with low level audio modulation) the diode pump produces an output close to zero volts; this leaves the JFET conducting and Q103 turned off, allowing audio to pass unhindered from the volume control to the LM386 amplifier. In the "no signal" condition, the background noise levels increase, and the diode pump produdes larger negative voltages which cause the JFET to turn off, biasing Q103 into conduction and shorting out the audio at the input to the LM386 amplifier.
 
 Unfortunately, this latter state would also arise when strongly modulated carriers are received, resulting in the squelch *closing* on strong audio (not good!), although (due to the fast time constants in the diode pump) this is confined to voice peaks only. To create a useable squelch circuit, all that is needed is a way to keep the squelch open across strong voice peaks. A simple capacitor across the base-emitter junction of Q103 is sufficient to do this, by providing a "pulse stretching" or monostable function which maintains the "squelch open" condition across voice peaks, and also provides a short (but not too long) "hang time" for the overall squelch action.
+
+Number of components required is about 13.
 
  
 
