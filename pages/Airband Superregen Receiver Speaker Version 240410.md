@@ -33,7 +33,7 @@ Examples of all three circuits are shown below.
 
 
 
-</detail>
+</details>
 
 ### Squelch Circuit
 The squelch circuit is based around a fairly traditional diode pump (Greinacher circuit). It monitors the "no signal" noise above the highest modulation frequency and watches for the amplitude of this to fall when a carrier is present. When the audi level falls below a threshold, the squelch opens (this is option 1 in the "Squelch Circuit Background" section above).
