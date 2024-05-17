@@ -11,6 +11,8 @@ This page describes my Superregen VHF AM receiver with Squelch. It has several a
 - Superregen "capture effect"
 
 # Circuit description
+The diagram below shows the entire circuit diagram. The subsections below describe the operation of the various parts.
+
 ![Airband Superregen Receiver Schematic]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24.png)
 
 ## Superregen Receiver Section
@@ -19,7 +21,7 @@ The Superregen circuit based around Q2 is nothhing new, and follows several desi
 ![Airband Superregen Receiver Schematic SRO Section]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 SRO Section.png)
 
 The detector is Q3 & based on the configuration recommended in Dr Eddie Insam's paper [Designing Super-Regenerative Receivers]
-(https://www.qsl.net/l/lu7did/docs/QRPp/Receptor%20Regenerativo.pdf). As Dr Insam states, this configuration does seem to improve the sensitivity of the SuperRegen Oscillator (SRO). After that the buffer Q5 feeds a single stage BJT [Sallen Key](https://en.wikipedia.org/wiki/Sallen%E2%80%93Key_topology) Filter Q4 , and this provides enough signal level to present to the volume control and then on to the LM386 audio amp. 
+(https://www.qsl.net/l/lu7did/docs/QRPp/Receptor%20Regenerativo.pdf). As Dr Insam states, this configuration does seem to improve the sensitivity of the SuperRegen Oscillator (SRO). After that the buffer Q5 feeds a single stage BJT [Sallen Key](https://en.wikipedia.org/wiki/Sallen%E2%80%93Key_topology) Filter Q4 , and this provides enough signal level to present to the volume control and then on to the LM386 audio amp. The Sallen Key filter has a 3dB frequency of approx 1.5 kHz and a third order rollof.
 
 ![Airband Superregen Receiver Schematic Audio Section]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Audio Section.png)
 
@@ -27,13 +29,15 @@ The detector is Q3 & based on the configuration recommended in Dr Eddie Insam's 
 <details markdown=1><summary markdown="span">Click to expand</summary>
 Squelch circuits can be quite tricky to implement in SRO receivers because the background noise under "no signal" conditions can be almost as loud as wanted signals when a carrier is present. The figure below shows the audio spectrum measured at the emitter of Q5. The blue trace shows the receiver tuned to no signal, and the black trace shows the receiver tuned to a continuously broadcasting VOLMET station. It can be seen that, using the traditional audio squelch method of measuring the received level over the range containing demodulated audio (up to approx 2.5kHz in this design), it would be difficult to discriminate between no signal and wanted signal cases.
  
-![G1OJS Airband Superregen 17-05-24 Audio Spectra]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen 17-05-24 Audio Spectra.png) 
+![G1OJS Airband Superregen 17-05-24 Audio Spectra]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen 17-05-24 Audio Spectra.jpg) 
  
 However, there are several ways around this problem, as described in the subsections below.
 
+Note: the spectrum plot above also shows the strong signal at the quench frequency around 20kHz, even after the Sallen Key filter providing approx 67 dB rejection at this frequency. We can also see how the quench frequency is reduced when there is a carrier present.
+
 ### Channel Quieting Squelch
 This approach is to monitor the "no signal" noise above the highest modulation frequency and watch for the amplitude of this to fall when a carrier is present.
-A good example of this technique using a multiple-feedback narrowband bandpass filter based around an op-amp is described by Dayle Edwards on The RadioBoard [here](https://www.theradioboard.org/forum/solid-state-radios/solid-state-superregenerative-rx-with-squelch). Dayle's implementation uses a narrow bandpass filter to "pick out" the background hiss somewhere above the highest modulated audio frequency and the "quench frequency". It is necessary to use a tight filter to "probe" this "gap" in the frequency spectrum because both the demodulated audio and the signal coming from the residue of the quench operation are very strong and would otherwise make this technique unworkable.
+A good example of this technique using a multiple-feedback narrowband bandpass filter based around an op-amp is described by Dayle Edwards on The RadioBoard [here](https://www.theradioboard.org/forum/solid-state-radios/solid-state-superregenerative-rx-with-squelch). Dayle's implementation uses a narrow bandpass filter to "pick out" the background hiss somewhere above the highest modulated audio frequency and the "quench frequency" (see spectrum plot above). It is necessary to use a tight filter to "probe" this "gap" in the frequency spectrum because both the demodulated audio and the signal coming from the residue of the quench operation are very strong and would otherwise make this technique unworkable.
 
 ### Traditional Audio Level Squelch
 A traditional approach can be used if the demodulated audio is filtered tightly enough to remove the quency signal and as much of the "no signal" SRO noise as possible. This is in some ways the opposite of the Channel Queiting approach (looking for a strong wanted signal rather than quieted unwanted noise). I had some successwith the circuit below, usign two op-amps to do the tight filtering and gain, and an NE555 to act as the squelch trigger & hang time circuit.
