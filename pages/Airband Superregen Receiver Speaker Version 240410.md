@@ -16,7 +16,9 @@ The diagram below shows the entire circuit diagram. The subsections below descri
 ![Airband Superregen Receiver Schematic]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24.png)
 
 ## Superregen Receiver Section
-The Superregen circuit based around Q2 is nothhing new, and follows several designs available on the web. As with all superregenerative oscillators (SROs), it is necessary to precede the circuit by an amplifier stage to avoid radiation of the oscillations produced by the SRO. Q1 performs this function and provides sufficient gain to allow the SRO to detect signals as low as -110 dBm.
+The Superregen circuit based around Q2 is nothhing new, and follows several designs available on the web, however I have used an off-the-shelf ferrite inductor for the emitter lead choke (L1) rather than a home wound coil. L2 is then the only home-made component, and is about 5 turns of 0.9mm ECW air cored & wound on a former with a diameter of about 6mm.
+
+As with all superregenerative oscillators (SROs), it is necessary to precede the circuit by an amplifier stage to avoid radiation of the oscillations produced by the SRO. Q1 performs this function and provides sufficient gain to allow the SRO to detect signals as low as -110 dBm.
 
 ![Airband Superregen Receiver Schematic SRO Section]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 SRO Section.png)
 
