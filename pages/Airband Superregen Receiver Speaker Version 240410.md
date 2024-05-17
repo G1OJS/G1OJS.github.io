@@ -20,8 +20,7 @@ The Superregen circuit based around Q2 is nothhing new, and follows several desi
 
 ![Airband Superregen Receiver Schematic SRO Section]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 SRO Section.png)
 
-The detector is Q3 & based on the configuration recommended in Dr Eddie Insam's paper [Designing Super-Regenerative Receivers]
-(https://www.qsl.net/l/lu7did/docs/QRPp/Receptor%20Regenerativo.pdf). As Dr Insam states, this configuration does seem to improve the sensitivity of the SuperRegen Oscillator (SRO). After that the buffer Q5 feeds a single stage BJT [Sallen Key](https://en.wikipedia.org/wiki/Sallen%E2%80%93Key_topology) Filter Q4 , and this provides enough signal level to present to the volume control and then on to the LM386 audio amp. The Sallen Key filter has a 3dB frequency of approx 1.5 kHz and a third order rollof.
+The detector is Q3 & based on the configuration recommended in Dr Eddie Insam's paper [Designing Superregenerative Receivers](https://www.qsl.net/l/lu7did/docs/QRPp/Receptor%20Regenerativo.pdf). As Dr Insam states, this configuration does seem to improve the sensitivity of the SuperRegen Oscillator (SRO). After that the buffer Q5 feeds a single stage BJT [Sallen Key](https://en.wikipedia.org/wiki/Sallen%E2%80%93Key_topology) Filter Q4 , and this provides enough signal level to present to the volume control and then on to the LM386 audio amp. The Sallen Key filter has a 3dB frequency of approx 1.5 kHz and a third order rollof.
 
 ![Airband Superregen Receiver Schematic Audio Section]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Audio Section.png)
 
