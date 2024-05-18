@@ -64,10 +64,10 @@ Number of components required is about 19 plus two ICs.
 
 ![Airband Superregen Receiver Schematic Audio Squelch Circuit]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Audio Squelch Circuit.png)
 
-### Voice Cadence Squelch
-My own invention as far as I know: monitor the audio spectrum (again tightly filtered as in the approach immediately above) but instead of triggering the squelch based on the *level* of the audio, watch for *changes* in the audio level. This way, the squelch responds to the transition between "no signal" hiss and the quieted audio on reception of an unmodulated carrier, and also responds to the cadence of voice signals (the increase and decrease in volume across speech sounds is itself a signal that can be monitored).
+### Voice Cadence / Syllabic Squelch
+This circuit is an implementation of a type of channel activity squelch. The idea is to monitor the audio spectrum (again tightly filtered as in the approach immediately above) but instead of triggering the squelch based on the *level* of the audio, watch for *changes* in the audio level. This way, the squelch responds to the transition between "no signal" hiss and the quieted audio on reception of an unmodulated carrier, and also responds to the cadence of voice signals (the increase and decrease in volume across speech sounds is itself a signal that can be monitored).
 
-The circuit operates as follows:
+The circuit operates as follows (& I haven't yet seen it done like this!) :
 
 - Q101 amplifies ~50mVpp audio at R22 to ~2Vpp. C103, R103, D102, D103, C104 form a [Greinacher voltage doubler](https://en.wikipedia.org/wiki/Voltage_doubler#Greinacher_circuit) whose output follows the cadence of voice signals. Time constants are ~50mS (~20Hz). 
 - Q102 drives another Greinacher circuit whose output voltage represents the amplitude of the cadence signal (not the amplitude of the audio signal) - this amplitude is zero on constant carrier, constant noise or constant QRM equivalently as there is no variation in the cadence signal. Q102 is chosen to be PNP in order to provide a strong pull up on leading edges of the voice cadence signal.
