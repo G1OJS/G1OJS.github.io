@@ -99,5 +99,5 @@ The audio amplifier uses a simple LM386 circuit, again aiming to keep the overal
 
 ![Airband Superregen Receiver Schematic Audio Amp Circuit]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Audio Amp.png)
 
-## Summary
+# Summary
 This little receiver is very pleasant to use, and has a total component count of about 62 depending on what you count as a "component"!
