@@ -22,7 +22,7 @@ The diagram below shows the entire circuit diagram. The subsections below descri
 
 ![Airband Superregen Receiver Schematic]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24.png)
 
-## Superregen Receiver Section
+## Superregen Receiver Oscillator Section
 The Superregen circuit shown in the diagram below, based around Q2, is nothing new, and follows several designs available on the web. I have used an off-the-shelf ferrite inductor for the emitter lead choke (L1) rather than a home wound coil. L2 is then the only home-made component, and is about 5 turns of 0.9mm ECW air cored & wound on a former with a diameter of about 6mm.
 
 As with all superregenerative oscillators (SROs), it is necessary to precede the circuit by an amplifier stage to avoid radiation of the oscillations produced by the SRO. Q1 performs this function and provides sufficient gain to allow the SRO to detect signals as low as -110 dBm.
@@ -88,11 +88,16 @@ A diode pump ([Greinacher voltage doubler circuit](https://en.wikipedia.org/wiki
 
 The lack of a sharp bandpass filter means that strongly modulated carriers would cause the squelch to *close* on strong audio peaks unless other measures were taken in the squelch circuit design. This is dealt with as follows:
 - Using fast time constants in the diode pump means that any potential unwanted squelch closed periods are not unnecessarily extended in time, and are confined to short periods on voice peaks only.
-- A simple capacitor across the base-emitter junction of Q103 provides a "pulse stretching" or monostable function which maintains the "squelch open" condition across these short voice peaks, and also provides a short (but not too long) "hang time" for the overall squelch action.
+- A simple capacitor across the base-emitter junction of Q103 provides a "pulse stretching" or monostable function which maintains the "squelch open" condition across these short voice peaks, and also provides a short (but not too long) "hang time" for the overall squelch action. This capacitor doesn't significantly affect the speed with which the squelch opens, because in this case it dischcarges rapildy through the low resistance of the conducting JFET rather than charging slowly through R103 as the squelch closes.
 
 Note - with R103 at 470k, Q103 doesn't fully saturate when the squelch is closed. This allows a small level of audio signal to pass the closed squelch, which can provide useful reassurance that the radio isn't missing any wanted signals. If this is not desired, change this resistor to about 100k and, to keep the "hang time" unchanged, change C104 to 22u.
 
 Number of components required is about 13.
 
- 
+## Audio Amplifier Section
+The audio amplifier uses a simple LM386 circuit, again aiming to keep the overall component count low.
 
+![Airband Superregen Receiver Schematic Audio Amp Circuit]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen With Squelch 17-05-24 Audio Amp.png)
+
+## Summary
+This little receiver is very pleasant to use, and has a total component count of about 62 depending on what you count as a "component"!
