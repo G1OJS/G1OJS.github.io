@@ -52,6 +52,8 @@ Note: the spectrum plot above also shows the strong signal at the quench frequen
 This approach is to monitor the "no signal" noise above the highest modulation frequency and watch for the amplitude of this to fall when a carrier is present.
 A good example of this technique using a multiple-feedback narrowband bandpass filter based around an op-amp is described by Dayle Edwards on The RadioBoard [here](https://www.theradioboard.org/forum/solid-state-radios/solid-state-superregenerative-rx-with-squelch). Dayle's implementation uses a narrow bandpass filter to "pick out" the SRO noise somewhere between the highest modulated audio frequency and the "quench frequency" (see spectrum plot above). It is necessary to use a tight filter to "probe" this "gap" in the frequency spectrum because both the demodulated audio and the signal coming from the residue of the quench operation are very strong and would otherwise make this technique unworkable. I also found that this approach was difficult to implement with a low quench frequency - which I wanted for better selectivity - because the "gap" between the audio and the quench frequency was not wide enough to allow a filter to pick out the wanted SRO noise to monitor. I might come back to investigate this again.
 
+This is a good approach if it can be made to work; the plot above shows that SRO noise falls by about 10dB in the kHz region when a carrier is present, and this change is easily detectable.
+
 Number of components required is about 16 plus one IC.
 
 ### Traditional Audio Level Squelch
