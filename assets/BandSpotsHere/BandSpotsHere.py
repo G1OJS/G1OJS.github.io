@@ -97,9 +97,10 @@ def savedicts():
   print("Saving "+str(len(spot_pairs))+ " spot pairs for "+str(len(active_tx))+ " active calls on "+band+" in dxcc "  + home_dxcc)
   with open('spots.pkl', 'wb') as f:
     pickle.dump(spot_pairs, f)
+    f.close()
   with open('active.pkl', 'wb') as f:
     pickle.dump(active_tx, f)
-  
+    f.close()
 
 # Main ########
 
@@ -122,12 +123,14 @@ active_tx={}
 try:
   with open('spots.pkl', 'rb') as f:
     spot_pairs = pickle.load(f)
+    f.close()
 except:
   pass
 
 try:
   with open('active.pkl', 'rb') as f:
     active_tx = pickle.load(f)
+    f.close()
 except:
   pass
 

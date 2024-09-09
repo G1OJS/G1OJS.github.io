@@ -52,13 +52,23 @@ while True:
   try:
     with open('spots.pkl', 'rb') as f:
       spot_pairs = pickle.load(f) 
+      f.close()
   except:
     pass
   try:
     with open('active.pkl', 'rb') as f:
       active_tx = pickle.load(f)
+      f.close()
   except:
     pass
 
   printsummary(False)
   time.sleep(15)
+
+
+
+
+
+
+
+
