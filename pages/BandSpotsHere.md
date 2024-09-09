@@ -36,6 +36,8 @@ I've listed the Python code below. It's not a polished installable product yet, 
 - math
 - maidenhead (this isn't actually used in the display yet, but is in the spot gathering code)
 
+The parameters that specify the band of interest and the "home" DXCC are at the top of the "main" block around line 105 in the spot-gathering code.
+
 ## [The spot-gathering code]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHere.py)
 Click the title above to download the code.
 ```Python
@@ -45,12 +47,6 @@ import math
 import datetime
 import time
 import maidenhead as mh
-
-def hhmmFromMins(Mins):
-  return str(int(Mins/60)).zfill(2)+str(int(Mins)%60).zfill(2)
-
-def minsFromHHMM(HHMM):
-  return 60*int(HHMM[0:2])+int(HHMM[2:5])
 
 def MHtoDB(Square1, Square2):
   d2r=3.1415926/180.0
