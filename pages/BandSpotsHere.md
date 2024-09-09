@@ -187,7 +187,7 @@ mqttc.loop_forever()
 
 ```
 
-## [The Display Code]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHere.py)
+## [The Display Code]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereDisplay.py)
 Click the title above to download the code.
 ```Python
 import pickle
