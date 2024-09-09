@@ -109,9 +109,12 @@ def savedicts():
 
 # Main ########
 
+####### Edit this part for your requirements: #####
 band="2m"
 home_dxcc="223"
 stale_mins=15
+###################################################
+
 lastsave=datetime.datetime.now()
 
 mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
