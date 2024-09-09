@@ -35,7 +35,7 @@ I've listed the Python code below. It's not a polished installable product yet, 
 - math
 - maidenhead (this isn't actually used in the display yet, but is in the spot gathering code)
 
-## The spot-gathering code
+## [The spot-gathering code]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHere.py)
 ```Python
 import paho.mqtt.client as mqtt
 import pickle
@@ -186,7 +186,7 @@ mqttc.loop_forever()
 
 ```
 
-## The Display Code
+## [The Display Code]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHere.py)
 ```Python
 import pickle
 import os
