@@ -23,7 +23,7 @@ It works like this:
 
 The screenshot below shows this working on the 2m band (at the same time as the PSKR screenshot above). It's quite a sparse set of data, but it's meant for relatively empty bands like 2m. It's actually a great way to monitor band activity whilst doing something else, even with the radio off.
 
-![LiveSpotsExample]({{ site.baseurl }}/assets/img/LiveSpotsExample.JPG)
+![LiveSpotsExample]({{ site.baseurl }}/assets/img/BandSpotsHereExample.jfif)
 
 I've listed the Python code below. It's not a polished installable product yet, just Python code to play with. You need to run both bits of Python at the same time (one gathers spots via MQTT and the other displays the analysis of them). There's probably a much better way to do this using threading within one Python module but this was the easiest and most convenient for me. I run the Python scripts from two .bat files with the same names as the scripts. You'll need a fair few Python libraries that you can easily install using Pip Install:
 - pickle
