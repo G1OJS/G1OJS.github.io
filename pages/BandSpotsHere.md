@@ -17,4 +17,4 @@ It works like this:
 
 The screenshot below shows this working on the 2m band. It's quite a sparse set of data, but it's meant for relatively empty bands like 2m. It's actually a great way to monitor band activity whilst doing something else, even with the radio off.
 
-
+![LiveSpotsHereExample]({{ site.baseurl }}/assets/img/Livespots example.JPG)
