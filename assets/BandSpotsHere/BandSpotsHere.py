@@ -5,12 +5,6 @@ import datetime
 import time
 import maidenhead as mh
 
-def hhmmFromMins(Mins):
-  return str(int(Mins/60)).zfill(2)+str(int(Mins)%60).zfill(2)
-
-def minsFromHHMM(HHMM):
-  return 60*int(HHMM[0:2])+int(HHMM[2:5])
-
 def MHtoDB(Square1, Square2):
   d2r=3.1415926/180.0
 # Get lat/long from squares
