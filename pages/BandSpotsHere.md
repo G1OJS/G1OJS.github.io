@@ -3,6 +3,7 @@ layout: default
 title: "BandSpotsHere - How am I doing relative to other stations in my DXCC?"
 permalink: /BandSpotsHere/
 ---
+# BandSpotsHere - How am I doing relative to other stations in my DXCC?
 
 ## Introduction 
 
@@ -149,9 +150,12 @@ def savedicts():
 
 # Main ########
 
+####### Edit this part for your requirements: #####
 band="2m"
 home_dxcc="223"
 stale_mins=15
+###################################################
+
 lastsave=datetime.datetime.now()
 
 mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
