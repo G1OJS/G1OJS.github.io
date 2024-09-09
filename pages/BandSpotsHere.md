@@ -9,7 +9,7 @@ permalink: /BandSpotsHere/
 
 NOTE - this whole page assumes a lot of knowledge about ham radio, the FT8 mode and [Pskreporter.info](https://pskreporter.info/)
 
-I’ve been wondering for a while if I struggle to receive FT8 on 2m even whilst I can see my Tx is doing well on Pskreporter. If I look at Pskreporter's map of spots of "Country of Callsign G1OJS", I can get some idea. But it's difficult to see if the other spots are from one strong operator with a large beam receiving lots of rx reports from Europe, or if there are quite a few other operators making getting several rx spots each, and how many DX calls this unknown number of active 2m stations in my country are receiving. For example, see the screenshot below:
+I’ve been wondering for a while if I struggle to receive FT8 on 2m even whilst I can see my Tx is doing well on [Pskreporter](https://pskreporter.info/) If I look at Pskreporter's map of spots of "Country of Callsign G1OJS", I can get some idea. But it's difficult to see if the other spots are from one strong operator with a large beam receiving lots of rx reports from Europe, or if there are quite a few other operators making getting several rx spots each, and how many DX calls this unknown number of active 2m stations in my country are receiving. For example, see the screenshot below:
 
 ![PSKRExample]({{ site.baseurl }}/assets/img/PSKRExample.JPG)
 
@@ -37,6 +37,8 @@ I've listed the Python code below. It's not a polished installable product yet, 
 - maidenhead (this isn't actually used in the display yet, but is in the spot gathering code)
 
 The parameters that specify the band of interest and the "home" DXCC are at the top of the "main" block around line 105 in the spot-gathering code.
+
+Development ideas for the future include a GUI of some kind (or at least hotkeys) and using Maidenhead square(s) as an alternative to DXCC to specify the "neighbours" you want to watch.
 
 ## [The spot-gathering code]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHere.py)
 Click the title above to download the code.
