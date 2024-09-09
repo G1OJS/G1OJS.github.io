@@ -6,13 +6,13 @@ permalink: /BandSpotsHere/
 
 ## Introduction 
 
-NOTE - this whole page assumes a lot of knowledge about ham radio, the FT8 mode and Pskreporter.info
+NOTE - this whole page assumes a lot of knowledge about ham radio, the FT8 mode and [Pskreporter.info](https://pskreporter.info/)
 
 I’ve been wondering for a while if I struggle to receive FT8 on 2m even whilst I can see my Tx is doing well on Pskreporter. If I look at Pskreporter's map of spots of "Country of Callsign G1OJS", I can get some idea. But it's difficult to see if the other spots are from one strong operator with a large beam receiving lots of rx reports from Europe, or if there are quite a few other operators making getting several rx spots each, and how many DX calls this unknown number of active 2m stations in my country are receiving. For example, see the screenshot below:
 
 ![PSKRExample]({{ site.baseurl }}/assets/img/PSKRExample.JPG)
 
-So I've made a little Python thing to get Pskreporter live data via MQTT & give an overview of who’s active and who’s receiving who on 2m (it can work for any band but 2m is why I made it). 
+So I've made a little Python thing to get [Pskreporter live data via MQTT](https://groups.io/g/pskr-mqtt) & give an overview of who’s active and who’s receiving who on 2m (it can work for any band but 2m is why I made it). 
 
 It works like this: 
 - make a list of all callsigns **from the specified DXCC** spotted on the specified band. Call these the Active Calls.
