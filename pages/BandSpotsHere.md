@@ -41,7 +41,9 @@ I've listed the Python code below. It's not a polished installable product yet, 
 - math
 - maidenhead (this isn't actually used in the display yet, but is in the spot gathering code)
 
-The parameters that specify the band of interest and the "home" DXCC are at the top of the "main" block around line 105 in the spot-gathering code.
+The parameters that specify the band of interest and the "home" DXCC are at the top of the "main" block around line 150 in the spot-gathering code; you'll need to edit these to suit your area of interest before running.
+
+The spot-gathering code saves two 'Pickle' files in the same directory as the code for the display code to use. If you stop the code and change the band or home DXCC, please delete these files or you'll have a mix of spots from the previous and new places and won't be able to tell them apart until they have 'expired' (see 'stale_mins'). Actually you can delete these files at any time should you want to manually reset the spots or active list to empty. **Known issue:** the code that calls the 'clear out old spots & calls' part currently lives in the loop that activates if a spot is received, which means that if no spots are received, spots older than the 'stale_mins' specification will still display.
 
 Development ideas for the future include a GUI of some kind (or at least hotkeys) and using Maidenhead square(s) as an alternative to DXCC to specify the "neighbours" you want to watch.
 
