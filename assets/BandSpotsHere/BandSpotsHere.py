@@ -58,14 +58,6 @@ def on_message(client, userdata, msg):
   # if the *transmitter* is in the home_dxcc (i.e. counts as "active"), make sure its in the active tx list
   if (sp["sa"]==home_dxcc) and (sp["sc"] not in active_tx):
     active_tx[sp["sc"]]=tspot
-
-  # flush out active_tx calls not seen for a while
-  for txc in active_tx:
-    tnow=datetime.datetime.now()
-    ts=active_tx[txc]
-    td=int((tnow-ts).total_seconds()/60)
-    if(td>stale_mins):
-      active_tx.pop(txc)
   
   # if either station in the spot is in the active list (home_dxcc and recent), record the spot pair with details
   if (sp["sc"] in active_tx) or (sp["rc"] in active_tx):
