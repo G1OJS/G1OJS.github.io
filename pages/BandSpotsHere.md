@@ -6,7 +6,7 @@ permalink: /BandSpotsHere/
 # BandSpotsHere - How am I doing relative to other stations in my DXCC?
 
 ## TL;DR
-A ham-radio related utility that uses the [Pskreporter] [MQTT](https://mqtt.org/) feed to display transmit and receive statistics for stations currently active in a specified country ([DXCC](https://www.electronics-notes.com/articles/ham_radio/awards/dxcc-ham-radio-operating-award.php) code).
+A [ham radio](https://en.wikipedia.org/wiki/Amateur_radio) related utility that uses the [Pskreporter] [MQTT](https://mqtt.org/) feed to display transmit and receive statistics for stations currently active on [FT8](https://www.sigidwiki.com/wiki/FT8) in a specified country ([DXCC](https://www.electronics-notes.com/articles/ham_radio/awards/dxcc-ham-radio-operating-award.php) code).
 
 ## Notes
 At the time of writing (Sep 2024), I've been working on this utility for about a week; hence, this page is really to publish the idea and allow people who know a bit about coding to try it out. As I develop it further, I'll add some install instructions and see what I can do to make that as simple as possible. In the meantime: download & install Python, open a command window and type "pip install " + each of the libraries mentioned below, download the two bits of python code from this page, and the two Windows batch files to run them, and run both batch files.
