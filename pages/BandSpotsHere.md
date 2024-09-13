@@ -33,7 +33,7 @@ The screenshot below shows this working on the 2m band (at the same time as the 
 
 ## Installing it
 1. Get Python.These scripts are written in Python and you'll need to install that if you haven't got it yet. You can download it on the [Python](https://www.python.org/) site.
-2. The code refers to several Python libraries that need to be seperately installed. These are:
+2. The code refers to several Python libraries that need to be seperately installed. The easiest way to do this is to open a command window and type "pip install" + the name of each of the libraries in turn. The liraries are:
    - pickle
    - os
    - datetime
@@ -42,7 +42,7 @@ The screenshot below shows this working on the 2m band (at the same time as the 
    - paho.mqtt.client
    - math
    - maidenhead (this isn't actually used in the display yet, but is in the spot gathering code)
-The easiest way to install these is to open a command window and type "pip install" + the name of each of the libraries in turn
+
 3. Download the Python and the two Windows batch files below. Put all 4 files in a convenient folder, and run both batch files by double clicking them.
    - [BandSpotsHere.py]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHere.py)
    - [BandSpotsHereDisplay.py]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereDisplay.py)
@@ -51,7 +51,7 @@ The easiest way to install these is to open a command window and type "pip insta
   
 You need to run both batch files at the same time (start either first) because one gathers spots via MQTT and the other displays the analysis of them. There's probably a much better way to do this using threading within one Python module but this was the easiest and most convenient for me. 
 
-The parameters that specify the band of interest and the "home" DXCC are at the top of the "main" block around line 150 in the spot-gathering code; you'll need to edit these to suit your area of interest before running.
+The parameters that specify the band of interest and the "home" DXCC are at the top of the "main" block around line 150 in the spot-gathering code ('BandSpotsHere.py'); you'll need to edit these to suit your area of interest before running.
 
 The spot-gathering code saves two 'Pickle' files in the same directory as the code for the display code to use. If you stop the code and change the band or home DXCC, please delete these files or you'll have a mix of spots from the previous and new places and won't be able to tell them apart until they have 'expired' (see 'stale_mins'). Actually you can delete these files at any time should you want to manually reset the spots or active list to empty. **Known issue:** the code that calls the 'clear out old spots & calls' part currently lives in the loop that activates if a spot is received, which means that if no spots are received, spots older than the 'stale_mins' specification will still display.
 
