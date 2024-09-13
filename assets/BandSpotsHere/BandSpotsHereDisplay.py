@@ -19,7 +19,7 @@ def printsummary(bare):
   active_calls=""
   for active_call in active_tx:
     active_calls+=active_call+" "
-  print(Fore.WHITE+Back.BLUE+str(len(active_tx))+" active Tx calls: "+active_calls)
+  print(Style.BRIGHT+Fore.WHITE+Back.BLUE+str(len(active_tx))+" active Tx calls: "+active_calls)
   print()
   # for each active call ...
   for active_call in active_tx:
@@ -37,10 +37,10 @@ def printsummary(bare):
     nw=datetime.datetime.now()
     t=active_tx[active_call]
     td=int((nw-t).total_seconds()/60)
-    print(Fore.WHITE+Back.BLUE+active_call + " ("+str(td)+" mins)" + Fore.GREEN+ " Spotted by "+str(len(Spotted_by)) +Fore.YELLOW+ " Spotted "+str(len(Spotted)))
+    print(Style.BRIGHT+Fore.WHITE+Back.BLUE+active_call + " ("+str(td)+" mins)" + Fore.GREEN+ " Spotted by "+str(len(Spotted_by)) +Fore.YELLOW+ " Spotted "+str(len(Spotted)))
     if not bare:
-      print(Fore.GREEN+Back.BLUE+" ".join(Spotted_by))
-      print(Fore.YELLOW+Back.BLUE+" ".join(Spotted))
+      print(Style.BRIGHT+Fore.GREEN+Back.BLUE+" ".join(Spotted_by))
+      print(Style.BRIGHT+Fore.YELLOW+Back.BLUE+" ".join(Spotted))
       print()
 
       
@@ -52,13 +52,13 @@ while True:
   try:
     with open('spots.pkl', 'rb') as f:
       spot_pairs = pickle.load(f) 
-      f.close()
+    f.close()
   except:
     pass
   try:
     with open('active.pkl', 'rb') as f:
       active_tx = pickle.load(f)
-      f.close()
+    f.close()
   except:
     pass
 
