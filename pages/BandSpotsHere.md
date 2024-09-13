@@ -42,8 +42,8 @@ The screenshot below shows this working on the 2m band (at the same time as the 
    - paho.mqtt.client
    - math
    - maidenhead (this isn't actually used in the display yet, but is in the spot gathering code)
-   The easiest way to install these is to open a command window and type "pip install" + the name of each of the libraries in turn
-3. download the two bits of Python code from this page and the two Windows batch files (unless you want to make your own). Put all 4 files in a convenient folder, and run both batch files.
+The easiest way to install these is to open a command window and type "pip install" + the name of each of the libraries in turn
+3. Download the Python and the two Windows batch files below. Put all 4 files in a convenient folder, and run both batch files by double clicking them.
    - [BandSpotsHere.py]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHere.py)
    - [BandSpotsHereDisplay.py]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereDisplay.py)
    - [BandSpotsHere.bat]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereDisplay.bat)
