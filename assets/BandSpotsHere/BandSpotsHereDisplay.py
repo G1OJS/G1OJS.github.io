@@ -4,7 +4,6 @@ import datetime
 import time
 from colorama import init, Fore, Back, Style
 
-
 def printsummary(bare):
 
   init(convert=True)
@@ -21,6 +20,7 @@ def printsummary(bare):
     active_calls+=active_call+" "
   print(Style.BRIGHT+Fore.WHITE+Back.BLUE+str(len(active_tx))+" active Tx calls: "+active_calls)
   print()
+
   # for each active call ...
   for active_call in active_tx:
 
@@ -49,16 +49,16 @@ spot_pairs={}
 active_tx={}
 
 while True:
+
   try:
     with open('spots.pkl', 'rb') as f:
-      spot_pairs = pickle.load(f) 
-    f.close()
+      spot_pairs = pickle.load(f)
   except:
     pass
+
   try:
     with open('active.pkl', 'rb') as f:
       active_tx = pickle.load(f)
-    f.close()
   except:
     pass
 
