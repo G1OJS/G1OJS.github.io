@@ -1,3 +1,6 @@
 @mode 90,15
-@Python "BandSpotsHere.py"
+
+@REM Specify the Band, DXCC code and max age of spots (in mins) below
+@Python "BandSpotsHere.py"  2m 223 15
+
 pause

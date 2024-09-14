@@ -4,6 +4,7 @@ import math
 import datetime
 import time
 import maidenhead as mh
+import sys
 
 def MHtoDB(Square1, Square2):
   d2r=3.1415926/180.0
@@ -96,11 +97,11 @@ def savedicts():
 
 # Main ########
 
-####### Edit this part for your requirements: #####
-band="2m"
-home_dxcc="223"
-stale_mins=15
-###################################################
+band=sys.argv[1]
+home_dxcc=sys.argv[2]
+stale_mins=int(sys.argv[3])
+
+print("Gathering spots for DXCC="+home_dxcc+" on "+band+" fresher than "+str(stale_mins)+" mins")
 
 lastsave=datetime.datetime.now()
 
