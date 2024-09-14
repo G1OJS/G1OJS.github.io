@@ -4,7 +4,7 @@ import datetime
 import time
 from colorama import init, Fore, Back, Style
 
-def printsummary(bare):
+def printsummary():
 
   os.system('color 1f')
   os.system('cls')
@@ -45,10 +45,11 @@ def printsummary(bare):
     t=active_tx[active_call]
     td=int((nw-t).total_seconds()/60)
     print(Style.BRIGHT+Fore.WHITE+Back.BLUE+active_call + " ("+str(td)+" mins)" + Fore.GREEN+ " Spotted by "+str(len(Spotted_by)) +Fore.YELLOW+ " Spotted "+str(len(Spotted)))
-    if not bare:
-      print(Style.BRIGHT+Fore.GREEN+Back.BLUE+" ".join(Spotted_by))
-      print(Style.BRIGHT+Fore.YELLOW+Back.BLUE+" ".join(Spotted))
-      print()
+    for i in range(0, len(Spotted_by), 10):
+      print(Style.BRIGHT+Fore.GREEN+Back.BLUE+" ".join(Spotted_by[i:i + 10]))
+    for i in range(0, len(Spotted), 10):
+      print(Style.BRIGHT+Fore.YELLOW+Back.BLUE+" ".join(Spotted[i:i + 10]))
+    print()
 
       
 # Main ##############
@@ -71,7 +72,7 @@ while True:
   except:
     pass
 
-  printsummary(False)
+  printsummary()
   time.sleep(15)
 
 
