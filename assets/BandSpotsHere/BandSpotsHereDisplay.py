@@ -6,7 +6,6 @@ from colorama import init, Fore, Back, Style
 
 def printsummary(bare):
 
-  init(convert=True)
   os.system('color 1f')
   os.system('cls')
 
@@ -15,10 +14,18 @@ def printsummary(bare):
   #    active_tx[call]=tspot
 
   # list the active calls, count them and print them
-  active_calls=""
+  active_calls_even=[]
+  active_calls_odd=[]  
   for active_call in active_tx:
-    active_calls+=active_call+" "
-  print(Style.BRIGHT+Fore.WHITE+Back.BLUE+str(len(active_tx))+" active Tx calls: "+active_calls)
+    tspot=active_tx[active_call].second %30
+    if(int(tspot/15)==0):
+      active_calls_even.append(active_call)
+    else:
+      active_calls_odd.append(active_call)
+  nwUTCstr=datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+  print(Style.BRIGHT+Fore.CYAN+Back.BLUE+nwUTCstr)
+  print(Style.BRIGHT+Fore.WHITE+Back.BLUE+str(len(active_calls_even))+" active Tx calls even/1st: "+" ".join(active_calls_even))
+  print(Style.BRIGHT+Fore.WHITE+Back.BLUE+str(len(active_calls_odd))+" active Tx calls odd/2nd:  "+" ".join(active_calls_odd))
   print()
 
   # for each active call ...
@@ -47,6 +54,8 @@ def printsummary(bare):
 # Main ##############
 spot_pairs={}
 active_tx={}
+
+init(convert=True)
 
 while True:
 

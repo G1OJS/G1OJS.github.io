@@ -38,7 +38,8 @@ def msg_to_spot_dict(msg):
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, reason_code, properties):
-    print(f"Connected with result code {reason_code}")
+    nwstr=datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+    print(nwstr+": "+ f"connected with result code {reason_code}")
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
 
@@ -86,7 +87,8 @@ def savedicts():
     del spot_pairs[pair]
   # save the cleaned dictionaries
   lastsave=tnow
-  print("Saving "+str(len(spot_pairs))+ " spot pairs for "+str(len(active_tx))+ " active calls on "+band+" in dxcc "  + home_dxcc)
+  nwUTCstr=datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+  print(nwUTCstr+": saving "+str(len(spot_pairs))+ " spot pairs for "+str(len(active_tx))+ " active calls on "+band+" in dxcc "  + home_dxcc)
   with open('spots.pkl', 'wb') as f:
     pickle.dump(spot_pairs, f)
   with open('active.pkl', 'wb') as f:

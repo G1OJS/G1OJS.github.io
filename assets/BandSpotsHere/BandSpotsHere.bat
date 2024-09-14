@@ -1,3 +1,3 @@
-@mode 60,15
+@mode 90,15
 @Python "BandSpotsHere.py"
 pause

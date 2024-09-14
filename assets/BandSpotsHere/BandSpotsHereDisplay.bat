@@ -1,3 +1,3 @@
-@mode 60,50
+@mode 90,40
 @Python "BandSpotsHereDisplay.py"
 pause
