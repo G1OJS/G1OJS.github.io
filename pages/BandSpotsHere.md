@@ -16,7 +16,7 @@ Also, this whole page assumes a lot of knowledge about ham radio, the FT8 mode a
 ## Introduction 
 I’ve been wondering for a while if I struggle to receive FT8 on 2m even whilst I can see my Tx is doing well on [Pskreporter](https://pskreporter.info/) If I look at Pskreporter's map of spots of "Country of Callsign G1OJS", I can get some idea. But it's difficult to see if the other spots are from one strong operator with a large beam receiving lots of rx reports from Europe, or if there are quite a few other operators making getting several rx spots each, and how many DX calls this unknown number of active 2m stations in my country are receiving. For example, see the screenshot below:
 
-![PSKRExample]({{ site.baseurl }}/assets/img/PSKRExample.JPG)
+![PSKRExample]({{ site.baseurl }}/assets/img/PSKReporter.JPG)
 
 So I've made a little Python thing to get [Pskreporter live data via MQTT](https://groups.io/g/pskr-mqtt) & give an overview of who’s active and who’s receiving who on 2m (it can work for any band but 2m is why I made it). 
 
@@ -29,7 +29,7 @@ It works like this:
 
 The screenshot below shows this working on the 2m band (at the same time as the PSKR screenshot above). It's quite a sparse set of data, but it's meant for relatively empty bands like 2m. It's actually a great way to monitor band activity whilst doing something else, even with the radio off.
 
-![LiveSpotsExample]({{ site.baseurl }}/assets/img/BandSpotsHereExample.jfif)
+![BandSpotsHere]({{ site.baseurl }}/assets/img/BandSpotsHere.JPG)
 
 ## Installing it
 1. Get Python.These scripts are written in Python and you'll need to install that if you haven't got it yet. You can download it on the [Python](https://www.python.org/) site.
