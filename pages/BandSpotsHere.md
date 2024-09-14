@@ -42,6 +42,7 @@ The screenshot below shows this working on the 2m band (at the same time as the 
    - paho.mqtt.client
    - math
    - maidenhead (this isn't actually used in the display yet, but is in the spot gathering code)
+   - sys
 
 3. Download the Python and the two Windows batch files below. Put all 4 files in a convenient folder, and run both batch files by double clicking them.
    - [BandSpotsHere.py]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHere.py)
@@ -51,7 +52,7 @@ The screenshot below shows this working on the 2m band (at the same time as the 
   
 You need to run both batch files at the same time (start either first) because one gathers spots via MQTT and the other displays the analysis of them. There's probably a much better way to do this using threading within one Python module but this was the easiest and most convenient for me. 
 
-The parameters that specify the band of interest and the "home" DXCC are at the top of the "main" block around line 150 in the spot-gathering code ('BandSpotsHere.py'); you'll need to edit these to suit your area of interest before running.
+The parameters that specify the band of interest and the "home" DXCC are in the first bat file ('BandSpotsHere.bat'); you'll need to edit these to suit your area of interest before running.
 
 The spot-gathering code saves two 'Pickle' files in the same directory as the code for the display code to use. If you stop the code and change the band or home DXCC, please delete these files or you'll have a mix of spots from the previous and new places and won't be able to tell them apart until they have 'expired' (see 'stale_mins'). Actually you can delete these files at any time should you want to manually reset the spots or active list to empty. **Known issue:** the code that calls the 'clear out old spots & calls' part currently lives in the loop that activates if a spot is received, which means that if no spots are received, spots older than the 'stale_mins' specification will still display.
 
