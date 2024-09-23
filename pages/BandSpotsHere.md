@@ -44,11 +44,7 @@ The screenshot below shows this working on the 2m band (at the same time as the 
    - maidenhead (this isn't actually used in the display yet, but is in the spot gathering code)
    - sys
 
-3. Download the Python and the two Windows batch files below. Put all 4 files in a convenient folder, and run both batch files by double clicking them.
-   - [BandSpotsHere.py]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHere.py)
-   - [BandSpotsHereDisplay.py]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereDisplay.py)
-   - [BandSpotsHere.bat]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereDisplay.bat)
-   - [BandSpotsHereDisplay.bat]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereDisplay.bat)
+3. Download all 4 files from [here]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHere/Python V1). Put all 4 files in a convenient folder, and run both batch files by double clicking them.
   
 You need to run both batch files at the same time (start either first) because one gathers spots via MQTT and the other displays the analysis of them. There's probably a much better way to do this using threading within one Python module but this was the easiest and most convenient for me. 
 
