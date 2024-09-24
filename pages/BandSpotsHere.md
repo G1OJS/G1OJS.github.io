@@ -6,7 +6,7 @@ permalink: /BandSpotsHere/
 # BandSpotsHere - How am I doing relative to other stations in my DXCC?
 
 ## TL;DR
-A [ham radio](https://en.wikipedia.org/wiki/Amateur_radio) related utility that uses the [Pskreporter](https://pskreporter.info/) [MQTT](https://mqtt.org/) feed to display transmit and receive statistics for stations currently active on [FT8](https://www.sigidwiki.com/wiki/FT8) in specified country ([DXCC](https://www.electronics-notes.com/articles/ham_radio/awards/dxcc-ham-radio-operating-award.php) codes).
+A [ham radio](https://en.wikipedia.org/wiki/Amateur_radio) related utility that uses the [Pskreporter](https://pskreporter.info/) [MQTT](https://mqtt.org/) feed to display transmit and receive statistics for stations currently active on [FT8](https://www.sigidwiki.com/wiki/FT8) in specified country or group of countries ([DXCC](https://www.electronics-notes.com/articles/ham_radio/awards/dxcc-ham-radio-operating-award.php) codes).
 
 ## Notes
 At the time of writing (Sep 2024), I've been working on this utility for about a week; hence, this page is really to publish the idea and allow people who know a bit about coding to try it out.
@@ -46,7 +46,7 @@ The screenshot below shows this working on the 2m band (at the same time as the 
 3. Download this zip file and extract both files into a convenient folder, and run the batch file by double clicking it.
    - [Python V1.1.1.zip]({{ site.baseurl }}/assets/BandSpotsHere/Python V1.1.1.zip)
 
-The parameters that specify the bands of interest and the "home" DXCCs are in the bat file ('BandSpotsHere.bat'); you'll need to edit these to suit your area of interest before running.
+The parameters that specify the bands of interest and the "home" DXCCs are in the bat file 'BandSpotsHere.bat'; you'll need to edit these to suit your area of interest before running.
 
 Once the script is running, the following hotkeys are available:
 - b cycles through the bands speccified in the bat file
