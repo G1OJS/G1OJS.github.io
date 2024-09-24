@@ -21,11 +21,11 @@ I’ve been wondering for a while if I struggle to receive FT8 on 2m even whilst
 So I've made a little Python thing to get [Pskreporter live data via MQTT](https://groups.io/g/pskr-mqtt) & give an overview of who’s active and who’s receiving who on 2m (it can work for any band but 2m is why I made it). 
 
 It works like this: 
-- make a list of all callsigns **from the specified DXCC** spotted on the specified band. Call these the Active Calls.
-- make a list of all Pskreporter spots where at least one end of the spot is in the specified DXCC and band.
+- make a list of all callsigns **from the specified DXCCs** spotted or submitting spots on the specified band. Call these the Active Calls.
+- categorise these callsigns as Tx only, Tx and Rx, or Rx only
 - use these lists to report, for each Active Call:
-  - how many DX calls have reported spotting this Active Call (& list them)
-  - how many DX calls this Active Call has spotted (& list them)
+  - the DX calls (from anywhere) that have reported spotting this Active Call
+  - the DX calls (from anywhere) that this Active Call has spotted
 
 The screenshot below shows this working on the 2m band (at the same time as the PSKR screenshot above). It's quite a sparse set of data, but it's meant for relatively empty bands like 2m. It's actually a great way to monitor band activity whilst doing something else, even with the radio off.
 
@@ -47,6 +47,10 @@ The screenshot below shows this working on the 2m band (at the same time as the 
    - [Python V1.zip]({{ site.baseurl }}/assets/BandSpotsHere/Python V1.1.1.zip)
 
 The parameters that specify the bands of interest and the "home" DXCCs are in the bat file ('BandSpotsHere.bat'); you'll need to edit these to suit your area of interest before running.
+
+Once the script is running, the following hotkeys are available:
+- b cycles through the bands speccified in the bat file
+- d toggles "detail" on and off
 
 
 
