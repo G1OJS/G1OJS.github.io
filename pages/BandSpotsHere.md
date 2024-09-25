@@ -16,8 +16,8 @@ Also, this whole page assumes a lot of knowledge about ham radio, the FT8 mode a
 ## Introduction 
 I’ve been wondering for a while if I struggle to receive FT8 on 2m even whilst I can see my Tx is doing well on [Pskreporter](https://pskreporter.info/) If I look at Pskreporter's map of spots of "Country of Callsign G1OJS", I can get some idea. But it's difficult to see if the other spots are from one strong operator with a large beam receiving lots of rx reports from Europe, or if there are quite a few other operators making getting several rx spots each, and how many DX calls this unknown number of active 2m stations in my country are receiving. For example, see the screenshot below:
 
-<html>>
-<img src="https://g1ojs.github.io/assets/img/BandSpotsHereV1.1.2%20PSKR.JPG">
+<html>
+<img src="https://g1ojs.github.io/assets/img/BandSpotsHereV1.1.2%20PSKR.JPG"><img>
 </html>
 
 ![PSKRExample]({{ site.baseurl }}/assets/img/BandSpotsHereV1.1.2 PSKR.JPG)
