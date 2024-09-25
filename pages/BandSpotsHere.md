@@ -44,7 +44,7 @@ The screenshot below shows this working on the 2m band (at the same time as the 
    - sys
 
 3. Download this zip file and extract both files into a convenient folder, and run the batch file by double clicking it.
-   - [Python V1.1.1.zip]({{ site.baseurl }}/assets/BandSpotsHere/Python V1.1.1.zip)
+   - [Python V1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/Python V1.1.2.zip)
 
 The parameters that specify the bands of interest and the "home" DXCCs are in the bat file 'BandSpotsHere.bat'; you'll need to edit these to suit your area of interest before running.
 
