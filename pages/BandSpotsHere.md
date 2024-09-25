@@ -31,8 +31,19 @@ The screenshot below shows this working on the 2m band (at the same time as the 
 
 ![BandSpotsHere]({{ site.baseurl }}/assets/img/BandSpotsHereV1.1.1.JPG)
 
-## Installing it
-1. Get Python.These scripts are written in Python and you'll need to install that if you haven't got it yet. You can download it on the [Python](https://www.python.org/) site.
+The software can either be run in Python or as an executable file.
+
+## Usage
+Whichever varsion you install, the parameters that specify the bands of interest and the "home" DXCCs are in the bat file 'BandSpotsHere.bat'; you'll need to edit these to suit your area of interest before running.
+
+Once the program is running, the following hotkeys are available:
+- b cycles through the bands speccified in the bat file
+- d toggles "detail" on and off
+
+Note that the program doesn't know about spots received from PSKR MQTT before the program was launched.
+
+## Installing the Python Version
+1. Get Python if you don't already have it. You can download it on the [Python](https://www.python.org/) site.
 2. The code refers to several Python libraries that need to be seperately installed. The easiest way to do this is to open a command window and type "pip install" + the name of each of the libraries in turn. The liraries are:
    - paho.mqtt.client
    - os
@@ -45,14 +56,12 @@ The screenshot below shows this working on the 2m band (at the same time as the 
 
 3. Download this zip file and extract both files into a convenient folder, and run the batch file by double clicking it.
    - [Python V1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/Python V1.1.2.zip)
+  
+## Installing the Executable Version
+Simply download this zip file and extract all files and folders into a convenient folder, and run the batch file by double clicking it.
+   - [ExeV1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereExeV1.1.2.zip)
+This version was compiled from the Python version using [Auto-py-to-exe](https://pypi.org/project/auto-py-to-exe/)
 
-The parameters that specify the bands of interest and the "home" DXCCs are in the bat file 'BandSpotsHere.bat'; you'll need to edit these to suit your area of interest before running.
-
-Once the script is running, the following hotkeys are available:
-- b cycles through the bands speccified in the bat file
-- d toggles "detail" on and off
-
-Note that the program doesn't know about spots received from PSKR MQTT before the program was launched.
 
 
 
