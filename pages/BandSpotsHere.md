@@ -18,7 +18,7 @@ I’ve been wondering for a while if I struggle to receive FT8 on 2m even whilst
 
 <html>
 <img  style="display: block; margin-left: auto; margin-right: auto; max-width: 50vw; max-height: unset;"
-      src="https://g1ojs.github.io/assets/img/BandSpotsHereV1.1.2%20PSKR.JPG">
+      src="https://g1ojs.github.io/assets/img/BandSpotsHereV1.1.2%20PSKR.PNG">
 </html>
 
 So I've made a little Python thing to get [Pskreporter live data via MQTT](https://groups.io/g/pskr-mqtt) & give an overview of who’s active and who’s receiving who on 2m (it can work for any band but 2m is why I made it). 
@@ -34,7 +34,7 @@ The screenshot below shows this working on the 2m band (at the same time as the 
 
 <html>
 <img style="display: block; margin-left: auto; margin-right: auto; max-width: 50vw; max-height: unset;"
-      src="https://g1ojs.github.io/assets/img/BandSpotsHereV1.1.2.JPG">
+      src="https://g1ojs.github.io/assets/img/BandSpotsHereV1.1.2.PNG">
 </html>
 
 ## Usage
