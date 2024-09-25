@@ -42,7 +42,7 @@ Note that the program doesn't know about spots received from PSKR MQTT before th
 
 ## Installing the Executable Version
 Simply download this zip file and extract all files and folders into a convenient folder, and run the batch file by double clicking it.
-   - [ExeV1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereExeV1.1.2.zip)
+   - [BandSpotsHereExeV1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereExeV1.1.2.zip)
 This version was compiled from the Python version using [Auto-py-to-exe](https://pypi.org/project/auto-py-to-exe/)
 
 ## Installing the Python Version
@@ -58,7 +58,7 @@ This version was compiled from the Python version using [Auto-py-to-exe](https:/
    - sys
 
 3. Download this zip file and extract both files into a convenient folder, and run the batch file by double clicking it.
-   - [Python V1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/Python V1.1.2.zip)
+   - [BandSpotsHerePythonV1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHerePythonV1.1.2.zip)
   
 
 
