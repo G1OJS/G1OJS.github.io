@@ -20,8 +20,6 @@ I’ve been wondering for a while if I struggle to receive FT8 on 2m even whilst
 <img src="https://g1ojs.github.io/assets/img/BandSpotsHereV1.1.2%20PSKR.JPG"><img>
 </html>
 
-![PSKRExample]({{ site.baseurl }}/assets/img/BandSpotsHereV1.1.2 PSKR.JPG)
-
 So I've made a little Python thing to get [Pskreporter live data via MQTT](https://groups.io/g/pskr-mqtt) & give an overview of who’s active and who’s receiving who on 2m (it can work for any band but 2m is why I made it). 
 
 It works like this: 
@@ -33,7 +31,9 @@ It works like this:
 
 The screenshot below shows this working on the 2m band (at the same time as the PSKR screenshot above). It's quite a sparse set of data, but it's meant for relatively empty bands like 2m. It's actually a great way to monitor band activity whilst doing something else, even with the radio off.
 
-![BandSpotsHere]({{ site.baseurl }}/assets/img/BandSpotsHereV1.1.2.JPG)
+<html>
+<img src="https://g1ojs.github.io/assets/img/BandSpotsHereV1.1.2.JPG"><img>
+</html>
 
 ## Usage
 To get started, you'll need to install either the Executable file version or Python script version as described below. Whichever varsion you install, the parameters that specify the bands of interest and the "home" DXCCs are in the bat file 'BandSpotsHere.bat'; you'll need to edit these to suit your area of interest before running.
