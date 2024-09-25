@@ -46,6 +46,8 @@ Simply download this zip file and extract all files and folders into a convenien
 This version was compiled from the Python version using [Auto-py-to-exe](https://pypi.org/project/auto-py-to-exe/)
 
 ## Installing the Python Version
+One advantage of installing the Python version is that you can read the Python file & see how it works, and perhaps modify it to suit your own purposes.
+
 1. Get Python if you don't already have it. You can download it on the [Python](https://www.python.org/) site.
 2. The code refers to several Python libraries that need to be seperately installed. The easiest way to do this is to open a command window and type "pip install" + the name of each of the libraries in turn. The liraries are:
    - paho.mqtt.client
