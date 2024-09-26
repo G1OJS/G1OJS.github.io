@@ -4,8 +4,6 @@ title: "Calculating Padding Capacitors"
 permalink: /calculating-padding-capacitors/
 ---
 
-# Calculating Padding Capacitors
-
 Padding capacitors are capacitors added to a variable capacitor in order to change the available range of capacitance. 
 <p></p>
 Generally, we need to add *two* capacitors - one in parallel and another in series. The diagrams below show the two ways of doing this. 
