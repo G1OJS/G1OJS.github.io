@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "BandSpotsHere"
-subtitle:"Who in my DXCC is transmitting and receiving whom on my favourite bands?"
+subtitle: "Who in my DXCC is transmitting and receiving whom on my favourite bands?"
 permalink: /BandSpotsHere/
 ---
 # BandSpotsHere
