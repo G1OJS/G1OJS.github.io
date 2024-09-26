@@ -7,7 +7,7 @@ permalink: /BandSpotsHere/
 ## TL;DR
 A [ham radio](https://en.wikipedia.org/wiki/Amateur_radio) related utility that uses the [Pskreporter](https://pskreporter.info/) [MQTT](https://mqtt.org/) feed to display transmit and receive statistics for stations currently active on [FT8](https://www.sigidwiki.com/wiki/FT8) in specified country or group of countries ([DXCC](https://www.electronics-notes.com/articles/ham_radio/awards/dxcc-ham-radio-operating-award.php) codes).
 
-Useful for guaging the activity levels on specified bands, mix between transmit and receive spots, and who's spotting whom. Spots are monitored globally and presented if either the Tx end or Rx end is in the specified group of DXCC codes.  
+Useful for guaging the activity levels on specified bands, mix between transmit and receive spots, and who's spotting whom. Spots are monitored globally and presented if either the Tx end or Rx end is in the specified group of DXCC codes. 
 
 ## Notes
 At the time of writing (Sep 2024), I've been working on this utility for about a week; hence, this page is really to publish the idea and allow people who know a bit about coding to try it out.
