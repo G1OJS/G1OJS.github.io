@@ -4,8 +4,6 @@ title: "High Performance Magloop"
 permalink: /QRO-magloop-no-VVC/
 ---
 
-# A High Performance QRO Magloop without a Vacuum Capacitor?
-
 ![Padding capacitors config 1]({{ site.baseurl }}/assets/img/80m padding example.jpg) 
 
 I've been experimenting with "magnetic" loop antennas for a few years now and running tests using WSPR (with hundreds of spots & statistical analysis) to drive out the losses from my antenna. I've had a lot of success using a largeish (7.5m circumference) loop antenna in the loft for 80m and 40m, where it easily outperforms -especially on low angle DX- any kind of wire antenna (loaded dipole, EFHW) that I can get into the available space.
