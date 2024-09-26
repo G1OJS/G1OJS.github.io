@@ -1,10 +1,9 @@
 ---
 layout: default
 mathjax: true
-title: "Calculating Padding Capacitors"
+title: "Maths for Calculating Padding Capacitors"
 permalink: /calculating-padding-capacitors-maths/
 ---
-# Maths for Calculating Padding Capacitors
 
 | Configuration a)  | Configuration b) |
 | ------------- | ------------- |
