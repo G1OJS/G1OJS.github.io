@@ -1,2 +1,9 @@
 
 @import "{{ site.theme }}";
+
+.page__subtitle{
+    border-bottom: 1px solid $light-gray;
+    font-size: $type-size-5;
+    color: $gray;
+    padding-bottom: $type-size-5;
+}
