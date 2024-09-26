@@ -1,5 +1,8 @@
-
-# 🖐️ Hi, this is my Ham Radio website at GitHub. 
+---
+layout: default
+title: "G1OJS Ham Radio Website"
+permalink: /G1OJS Ham Radio Website/
+---
 
 My Ham Radio callsign is G1OJS and my name is Alan Robinson. I'm now retired from 30 years working in the Space Industry after completing a PhD in Electromagnetics in 1992. I've been interested in electronics since I was about 8 or 9 years old (1975?) and had my ham radio license since 1985. I've always been interested in antennas and a lot of what I do now is about making them and testing them.
 
