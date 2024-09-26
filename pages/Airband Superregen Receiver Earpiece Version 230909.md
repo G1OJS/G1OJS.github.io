@@ -3,7 +3,6 @@ layout: default
 title: "VHF AM Superregen Receiver"
 permalink: /VHF-AM-SuperRegen Earpiece/
 ---
-# G1OJS VHF Airband Superregen Receiver
 Last summer (2023) I got the construction bug and wanted to build an airband receiver free from microprocessors. Something with an "analogue feel". 
 So I set about Googling and found quite a few designs for superregen receivers and a particular superhet kit that comes up very often based around
 the NE602 oscillator/mixer and several op-amps, plus an "IF can" transformer. I wanted to make something that was as close to an all-transistor all-solid-state design as I could (in other words, things I had to hand!). 
