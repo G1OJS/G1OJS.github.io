@@ -40,13 +40,15 @@ The screenshot below shows this working on the 2m band (at the same time as the 
 ![BandSpotsHere]({{ site.baseurl }}/assets/img/BandSpotsHereV1.1.2.PNG)
 
 # Installing the Python Version
-If you want to read the Python file & see how it works, and perhaps modify it to suit your own purposes, you'll probably want ti install the Python version.
+If you want to read the Python file & see how it works, and perhaps modify it to suit your own purposes, you'll probably want to install the Python version.
 
 1. Get Python if you don't already have it. You can download it on the [Python](https://www.python.org/) site.
-2. The code refers to several Python libraries that need to be seperately installed. The easiest way to do this is to open a command window and type "pip install" + the name of each of the libraries in turn. The liraries are listed in the file requirements.txt in the zip file.
-
-3. Download this zip file and extract both files into a convenient folder, and run the batch file by double clicking it.
+2. Download this zip file and extract all files into a convenient folder
    - [BandSpotsHerePythonV1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHerePythonV1.1.2.zip)
+3. Open a command window, navigate to the folder above, and type
+   - pip install -r requirements.txt
+   (you only need to do this once)
+4. Run the program by double-clicking BandSpotsHere.bat
   
 
 
