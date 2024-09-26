@@ -10,16 +10,16 @@ You can find quite a lot of ham radio content from me on my [G1OJS pages at Inst
 
 Until I get more content here and work out what navigation I'm going to use, here's the first bit of content: 
 
-### [G1OJS VHF Airband Superhet Receiver]({{ site.baseurl }}/VHF-AM-Superhet)
+**[G1OJS VHF Airband Superhet Receiver]({{ site.baseurl }}/VHF-AM-Superhet)**
 
-### [G1OJS VHF Airband Superregen Receiver Altoids Tin]({{ site.baseurl }}/VHF-AM-SuperRegen Earpiece)
+**[G1OJS VHF Airband Superregen Receiver Altoids Tin]({{ site.baseurl }}/VHF-AM-SuperRegen Earpiece)**
 
-### [G1OJS VHF Airband Superregen Receiver with Speaker and Squelch]({{ site.baseurl }}/VHF-AM-SuperRegen Speaker)
+**[G1OJS VHF Airband Superregen Receiver with Speaker and Squelch]({{ site.baseurl }}/VHF-AM-SuperRegen Speaker)**
 
-### [A High Performance QRO Magloop without a Vacuum Capacitor?]({{ site.baseurl }}/QRO-magloop-no-VVC)
+**[A High Performance QRO Magloop without a Vacuum Capacitor?]({{ site.baseurl }}/QRO-magloop-no-VVC)**
 
-### [Calculating padding capacitors]({{ site.baseurl }}/calculating-padding-capacitors)
+**[Calculating padding capacitors]({{ site.baseurl }}/calculating-padding-capacitors)**
 
-### [4nec2 stuff]({{ site.baseurl }}/4nec2)
+**[4nec2 stuff]({{ site.baseurl }}/4nec2)**
 
-### [WSJT-X and WSPR stuff]({{ site.baseurl }}/WSJT-X-WSPR)
+**[WSJT-X and WSPR stuff]({{ site.baseurl }}/WSJT-X-WSPR)**
