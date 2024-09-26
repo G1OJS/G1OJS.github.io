@@ -3,7 +3,6 @@ layout: default
 title: "VHF AM Airband Superregen Receiver with Speaker and Squelch Circuit"
 permalink: /VHF-AM-SuperRegen Speaker/
 ---
-# VHF AM Superregen Airband Receiver with Squelch Circuit
 ![]({{ site.baseurl }}/assets/img/G1OJS Airband Superregen Speaker Version BJT SK Filter LM386 Outside.png){: .align-right}
 
 This page describes my Superregen VHF AM Airband receiver with Squelch, and provides some background around approaches to solving the problems of designing squelch circuits for superregen receivers. 
