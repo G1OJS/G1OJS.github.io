@@ -39,8 +39,8 @@ Hopefully the calculator is useful to you!
 
 Click the links below to get to the calculator and the mathematical explanation
 
-## [📱 Calculator]({{ site.baseurl }}/Capacitor-Padding-Calc)
+**[📱 Calculator]({{ site.baseurl }}/Capacitor-Padding-Calc)**
 
-## [📱 Maths]({{ site.baseurl }}/calculating-padding-capacitors-maths)
+**[📱 Maths]({{ site.baseurl }}/calculating-padding-capacitors-maths)**
 
 
