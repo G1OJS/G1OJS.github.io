@@ -6,13 +6,6 @@
     <!-- can be used for css, script etc needed in page head tag -->
 {% endif %}
 
-<!-- Style for page subtitle -->
-{% if page.subtitle %}
-    <p id="page-subtitle" class="page__subtitle p-name" itemprop="headline">
-    {{ page.subtitle }}
-    </p>
-{% endif %}
-
 <!-- MathJax support -->
 {% if page.mathjax %}
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
