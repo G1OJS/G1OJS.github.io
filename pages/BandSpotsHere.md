@@ -4,17 +4,17 @@ title: "BandSpotsHere"
 subtitle: "Who in my DXCC is transmitting and receiving whom on my favourite bands?"
 permalink: /BandSpotsHere/
 ---
-## TL;DR
+# TL;DR
 A [ham radio](https://en.wikipedia.org/wiki/Amateur_radio) related utility that uses the [Pskreporter](https://pskreporter.info/) [MQTT](https://mqtt.org/) feed to display transmit and receive statistics for stations currently active on [FT8](https://www.sigidwiki.com/wiki/FT8) in specified country or group of countries ([DXCC](https://www.electronics-notes.com/articles/ham_radio/awards/dxcc-ham-radio-operating-award.php) codes).
 
 Useful for guaging the activity levels on specified bands, mix between transmit and receive spots, and who's spotting whom. Spots are monitored globally and presented if either the Tx end or Rx end is in the specified group of DXCC codes.
 
-## Notes
+# Notes
 At the time of writing (Sep 2024), I've been working on this utility for about a week; hence, this page is really to publish the idea and allow people who know a bit about coding to try it out.
 
 Also, this whole page assumes a lot of knowledge about ham radio, the FT8 mode and [Pskreporter.info](https://pskreporter.info/)
 
-## Introduction 
+# Introduction 
 I’ve been wondering for a while if I struggle to receive FT8 on 2m even whilst I can see my Tx is doing well on [Pskreporter](https://pskreporter.info/) If I look at Pskreporter's map of spots of "Country of Callsign G1OJS", I can get some idea. But it's difficult to see if the other spots are from one strong operator with a large beam receiving lots of rx reports from Europe, or if there are quite a few other operators making getting several rx spots each, and how many DX calls this unknown number of active 2m stations in my country are receiving. For example, see the screenshot below:
 
 ![PSKR]({{ site.baseurl }}/assets/img/BandSpotsHereV1.1.2%20PSKR.PNG)
@@ -32,7 +32,7 @@ The screenshot below shows this working on the 2m band (at the same time as the 
 
 ![BandSpotsHere]({{ site.baseurl }}/assets/img/BandSpotsHereV1.1.2.PNG)
 
-## Usage
+# Usage
 To get started, you'll need to install either the Executable file version or Python script version as described below. Whichever version you install, the parameters that specify the bands of interest and the "home" DXCCs are in the bat file 'BandSpotsHere.bat'; you'll need to edit these to suit your area of interest before running.
 
 Once the program is running, the following hotkeys are available:
@@ -41,13 +41,13 @@ Once the program is running, the following hotkeys are available:
 
 Note that the program doesn't know about spots received from PSKR MQTT before the program was launched.
 
-## Installing the Executable Version
+# Installing the Executable Version
 Simply download this zip file and extract all files and folders into a convenient folder, and run the batch file by double clicking it.
    - [BandSpotsHereExeV1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereExeV1.1.2.zip)
 
 This version was compiled from the Python version using [Auto-py-to-exe](https://pypi.org/project/auto-py-to-exe/)
 
-## Installing the Python Version
+# Installing the Python Version
 One advantage of installing the Python version is that you can read the Python file & see how it works, and perhaps modify it to suit your own purposes.
 
 1. Get Python if you don't already have it. You can download it on the [Python](https://www.python.org/) site.
