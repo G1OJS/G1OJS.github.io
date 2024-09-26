@@ -17,6 +17,6 @@ Each method requires different values of each of the padding capacitors C1 and C
 
 Click the links below to get to the calculator and the mathematical explanation
 
-## [📱 Calculator]({{ site.baseurl }}/Capacitor-Padding-Calc)
+**[📱 Calculator]({{ site.baseurl }}/Capacitor-Padding-Calc)**
 
-## [📱 Maths]({{ site.baseurl }}/calculating-padding-capacitors-maths)
+**[📱 Maths]({{ site.baseurl }}/calculating-padding-capacitors-maths)**
