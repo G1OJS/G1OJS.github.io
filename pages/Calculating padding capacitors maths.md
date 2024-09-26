@@ -11,7 +11,7 @@ permalink: /calculating-padding-capacitors-maths/
 
 It's easy to work out the range of capacitance achieved given the available range of the variable capacitor (e.g. 5pF to 250pf) and the values of the added capacitors, by using the well-known formulas for combining capacitors. However, it's not so easy to work out what values you need for C1 and C2 in order to achieve a particular desired capacitance range. This requires a bit more as explained below.
 
-## Calculating the output capacitance
+# Calculating the output capacitance
 <details markdown=1><summary markdown="span">Click to expand</summary>
   We can use the well-known formulas for capacitors in parallel $$C=C1+C2$$ and series $$\frac{1}{C}=\frac{1}{C1}+\frac{1}{C2}$$ to work out the output capacitance of each configuration for a particular value of its variable capacitor CV.
 
@@ -25,7 +25,7 @@ $$Cout=C2 + \frac{1}{\frac{1}{CV}+\frac{1}{C1}}$$
 
 </details>
 
-## Voltages across each capacitor
+# Voltages across each capacitor
 <details markdown=1><summary markdown="span">Click to expand</summary>
 A capacitive divider is very similar to a resistive divider in that voltages divide according to the ratios of the impedances; higher voltages across higher impedances and vice versa. The maths looks different though because the reactance (equal to the impedance if the capacitor is perfect) is proportinal to the reciprocal of the capacitance. 
   
@@ -43,10 +43,10 @@ So, the voltages as a fraction of the voltage across Cout are:
   
 </details>
 
-## Working out C1 and C2
+# Working out C1 and C2
 <details markdown=1><summary markdown="span">Click to expand</summary>
 
-### Configuration a)
+## Configuration a)
 
 Let's look first at the first configuration with the parallel capacitor connected directly across the variable one:
 
@@ -88,7 +88,7 @@ To get C2, and then C1 follows easily from
 
 $$\frac{1}{C1}=\frac{1}{B}+\frac{1}{C2+\beta}$$
 
-### Configuration b)
+## Configuration b)
 
 For the other configuration, the maths is very similar and shows that this time C1 rather than C2 is quadratic with coefficients -
 
