@@ -1,12 +1,18 @@
 ---
 layout: default
-title: "BandSpotsHere - How am I doing relative to other stations in my DXCC?"
+title: "BandSpotsHere"
 permalink: /BandSpotsHere/
 ---
-# BandSpotsHere - How am I doing relative to other stations in my DXCC?
+# BandSpotsHere
+<html>
+Who in my DXCC is transmitting and receiving whom on my favourite bands? 
+{: .page__subtitle}
+</html>
 
 ## TL;DR
 A [ham radio](https://en.wikipedia.org/wiki/Amateur_radio) related utility that uses the [Pskreporter](https://pskreporter.info/) [MQTT](https://mqtt.org/) feed to display transmit and receive statistics for stations currently active on [FT8](https://www.sigidwiki.com/wiki/FT8) in specified country or group of countries ([DXCC](https://www.electronics-notes.com/articles/ham_radio/awards/dxcc-ham-radio-operating-award.php) codes).
+
+Useful for guaging the activity levels on specified bands, mix between transmit and receive spots, and who's spotting whom. Spots are monitored globally and presented if either the Tx end or Rx end is in the specified group of DXCC codes.
 
 ## Notes
 At the time of writing (Sep 2024), I've been working on this utility for about a week; hence, this page is really to publish the idea and allow people who know a bit about coding to try it out.
@@ -38,7 +44,7 @@ The screenshot below shows this working on the 2m band (at the same time as the 
 </html>
 
 ## Usage
-To get started, you'll need to install either the Executable file version or Python script version as described below. Whichever varsion you install, the parameters that specify the bands of interest and the "home" DXCCs are in the bat file 'BandSpotsHere.bat'; you'll need to edit these to suit your area of interest before running.
+To get started, you'll need to install either the Executable file version or Python script version as described below. Whichever version you install, the parameters that specify the bands of interest and the "home" DXCCs are in the bat file 'BandSpotsHere.bat'; you'll need to edit these to suit your area of interest before running.
 
 Once the program is running, the following hotkeys are available:
 - b cycles through the bands speccified in the bat file
