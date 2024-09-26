@@ -7,12 +7,6 @@
     padding-bottom: $type-size-5;
 }
 
-.page-title{
-    font-size: 2em;
-    font-weight: bold;
-    padding-bottom: $type-size-5;
-}
-
 .page__subtitle{
     border-bottom: 1px solid $light-gray;
     font-size: $type-size-5;
