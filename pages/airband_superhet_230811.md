@@ -15,7 +15,7 @@ Apologies for the first version of this page having very little explanation - I 
 Also note that the circuit was designed mainly by trial and error, borrowing a few ideas (e.g. the input filter) from other designs
 and arriving at component values experimentally in the main, so although I believe the component values are *good*, they may not be optimum.
 
-## The circuit
+# The circuit
 The circuit diagram is shown below. The only "special" components needed are:
 - NE602 local oscillator / mixer IC
 - Two ceramic resonator type filters 10.7MHz +/- 10 kHz e.g. TOKEN LT10.7MFP
