@@ -4,8 +4,6 @@ title: "BandSpotsHere"
 subtitle: "Who in my DXCC is transmitting and receiving whom on my favourite bands?"
 permalink: /BandSpotsHere/
 ---
-# BandSpotsHere
-
 ## TL;DR
 A [ham radio](https://en.wikipedia.org/wiki/Amateur_radio) related utility that uses the [Pskreporter](https://pskreporter.info/) [MQTT](https://mqtt.org/) feed to display transmit and receive statistics for stations currently active on [FT8](https://www.sigidwiki.com/wiki/FT8) in specified country or group of countries ([DXCC](https://www.electronics-notes.com/articles/ham_radio/awards/dxcc-ham-radio-operating-award.php) codes).
 
