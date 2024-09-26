@@ -38,6 +38,13 @@
     
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+
+        {% if page.title %}
+          <p id="page-title" class="page__title p-name" itemprop="headline">
+            {{ page.title }}
+          </p>
+        {% endif %}
+        
         {% if page.subtitle %}
           <p id="page-subtitle" class="page__subtitle p-name" itemprop="headline">
             {{ page.subtitle }}
