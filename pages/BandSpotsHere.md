@@ -30,6 +30,10 @@ On busy bands, you will probably not want to see all indidvidual spot details (m
 
 Note that the program doesn't know about spots received from PSKR MQTT before the program was launched.
 
+The screen will update every 15 seconds. Spot information is kept for 15 minutes (by default - you can change this in the 'BandSpotsHere.bat' file) after which they are deleted from memory, so the screen information reflects the last 15 (or what you specify) minutes of band activity.
+
+If you want, you can make several copies of 'BandSpotsHere.bat' with different settings (different bands and/or DXCCs to watch) and run them simultaneously. So you can have one instance watching VHF bands including what's happening in nearby countries, and another watching HF bands just for your own country's band activity.
+
 
 
 
