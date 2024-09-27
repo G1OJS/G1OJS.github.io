@@ -4,7 +4,11 @@ title: "BandOpticon"
 permalink: /BandOpticonAppTest/
 ---
 # Introduction
-blah
+Experimental / under early development.
+
+Next steps 
+  - also (instead?) count unique calls instead of repeat spots
+  - add clickable functions (e.g. click on band results for detail window, click to change DXCC group etc, reset counters ....)
 
 # BandOpticon
 <html>
@@ -74,8 +78,8 @@ output {
 
 <div class="bandblock">
     <div class="top">
-      <output id='msgs'></output>/<output id='spots'></output>
-      <strong>Format = 'Spotted n times'/'Spotting n spots' </strong>
+      <strong>Format = 'DX calls spotted DXCC group n times' / 'DXCC Group spotted n DX spots' </strong>
+      <strong>Format = 'DXCC group = 223,114,265,122,279,106,294 (i.e. ~UK)' </strong>
     </div>
 
     <div class="A">
@@ -176,9 +180,6 @@ output {
     var ra=message.slice(a+5,b);
 
     if(DXCCs.indexOf(","+sa+",")>=0 || DXCCs.indexOf(","+ra+",")>=0){
-      n=document.getElementById('spots').value;
-      if(n=='') {n=0} else {n=parseInt(n)};
-      document.getElementById('spots').value=1+n;
       addSpot(message)
     }
   }
