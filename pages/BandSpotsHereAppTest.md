@@ -11,9 +11,9 @@ blah
 </style>
 <body onload="main()"></body> 
 
-<script>
-  import * as Paho.MQTT from "https://cdn.jsdelivr.net/npm/paho-mqtt@1.1.0/paho-mqtt.js";
+<script src="https://cdn.jsdelivr.net/npm/paho-mqtt@1.1.0/paho-mqtt.js"></script>
 
+<script>
   var client;
 
   main(){
