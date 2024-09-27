@@ -21,6 +21,8 @@ The information is presented in a way that has several advantages over looking a
 Download this zip file and extract all files and folders into a convenient folder. To run the program, simply double click the file 'BandSpotsHere.bat'.
    - [BandSpotsHereV1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereV1.1.2.zip)
 
+Note - in some cases Windows Defender won't allow the prgram to run because it detects a virus. If this happens to you, you can either create an exception for the program in Windows Security settings, or download and use the Python version instead (see below). I'm also planning to try writing this in Javascript and hosting it here to get around these issues.
+
 # Usage
 To change the pre-loaded bands and DXCC codes, edit the file 'BandSpotsHere.bat' before running.
 
@@ -34,7 +36,16 @@ The screen will update every 15 seconds. Spot information is kept for 15 minutes
 
 If you want, you can make several copies of 'BandSpotsHere.bat' with different settings (different bands and/or DXCCs to watch) and run them simultaneously, so you can have for example one instance watching VHF bands including what's happening in nearby countries, and another watching HF bands just for your own country's band activity. If you do this, update the "TITLE" line in the bat file to differentiate the windows, otherwise keypresses will affect all instances of it.
 
+# Installing the Python Version
+If you want to read the Python file & see how it works, and perhaps modify it to suit your own purposes, or if you're having trouble with Windows Defender, you'll probably want to install the Python version.
 
+1. Get Python if you don't already have it. You can download it on the [Python](https://www.python.org/) site.
+2. Download this zip file and extract all files into a convenient folder
+   - [BandSpotsHerePythonV1.1.2.Py.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHerePythonV1.1.2.Py.zip)
+3. Open a command window, navigate to the folder above, and type
+   - pip install -r requirements.txt
+   (you only need to do this once)
+4. Run the program by double-clicking BandSpotsHere.bat
 
 
 
