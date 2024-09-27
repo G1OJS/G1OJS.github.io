@@ -18,7 +18,7 @@ Advantages over Pskreporter map views:
  - Simultaneously, monitor spot numbers across several other bands to watch for band openings
 
 # Installation
-Download this zip file and extract all files and folders into a convenient folder. To run the program, simplydouble click the file 'BandSpotsHere.bat'.
+Download this zip file and extract all files and folders into a convenient folder. To run the program, simply double click the file 'BandSpotsHere.bat'.
    - [BandSpotsHereExeV1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereExeV1.1.2.zip)
 
 # Usage
