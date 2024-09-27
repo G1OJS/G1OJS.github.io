@@ -32,3 +32,6 @@ You can find quite a lot of ham radio content from me on my [G1OJS pages at Inst
 **[Python Script to split ALL.TXT into month-sized files](https://github.com/G1OJS/WSJT-X-and-WSPR-Utilities/blob/main/scripts/Split_ALL.py)**
 
 **[BandSpotsHere: see who's active in your country and who's receiving who]({{ site.baseurl }}/BandSpotsHere/)**
+
+**[BandOpticon: online version of BandSpotsHere - under development ]({{ site.baseurl }}/BandOpticonAppTest/)**
+
