@@ -6,10 +6,7 @@ permalink: /BandSpotsHereAppTest/
 # Introduction
 blah
 
-<html>
-<style type="text/css">
-</style>
-<body onload="main()"></body> 
+<a onClick='main()'>click</a>
 
 <script src="https://cdn.jsdelivr.net/npm/paho-mqtt@1.1.0/paho-mqtt.js"></script>
 
@@ -38,4 +35,3 @@ blah
   }
 </script>
 
-</html>
