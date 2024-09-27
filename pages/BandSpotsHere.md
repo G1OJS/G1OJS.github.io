@@ -8,7 +8,7 @@ permalink: /BandSpotsHere/
 # What is BandSpotsHere?
 BandSpotsHere is a piece of MS-Windows software that gets data from  [Pskreporter](https://pskreporter.info/) & gives an overview of who’s active and who’s receiving who. 
 
-![BandSpotsHere]({{ site.baseurl }}/assets/img/BandSpotsHereV1.1.2.PNG){: .image-right }
+![BandSpotsHere]({{ site.baseurl }}/assets/img/BandSpotsHereV1.1.2.png){: .image-right }
 The information is presented in a way that has several advantages over looking at the map views directly on Pskreporter:
  - **See activity for a group of DXCCs rather than a single "country of callsign ..."** On Pskreporter you have to choose between a single callsign, callsign's country, or everyone. When your local area has several DXCCs in it, it's useful to be able to combine them into one view (e.g. the UK is what I want to monitor, not England).
  - **See which active stations are transmitting or just receiving.** In other words, are there stations actively working the bands, or have they just left their equipment running & gone to work - or are they even a WEBSDR station?
