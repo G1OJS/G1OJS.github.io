@@ -28,7 +28,15 @@ h4 {
 }
 .image-left {
       display: block;
-      max-width: 50%;
+      max-width: 60%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      float: left;
+    }
+.image-right {
+      display: block;
+      max-width: 60%;
       height: auto;
       margin-left: auto;
       margin-right: auto;
