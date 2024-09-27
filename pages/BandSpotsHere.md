@@ -17,6 +17,8 @@ The information is presented in a way that has several advantages over looking a
  - **See which DX callsigns are spotting, and being spotted by, the active callsigns in your specified DXCCs.** i.e. where is the band open to *from your specified 'home region' (DXCC group)*
  - **Simultaneously, monitor spot numbers across several other bands to watch for band openings.** Watch the volume of spots rise and fall on all your specified bands at the same time as looking at the detail above for one of these bands. This is a good way to see if activity is starting on another band, and you can then cycle through the bands to see all of the detail above.
 
+Hot news - online version under development here: [BandOpticon test page]({{ site.baseurl }}/BandOpticonAppTest/)
+
 # Installation
 Download this zip file and extract all files and folders into a convenient folder. To run the program, simply double click the file 'BandSpotsHere.bat'.
    - [BandSpotsHereV1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereV1.1.2.zip)
