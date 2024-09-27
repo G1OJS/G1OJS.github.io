@@ -10,11 +10,11 @@ BandSpotsHere gets data from  [Pskreporter](https://pskreporter.info/) & gives a
 
 The information is presented in a way that has several advantages over looking at the map views directly on Pskreporter:
  - **See activity for a group of DXCCs rather than a single "country of callsign ..."** On Pskreporter you have to choose between a single callsign, callsign's country, or everyone. When your local area has several DXCCs in it, it's useful to be able to combine them into one view (e.g. the UK is what I want to monitor, not England).
- - **See which active stations are transmitting or just receiving** In other words, are there stations actively working the bands, or have they just left their equipment running & gone to work - or are they even a WEBSDR station?
- - **Get a view of whether the active stations are getting spotted by more DX calls than they are spotting themselves, or vice versa** In other words, how is receive performance stacking up against transmit performance for the active stations? 
- - **Easily compare this with your own transmit and receive spots** How does this compare to your own station's performance? If you aren't receiving or tranmitting as well as you'd like, is this a problem with your setup or is it just how the band is currently?
- - **See which DX callsigns are spotting, and being spotted by, the active callsigns in your specified DXCCs** i.e. where is the band open to *from your specified 'home region' (DXCC group)*
- - **Simultaneously, monitor spot numbers across several other bands to watch for band openings** Watch the volume of spots rise and fall on all your specified bands at the same time as looking at the detail above for one of these bands. This is a good way to see if activity is starting on another band, and you can then cycle through the bands to see all of the detail above.
+ - **See which active stations are transmitting or just receiving.** In other words, are there stations actively working the bands, or have they just left their equipment running & gone to work - or are they even a WEBSDR station?
+ - **Get a view of whether the active stations are getting spotted by more DX calls than they are spotting themselves, or vice versa.** In other words, how is receive performance stacking up against transmit performance for the active stations? 
+ - **Easily compare this with your own transmit and receive spots.** How does this compare to your own station's performance? If you aren't receiving or tranmitting as well as you'd like, is this a problem with your setup or is it just how the band is currently?
+ - **See which DX callsigns are spotting, and being spotted by, the active callsigns in your specified DXCCs.** i.e. where is the band open to *from your specified 'home region' (DXCC group)*
+ - **Simultaneously, monitor spot numbers across several other bands to watch for band openings.** Watch the volume of spots rise and fall on all your specified bands at the same time as looking at the detail above for one of these bands. This is a good way to see if activity is starting on another band, and you can then cycle through the bands to see all of the detail above.
 
 # Screenshot example
 ![BandSpotsHere]({{ site.baseurl }}/assets/img/BandSpotsHereV1.1.2.PNG)
