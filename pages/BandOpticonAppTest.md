@@ -79,7 +79,8 @@ output {
 <div class="bandblock">
     <div class="top">
       <strong>Format = 'DX calls spotted DXCC group n times' / 'DXCC Group spotted n DX spots' </strong>
-      <strong>Format = 'DXCC group = 223,114,265,122,279,106,294 (i.e. ~UK)' </strong>
+      <BR><strong>DXCC group = 223,114,265,122,279,106,294 (i.e. roughly 'UK') </strong>
+      <BR>Note that DX calls can be anywhere including within the DXCC Group.
     </div>
 
     <div class="A">
