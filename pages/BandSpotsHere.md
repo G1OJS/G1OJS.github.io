@@ -41,7 +41,7 @@ If you want to read the Python file & see how it works, and perhaps modify it to
 
 1. Get Python if you don't already have it. You can download it on the [Python](https://www.python.org/) site.
 2. Download this zip file and extract all files into a convenient folder
-   - [BandSpotsHerePythonV1.1.2.Py.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHerePythonV1.1.2.Py.zip)
+   - [BandSpotsHerePythonV1.1.2.Py.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereV1.1.2.Py.zip)
 3. Open a command window, navigate to the folder above, and type
    - pip install -r requirements.txt
    (you only need to do this once)
