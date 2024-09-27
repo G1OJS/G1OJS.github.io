@@ -19,7 +19,7 @@ The information is presented in a way that has several advantages over looking a
 
 # Installation
 Download this zip file and extract all files and folders into a convenient folder. To run the program, simply double click the file 'BandSpotsHere.bat'.
-   - [BandSpotsHereExeV1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereExeV1.1.2.zip)
+   - [BandSpotsHereV1.1.2.zip]({{ site.baseurl }}/assets/BandSpotsHere/BandSpotsHereV1.1.2.zip)
 
 # Usage
 To change the pre-loaded bands and DXCC codes, edit the file 'BandSpotsHere.bat' before running.
