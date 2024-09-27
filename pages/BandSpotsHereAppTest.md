@@ -9,7 +9,7 @@ blah
 <html>
 <style type="text/css">
 </style>
-<body onload="Main()"></body> 
+<body onload="main()"></body> 
 
 <script>
   import * as Paho.MQTT from "https://cdn.jsdelivr.net/npm/paho-mqtt@1.1.0/paho-mqtt.js";
