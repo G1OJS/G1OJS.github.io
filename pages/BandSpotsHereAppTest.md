@@ -6,7 +6,7 @@ permalink: /BandSpotsHereAppTest/
 # Introduction
 blah
 
-<a onClick='main()'>click</a>
+<a onclick='main()'>click</a>
 
 <script src="https://cdn.jsdelivr.net/npm/paho-mqtt@1.1.0/paho-mqtt.js"></script>
 
