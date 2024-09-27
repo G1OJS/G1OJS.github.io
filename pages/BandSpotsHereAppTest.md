@@ -1,7 +1,6 @@
 ---
 layout: default
-calculator_style: true
-title: "Capacitor Padding Calculator"
+title: "Band Spots Here"
 permalink: /BandSpotsHereAppTest/
 ---
 # Introduction
