@@ -9,18 +9,19 @@ blah
 <html>
 <style type="text/css">
 </style>
-<body></body>    
+<body onLoad=main();></body>    
 
 <script>
   import * as Paho.MQTT from "https://cdn.jsdelivr.net/npm/paho-mqtt@1.1.0/paho-mqtt.js";
 
   var client;
 
-
+  main(){
     document.write('Connecting');
     client = new Paho.MQTT.Client("mqtt.pskreporter.info", Number(1885),"a");
     client.onMessageArrived = onMessageArrived;
     client.connect({onSuccess:onConnect});
+  }
 
   // called when the client connects
   function onConnect() {
