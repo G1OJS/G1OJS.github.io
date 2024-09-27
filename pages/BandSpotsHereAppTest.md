@@ -2,79 +2,15 @@
 layout: default
 calculator_style: true
 title: "Capacitor Padding Calculator"
-permalink: /Capacitor-Padding-Calc/
+permalink: /BandSpotsHereAppTest/
 ---
 # Introduction
-This calculator works out the values needed for capacitors C1 and C2 in the diagrams below to achieve a specified range of output capacitance Cout, and shows the range of capacitance achieved when using specified values for C1 and C2. The maths behind the calculator is described [here]({{ site.baseurl }}/calculating-padding-capacitors-maths).
-
-# Usage
-Edit the values in the first four boxes. The calculator will then show the values of C1 and C2 needed to achieve this range for each configuration. Note that errors will occur if unachievable ranges are specified. Once calculated, these values can be edited to see the effect of chosing different values (e.g. to pick from E12 values or simply to experiment).
+blah
 
 <html>
 <style type="text/css">
   
-.calcblock {
-  display: grid;
-  grid-template-areas:
-  'top1  top1'
-  'left1 right1'
-  'left2 right2';
-  grid-template-columns: 1fr 1.7fr;
-  grid-gap: 5px;
-  background-color: #2196F3;
-  padding: 5px;
-}
-
-.calcblock > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 5px;
-}
-
-.left1 { grid-area: left1; }
-.right1 { grid-area: right1; }
-.left2 { grid-area: left2; }
-.right2 { grid-area: right2; }
-.top1 { grid-area: top1; }
-
-input {
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 40px;
-}
-
-label {
-    display: inline-block;
-    margin-left: 0px;
-    margin-right: 2px;
-    width: 40px;
-    text-align: right;
-}
-
-output {
-    display: inline-block;
-    margin-left: 0px;
-    margin-right: 5px;
-    width: 35px;
-    text-align: right;
-}
-
-</style>
-
-<body onload="CalcPadding()">
-
-<div class="calcblock">
-    <div class="top1">
-      <strong>Requirements:</strong>
-      <br><span style="display: inline-block; width: 180px;"> Variable Capacitor Range </span>
-      <label>Min</label><input type="text" id="Alpha" value="10" onchange="CalcPadding()" />
-      <label>Max</label><input type="text" id="Beta" value="250" onchange="CalcPadding()" />
-      <br><span style="display: inline-block; width: 180px;">Needed Capacitance Range</span>
-      <label>Min</label><input type="text" id="Ca" value="200" onchange="CalcPadding()" />
-      <label>Max</label><input type="text" id="Cb" value="240" onchange="CalcPadding()" />
-    </div>
-
-    <div class="left1">
-      <strong>Configuration a)</strong><br>
+g><br>
         <label>C1</label><input type="text" id="CFG1_C1Used" onchange="EvaluatePadding()" />
         <label>C2</label><input type="text" id="CFG1_C2Used" onchange="EvaluatePadding()" />
         <!-- inline CSS bacause Jekyll adds margin and padding to img that seems not to be overridden by <style> section -->
