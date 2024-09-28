@@ -4,11 +4,14 @@ title: "BandOpticon"
 permalink: /BandOpticonAppTest/
 ---
 # Introduction
-Experimental / under early development.
+Experimental / under early development. Displays number of FT8 spots on all bands categorised by zone of origin and reception. Updates in real time.
+
+Refresh the page to reset counters.
 
 Next steps 
-  - also (instead?) count unique calls instead of repeat spots
-  - add clickable functions (e.g. click on band results for detail window, click to change DXCC group etc, reset counters ....)
+  - expire old spots
+  - GUI to edit DXCCs
+  - Extra detail? What to include? Active Tx call list?
 
 # BandOpticon
 <html>
