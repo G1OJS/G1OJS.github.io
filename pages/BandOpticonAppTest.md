@@ -14,205 +14,131 @@ Next steps
 <html>
 <head>
 <style>
+.headblock {
+  grid-column: 1 / span 5;
+  background-color: #2196F3;
+  color:white;
+  font-weight: bold;
+  padding: 5px;
+  grid-gap: 5px;
+  min-height:40px;
+}
 .bandblock {
   display: grid;
-  grid-template-areas:
-  'top top top top top'
-  'A B C D E'
-  'F G H I J'
-  'K L M N O';
-  grid-template-columns: 1fr 1fr  1fr  1fr  1fr;
-  grid-gap: 5px;
+  grid-template-columns: auto auto auto;
   background-color: #2196F3;
   padding: 5px;
+  grid-gap: 5px;
 }
-
-.top { grid-area: top; }
-.A { grid-area: A; }
-.B { grid-area: B; }
-.C { grid-area: C; }
-.D { grid-area: D; }
-.E { grid-area: E; }
-.F { grid-area: F; }
-.G { grid-area: G; }
-.H { grid-area: H; }
-.I { grid-area: I; }
-.J { grid-area: J; }
-.K { grid-area: K; }
-.L { grid-area: L; }
-.M { grid-area: M; }
-.N { grid-area: N; }
-.O { grid-area: O; }
-
 .bandblock > div {
   background-color: rgba(255, 255, 255, 0.8);
+  min-height:100px;
   padding: 5px;
-}
-
-input {
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 40px;
-}
-
-label {
-    display: inline-block;
-    margin-left: 0px;
-    margin-right: 2px;
-    width: 40px;
-    text-align: right;
 }
 
 output {
     display: inline-block;
     margin-left: 0px;
-    margin-right: 5px;
-    width: 35px;
-    text-align: right;
+    margin-right: 3px;
+    width: auto;
+    text-align: left;
 }
+label {
+    display: inline-block;
+    margin-left: 0px;
+    margin-right: 2px;
+    width: auto;
+    text-align: left;
+    font-size: 1em;
+}
+
 </style>
 </head>
 
 
 <body>
 
-<div class="bandblock">
-    <div class="top">
-      <strong>Format = 'DX calls spotted DXCC group n times' / 'DXCC Group spotted n DX spots' </strong>
-      <BR><strong>DXCC group = 223,114,265,122,279,106,294 (i.e. roughly 'UK') </strong>
-      <BR>Note that DX calls can be anywhere including within the DXCC Group.
-    </div>
-
-    <div class="A">
-      <strong>160m</strong><br>
-      <output id='160mo'></output>/<output id='160mi'></output>
-    </div>
-
-    <div class="B">
-      <strong>80m</strong><br>
-      <output id='80mo'></output>/<output id='80mi'></output>
-    </div>
-    
-    <div class="C">
-      <strong>60m</strong><br>
-      <output id='60mo'></output>/<output id='60mi'></output>
-    </div>
+<div class="headblock" id="headblock">
   
-    <div class="D">
-      <strong>40m</strong><br>
-      <output id='40mo'></output>/<output id='40mi'></output>
-    </div>
-    
-    <div class="E">
-      <strong>30m</strong><br>
-      <output id='30mo'></output>/<output id='30mi'></output>
-    </div>
-    
-    <div class="F">
-      <strong>20m</strong><br>
-      <output id='20mo'></output>/<output id='20mi'></output>
-    </div>
-    
-    <div class="G">
-      <strong>17m</strong><br>
-      <output id='17mo'></output>/<output id='17mi'></output>
-    </div>
-    
-    <div class="H">
-      <strong>15m</strong><br>
-      <output id='15mo'></output>/<output id='15mi'></output>
-    </div>
-    
-    <div class="I">
-      <strong>12m</strong><br>
-      <output id='12mo'></output>/<output id='12mi'></output>
-    </div>
-    
-    <div class="J">
-      <strong>10m</strong><br>
-      <output id='10mo'></output>/<output id='10mi'></output>
-    </div>
-        
-    <div class="K">
-      <strong>6m</strong><br>
-      <output id='6mo'></output>/<output id='6mi'></output>
-    </div>
-    
-    <div class="L">
-      <strong>4m</strong><br>
-      <output id='4mo'></output>/<output id='4mi'></output>
-    </div>
-    
-    <div class="M">
-      <strong>2m</strong><br>
-      <output id='2mo'></output>/<output id='2mi'></output>
-    </div>
-    
-    <div class="N">
-      <strong>70cm</strong><br>
-      <output id='70cmo'></output>/<output id='70cmi'></output>
-    </div>
-   
 </div>
 
+<div class="bandblock" id="bandblock"></div>
+
+<script>
+  // Define the DXCCs and Bands of interest
+  const DXCCs=[223,114,265,122,279,106,294];
+  const Bands=["160m","80m","60m","40m","30m","20m","17m","15m","12m","10m","6m","4m","2m","70cm","23cm"];
+</script>
+  
+<script>
+// Write the table heading block
+  headblock.innerHTML="Showing statistics between Home and DX, where<br>Home = DXCCs "+DXCCs+", and <br>DX = rest of world"
+
+// Add in the boxes for all bands, and inside them the required outputs with IDs
+var toAdd = document.createDocumentFragment();
+for(var i=0; i < Bands.length; i++){
+   var newDiv = document.createElement('div');
+   newDiv.id = Bands[i]+i;   
+   newDiv.innerHTML="<strong>"+Bands[i]+"</strong> \
+     <label>Total Spots</label><br> \
+     <label>H&#8680H:</label><output id='"+Bands[i]+"3'>0</output> \
+     <label>H&#8680DX:</label><output id='"+Bands[i]+"2'>0</output> \
+     <label>DX&#8680H:</label><output id='"+Bands[i]+"1'>0</output>";
+   toAdd.appendChild(newDiv);
+}
+document.getElementById('bandblock').appendChild(toAdd);
+</script>
+
+<!--Get the library for MQTT functions -->
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 
 <script>
-  const DXCCs=",223,114,265,122,279,106,294,"
-  const Band="10m"
-</script>
-
-<script>
+  // Connect to Pskreporter and subscribe on connect
   const client=mqtt.connect("wss://mqtt.pskreporter.info:1886");
-  client.onSuccess=onConnect();
+  client.onSuccess=client.subscribe('pskr/filter/v2/+/FT8/+/+/+/+/+/#');
   client.on("message", (filter,message) => {onMessage(message.toString());}  );
 
-  function onConnect() {
-    document.write('Connected');
-    client.subscribe('pskr/filter/v2/+/FT8/+/+/+/+/+/#'); 
-  }
-
   function onMessage(message){    
-    var a=message.indexOf('"sa":');
-    var b=message.indexOf(",",a);
-    var sa=message.slice(a+5,b);
-    a=message.indexOf('"ra":');
-    b=message.indexOf(",",a);
-    var ra=message.slice(a+5,b);
-
-    if(DXCCs.indexOf(","+sa+",")>=0 || DXCCs.indexOf(","+ra+",")>=0){
-      addSpot(message)
-    }
+    sa=parseInt(getVal("sa",message));
+    if(DXCCs.includes(sa)){processSpot(message); return;}
+    ra=parseInt(getVal("ra",message));
+    if(DXCCs.includes(ra)){processSpot(message);}
   }
-</script>
-
-<script>
+  
+  function processSpot(message){
+    band=getVal("b",message);
+    senderDXCC=parseInt(getVal("sa",message));
+    receiverDXCC=parseInt(getVal("ra",message));
+    incrementSpotCounts(band,senderDXCC,receiverDXCC);
+  }
+  
+  function incrementSpotCounts(band,senderDXCC,receiverDXCC){
+    var dircode=0;
+    if(DXCCs.includes(senderDXCC)) {dircode+=1};
+    if(DXCCs.includes(receiverDXCC)) {dircode+=2};
+    var elID=band+dircode;
+    n=parseInt(document.getElementById(elID).value);
+    document.getElementById(elID).value=1+n;
+  }
+  
   function getVal(key,message){
-    var a=message.indexOf('"'+key+'":');
-    a=message.indexOf(':',a);
-    var b=message.indexOf(",",a);
-    var sa=message.slice(a+1,b);
-    return sa;
+    var iVal=message.indexOf('"'+key+'":');
+    var iColon=message.indexOf(':',iVal);
+    var iComma=message.indexOf(",",iColon);
+    var val=message.slice(iColon+1,iComma).replace(/"/g, '');
+    return val;
   }
-  function addSpot(message){
-
-      b=getVal("b",message);
-      b=b.substr(1, b.length-2);
-      
-      sa=getVal("sa",message);
-      if(DXCCs.indexOf(","+sa+",")>0){io='o'} else {io='i'};
-      n=document.getElementById(b+io).value;
-      if(n=='') {n=0} else {n=parseInt(n)};
-      document.getElementById(b+io).value=1+n;
-
-  }
+ 
 
 </script>
-    
+
 </body>
 
 
 </html>
+
+
+
 
 
 
