@@ -9,15 +9,17 @@ Experimental / under early development. Displays number of FT8 spots on all band
 Refresh the page to reset counters.
 
 Next steps 
-  - expire old spots
   - GUI to edit DXCCs
   - Extra detail? What to include? Active Tx call list?
+  - Format improvements
+  - UTC clock date & time
+  - Credits
 
 # BandOpticon
 <html>
 <head>
 <style>
-.titleblock {
+#title {
   grid-column: 1 / span 5;
   background-color: #2196F3;
   color:black;
@@ -27,15 +29,20 @@ Next steps
   grid-gap: 5px;
   min-height:40px;
 }
-.headblock {
+#key {
   grid-column: 1 / span 5;
   background-color: #2196F3;
-  color:white;
-  font-weight: bold;
+  color:black;
   padding: 5px;
   grid-gap: 5px;
   min-height:40px;
 }
+#key > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height:10px;
+  padding: 5px;
+}
+
 .bandblock {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
@@ -43,6 +50,7 @@ Next steps
   padding: 5px;
   grid-gap: 5px;
 }
+
 .bandblock > div {
   background-color: rgba(255, 255, 255, 0.8);
   min-height:10px;
@@ -71,8 +79,8 @@ label {
 
 <body>
 
-<div class="titleblock" id="title">BandOpticon</div>
-<div class="headblock" id="key"></div>
+<div id="title">BandOpticon</div>
+<div id="key"></div>
 <div class="bandblock" id="bandblock"></div>
 
 <script>
@@ -80,26 +88,28 @@ label {
   const DXCCs=[223,114,265,122,279,106,294];
   const Bands=["160m","80m","60m","40m","30m","20m","17m","15m","12m","10m","6m","4m","2m","70cm","23cm"];
   const refreshSeconds=2;
+  const purgeSeconds=600;
   let spots=[];
   let tWrite=Date.now();
 </script>
   
 <script>
 // Write the table heading block
-  key.innerHTML="Showing statistics between Home and DX, \
-  where:<br><li>Home = DXCCs "+DXCCs+", and </li><li>DX = rest of world</li><br> \
-  Format: Band, Spots(Home &#8680 Home), Spots(Home &#8680 DX), (Spots DX &#8680 Home)<br><br>"
+  key.innerHTML="Showing Pskreporter statistics for FT8 spots between Home and DX, \
+  where:<br><li>Home = DXCCs "+DXCCs+", and </li><li>DX = rest of world</li><br>Format: \
+  <div><b>Band</b><br>Spots: number of spots Home &#8680 Home, Home &#8680 DX, DX &#8680 Home<br> \
+  Tx Calls: number of unique calls in 'Home' received by anyone<br> \
+  Rx Calls: number of unique calls in 'Home' receiving anyone</div>"
 
 // Add in the boxes for all bands, and inside them the required outputs with IDs
 var toAdd = document.createDocumentFragment();
 for(var i=0; i < Bands.length; i++){
    var newDiv = document.createElement('div');
-   newDiv.id = Bands[i]+i;   
+   newDiv.id = Bands[i];   
    // dircode is 0=H->H, 1=DX->H, 2=H->DX, 3=DX-DX
-   newDiv.innerHTML="<strong>"+Bands[i]+"</strong> \
-     <output id='"+Bands[i]+"0'>0</output>, \
-     <output id='"+Bands[i]+"2'>0</output>, \
-     <output id='"+Bands[i]+"1'>0</output>";
+   newDiv.innerHTML="<strong>"+Bands[i]+"</strong><br> \
+     <output id='"+Bands[i]+"spots'></output><br> \
+     <output id='"+Bands[i]+"calls'></output>";
    toAdd.appendChild(newDiv);
 }
 document.getElementById('bandblock').appendChild(toAdd);
@@ -117,33 +127,43 @@ document.getElementById('bandblock').appendChild(toAdd);
   function onMessage(message){    
     if ( (Date.now()-tWrite)/1000 > refreshSeconds ){
     	tWrite=Date.now();
-      writeStats();
+      purgeSpots();
+      writeBandSpotStats();
+      writeBandActiveCallStats();
     }
     sa=parseInt(getVal("sa",message));
-    if(DXCCs.includes(sa)){processSpot(message); return;}
+    if(DXCCs.includes(sa)){addSpot(message); return;}
     ra=parseInt(getVal("ra",message));
-    if(DXCCs.includes(ra)){processSpot(message);}
+    if(DXCCs.includes(ra)){addSpot(message);}
   }
   
-  function processSpot(message){
-    
+  function purgeSpots(){
+    var del=[];
+    for (let iSpot=1; iSpot < spots.length; iSpot++) {
+      var spot=spots[iSpot];
+      var tSpot=spot[1];
+      if((Date.now()/1000-tSpot) > purgeSeconds) {del.push(iSpot)}
+    }
+    for (let iSpot=1; iSpot <del.length;iSpot++){spots.splice(del[iSpot],1)}
+  }
+  
+  function addSpot(message){
     band=getVal("b",message);
     senderDXCC=parseInt(getVal("sa",message));
     receiverDXCC=parseInt(getVal("ra",message));
     senderCall=getVal("sc",message);
     receiverCall=getVal("rc",message);
     tSpot=parseInt(getVal("t",message));
-    
     spots.push([band,tSpot,senderCall,receiverCall,senderDXCC,receiverDXCC]);
   }
   
-  function writeStats(){
-
+  function writeBandSpotStats(){
+ //   misc.innerHTML="Total spots: "+spots.length;
+  
     var bandStats = new Array(Bands.length);
     for(let i = 0; i < Bands.length; i++) {
         bandStats[i]=[0,0,0];
     }
-
     for (let iSpot=1; iSpot < spots.length; iSpot++) {
       var spot=spots[iSpot];
       var dircode=0;    // dircode is 0=H->H, 1=DX->H, 2=H->DX, 3=DX-DX
@@ -152,15 +172,30 @@ document.getElementById('bandblock').appendChild(toAdd);
       iBand=Bands.indexOf(spot[0]);
       bandStats[iBand][dircode]+=1;
     } 
-    
     for (let iBand=0; iBand < Bands.length; iBand++) {
-      for (let dircode=0; dircode < 3; dircode++){
-// do I really need 3 output fields? Could just make this into a string for each band
-        document.getElementById(Bands[iBand]+dircode).value=bandStats[iBand][dircode];
-      }
+      var snum=bandStats[iBand];
+      document.getElementById(Bands[iBand]+"spots").value="Spots "+snum[0]+","+snum[2]+","+snum[1];
     }
-    
   }
+  
+   function writeBandActiveCallStats(){
+  //spots.push([band,tSpot,senderCall,receiverCall,senderDXCC,receiverDXCC])
+     for (iBand=0; iBand<Bands.length; iBand++){
+
+       var active_tx=new Set;
+       var active_rx=new Set;
+       for (let iSpot=1; iSpot < spots.length; iSpot++) {
+         var spot=spots[iSpot];
+         if(spot[0]==Bands[iBand]){
+           if(DXCCs.includes(spot[4])) {active_tx.add(spot[2])};
+           if(DXCCs.includes(spot[5])) {active_rx.add(spot[3])};
+         }
+       }
+  //     console.log(Bands[iBand],active_tx);
+       document.getElementById(Bands[iBand]+"calls").innerHTML="Tx Calls "+active_tx.size+"<br>"+"Rx Calls "+active_rx.size;
+     }
+   }
+    
   
   function getVal(key,message){
     var iVal=message.indexOf('"'+key+'":');
@@ -177,6 +212,9 @@ document.getElementById('bandblock').appendChild(toAdd);
 
 
 </html>
+
+
+
 
 
 
