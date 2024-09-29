@@ -5,14 +5,18 @@ permalink: /BandOpticonAppTest/
 ---
 
 <html>
-<body><div>
+<head><style>
+:root { background-color: #2196F3; color:black;text-align: left;}
+div {margin: 2px;  padding: 5px;}
+#title {text-align: center; font-size: 4em;}
+#subtitle {text-align: center; font-size: 1.3em;}
+.detail > div {background-color: rgba(255, 255, 255, 0.8);}
+.bandblock {display: grid; grid-template-columns: auto auto auto auto auto;}
+.bandblock > div {background-color: rgba(255, 255, 255, 0.8);}
+</style>
+</head>
 
-<div id="title">BandOpticon</div>
-<div id="subtitle">Live <a href='https://pskreporter.info/'>Pskreporter</a> statistics for FT8 spots on all bands between Home and DX</div>
-<div class="detail" id="controls"></div>
-<div class="detail" id="detail"></div>
-<div class="bandblock" id="bandblock"></div>
-</div></body>
+
 
 <script>
   function updateDetails(newWant){
@@ -201,6 +205,14 @@ document.getElementById('bandblock').appendChild(toAdd);
 
 </script>
 
+<body><div>
+
+<div id="title">BandOpticon</div>
+<div id="subtitle">Live <a href='https://pskreporter.info/'>Pskreporter</a> statistics for FT8 spots on all bands between Home and DX</div>
+<div class="detail" id="controls"></div>
+<div class="detail" id="detail"></div>
+<div class="bandblock" id="bandblock"></div>
+</div></body>
 
 
 </html>
