@@ -8,6 +8,8 @@ Add option to enter your own call & see the same stats but for your call only (u
 
 Validation for home squares definition
 
+Allow edit of purge time and refresh time
+
 -->
 
 <html>
