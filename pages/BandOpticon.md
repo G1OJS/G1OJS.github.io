@@ -31,7 +31,7 @@ div {margin: 2px;  padding: 5px;}
 <div class="detail" id="detail" name="detail"></div>
 <div class="bandblock" id="bandblock"></div>
 <div class="detail" id="credits" name="credits">
-  Javascript & HTML developed by me, Alan Robinson - G1OJS, with thanks to:<BR>
+  Javascript & HTML developed by me, Alan Robinson - G1OJS - G1OJS@yahoo.com, with thanks to:<BR>
   Philip Gladstone - N1DQ for https://pskreporter.info/<br>
   Tom Stanton - M0LTE for mqtt.pskreporter.info, the MQTT feed for this app<br>
   <a href='https://www.unpkg.com/browse/mqtt@5.10.1/README.md'>www.unpkg.com</a> 
