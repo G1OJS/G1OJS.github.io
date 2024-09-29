@@ -152,6 +152,11 @@ document.getElementById('bandblock').appendChild(toAdd);
       if(!DXCCs.includes(spots[iSpot][5])) {dircode+=2};
       iBand=Bands.indexOf(spot[0]);
       bandStats[iBand][dircode]+=1;
+      if(dircode>2){
+         console.log("Bad spot "+spot);
+      } else {
+        bandStats[iBand][dircode]+=1;
+      }
     } 
     for (let iBand=0; iBand < Bands.length; iBand++) {
       var snum=bandStats[iBand];
