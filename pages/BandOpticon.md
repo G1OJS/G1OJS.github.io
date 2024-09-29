@@ -9,8 +9,8 @@ permalink: /BandOpticon/
 :root { background-color: #91FCFE; color:black;text-align: left; font-size: 1em;}
 #main_content { background-color: #DFF8FE; color:black;text-align: left; font-size: 1em;}
 div {margin: 2px;  padding: 5px;}
-#title {text-align: center; font-size: 4em;}
-#subtitle {text-align: center; font-size: 1.2em;}
+#BO_title {text-align: center; font-size: 4em;}
+#BO_subtitle {text-align: center; font-size: 1.2em;}
 .detail > div {background-color: rgba(255, 255, 255, 0.8);}
 .bandblock {display: grid; grid-template-columns: auto auto auto auto auto;}
 .bandblock > div {background-color: rgba(255, 255, 255, 0.8);}
@@ -18,8 +18,8 @@ div {margin: 2px;  padding: 5px;}
 </head>
 
 <body id="BandOpticonBody"><div>
-<div id="title" name="title">BandOpticon</div>
-<div id="subtitle" name="subtitle">Live <a href='https://pskreporter.info/'>Pskreporter</a> statistics for FT8 spots on all bands between Home and DX</div>
+<div id="BO_title" name="BO_title">BandOpticon</div>
+<div id="BO_subtitle" name="BO_subtitle">Live <a href='https://pskreporter.info/'>Pskreporter</a> statistics for FT8 spots on all bands between Home and DX</div>
 <div class="detail" id="controls" name="controls"></div>
 <div class="detail" id="detail" name="detail"></div>
 <div class="bandblock" id="bandblock"></div>
