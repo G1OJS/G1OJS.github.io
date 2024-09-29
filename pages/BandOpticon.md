@@ -3,6 +3,12 @@ layout: default
 permalink: /BandOpticon/
 ---
 
+<!-- Next steps
+Add option to enter your own call & see the same stats but for your call only (under the TX,rx, sq in the band details box)
+
+Validation for home squares definition
+
+-->
 
 <html>
 <head><style>
@@ -68,17 +74,17 @@ div {margin: 2px;  padding: 5px;}
        +("0"+now.getUTCSeconds()).substr(-2)+" UTC";
     var runningmins=Math.trunc(((now-tStart)/1000) / 60);
     controls.innerHTML="<div><strong>"+utc_timestamp+"</strong> (running for "+runningmins+" minutes)"+
-       "<br>Home = DXCCs "+DXCCs+" <a href='#controls' onclick='editDXCCs();'>edit</a><br>"+
+       "<br>Home = Squares "+Squares+" <a href='#controls' onclick='editSquares();'>edit</a><br>"+
        "Spots purged when older than "+purgeMinutes+" minutes"
   }
 
-  // Define the DXCCs and Bands of interest
-  //localStorage.removeItem('DXCCs')
-  if(localStorage.getItem('DXCCs')){
-    var DXCCs=JSON.parse(localStorage.getItem('DXCCs'));
+  // Define the Squares and Bands of interest
+  //localStorage.removeItem('Squares')
+  if(localStorage.getItem('Squares')){
+    var Squares=JSON.parse(localStorage.getItem('Squares'));
   } else {
-    var DXCCs=[223,114,265,122,279,106,294];
-    localStorage.setItem('DXCCs', JSON.stringify(DXCCs));
+    var Squares=["IO","JO01","JO02","JO03","JO04"];
+    localStorage.setItem('Squares', JSON.stringify(Squares));
   }
 
   const Bands=["160m","80m","60m","40m","30m","20m","17m","15m","12m","10m","6m","4m","2m","70cm","23cm"];
@@ -91,18 +97,18 @@ div {margin: 2px;  padding: 5px;}
   updateDetails();
   updateControls();
 
-  function editDXCCs(){
-    var resp=prompt("Enter DXCCs",DXCCs);
-    var regex=/^(([0-9]+)(,(?=[0-9]))?)+$/;
-    if (regex.test(resp)) {
-      DXCCs=resp;
+  function editSquares(){
+    var resp=prompt("Enter Squares",Squares);
+ //   var regex=/^(([0-9]+)(,(?=[0-9]))?)+$/;
+ //   if (regex.test(resp)) {
+      Squares=resp;
       updateControls();
-      localStorage.setItem('DXCCs', DXCCs);
+      localStorage.setItem('Squares', Squares);
       spots=[];
       tWrite=0; //forces an onmessage screen update
-    } else {
-      alert("DXCC list must be comma-separated integers");
-    }
+ //   } else {
+ //     alert("Squares list must be comma-separated valid squares");
+ //   }
   }
 
 // Add in the boxes for all bands, and inside them the required outputs with IDs
@@ -135,10 +141,10 @@ document.getElementById('bandblock').appendChild(toAdd);
     b=getVal("b",message); //ignore nessages for bands we aren't set up to watch
     if(!Bands.includes(b)) {return;}
     
-    sa=parseInt(getVal("sa",message));
-    if(DXCCs.includes(sa)){addSpot(message); return;}
-    ra=parseInt(getVal("ra",message));
-    if(DXCCs.includes(ra)){addSpot(message);}
+    sl=getVal("sl",message);
+    if(SquareInHome(sl)){addSpot(message); return;}
+    rl=getVal("rl",message);
+    if(SquareInHome(rl)){addSpot(message);}
   }
   
   function purgeSpots(){
@@ -153,12 +159,12 @@ document.getElementById('bandblock').appendChild(toAdd);
   
   function addSpot(message){
     band=getVal("b",message);
-    senderDXCC=parseInt(getVal("sa",message));
-    receiverDXCC=parseInt(getVal("ra",message));
     senderCall=getVal("sc",message);
     receiverCall=getVal("rc",message);
+    senderSq=getVal("sl",message).toUpperCase();
+    receiverSq=getVal("rl",message).toUpperCase();
     tSpot=parseInt(getVal("t",message));
-    spots.push([band,tSpot,senderCall,receiverCall,senderDXCC,receiverDXCC]);
+    spots.push([band,tSpot,senderCall,receiverCall,senderSq,receiverSq]);
   }
   
   function writeBandSpotStats(){
@@ -172,8 +178,8 @@ document.getElementById('bandblock').appendChild(toAdd);
     for (let iSpot=0; iSpot < spots.length; iSpot++) {
       var spot=spots[iSpot];
       var dircode=0;    // dircode is 0=H->H, 1=DX->H, 2=H->DX, 3=DX-DX
-      if(!DXCCs.includes(spots[iSpot][4])) {dircode+=1};
-      if(!DXCCs.includes(spots[iSpot][5])) {dircode+=2};
+      if(!SquareInHome(spots[iSpot][4])) {dircode+=1};
+      if(!SquareInHome(spots[iSpot][5])) {dircode+=2};
       iBand=Bands.indexOf(spot[0]);
       if(dircode>2 || iBand==-1){
          console.log("Bad spot "+spot);
@@ -192,16 +198,16 @@ document.getElementById('bandblock').appendChild(toAdd);
   }
   
    function writeBandActiveCallStats(){
-  //spots array 0=band,1=tSpot,2=senderCall,3=receiverCall,4=senderDXCC,5=receiverDXCC
+  //spots array 0=band,1=tSpot,2=senderCall,3=receiverCall,4=senderSq,5=receiverSq
      for (iBand=0; iBand<Bands.length; iBand++){
-  //note that this sub could be written with integer counters now as it was going to do other things but now isn't
+       //note - we use sets here as an easy way of counting unique calls
        var active_tx=new Set;
        var active_rx=new Set;
        for (let iSpot=1; iSpot < spots.length; iSpot++) {
          var spot=spots[iSpot];
          if(spot[0]==Bands[iBand]){
-           if(DXCCs.includes(spot[4])) {active_tx.add(spot[2])};
-           if(DXCCs.includes(spot[5])) {active_rx.add(spot[3])};
+           if(SquareInHome(spot[4])) {active_tx.add(spot[2])};
+           if(SquareInHome(spot[5])) {active_rx.add(spot[3])};
          }
        }
        document.getElementById(Bands[iBand]+"calls").innerHTML=
@@ -214,30 +220,42 @@ document.getElementById('bandblock').appendChild(toAdd);
 
     var active_tx=new Set;
     var active_rx=new Set;
-    var DXCC_reached=new Set;
-    var DXCC_spotted=new Set;
+    var Sq2_reached=new Set;
+    var Sq2_spotted=new Set;
+    var Sq4_reached=new Set;
+    var Sq4_spotted=new Set;
     for (let iSpot=1; iSpot < spots.length; iSpot++) {
       var spot=spots[iSpot];
- //spots array 0=band,1=tSpot,2=senderCall,3=receiverCall,4=senderDXCC,5=receiverDXCC
+  //spots array 0=band,1=tSpot,2=senderCall,3=receiverCall,4=senderSq,5=receiverSq
       if(spot[0]==Bands[iBand]){
-        if(DXCCs.includes(spot[4])) {
+        if(SquareInHome(spot[4])) {
            active_tx.add(spot[2]);
-           DXCC_reached.add(spot[5]);
+           Sq2_reached.add(spot[5].substr(0,2));
+           Sq4_reached.add(spot[5].substr(0,4));
         }
-        if(DXCCs.includes(spot[5])) {
+        if(SquareInHome(spot[5])) {
            active_rx.add(spot[3]);
-           DXCC_spotted.add(spot[4]);
+           Sq2_spotted.add(spot[4].substr(0,2));
+           Sq4_spotted.add(spot[4].substr(0,4));
         }
       }
     }
+
+    if(Sq4_reached.size>10) {var Sq_reached=Sq2_reached;} else {var Sq_reached=Sq4_reached;} 
+    if(Sq4_spotted.size>10) {var Sq_spotted=Sq2_spotted;} else {var Sq_spotted=Sq4_spotted;} 
+    
     detail.innerHTML="<div>"+ 
        "<strong>"+Bands[iBand]+"</strong><br>"+ 
        "<a href='#controls' onclick='updateDetails(-1);'> show layout</a><br>" +
-       "<p class='transmit'><strong>Tx calls:</strong> "+Array.from(active_tx).join(' ')+"<br>"+
-       "<strong>DXCC reached:</strong> "+Array.from(DXCC_reached).join(' ')+"<br></p>"+
-       "<p class='receive'><strong>Rx calls:</strong> "+Array.from(active_rx).join(' ')+"<br>"+
-       "<strong>DXCC spotted:</strong> "+Array.from(DXCC_spotted).join(' ')+"<br></p>"+
+       "<p class='transmit'><strong>Tx calls:</strong> "+Array.from(active_tx).toSorted().join(' ')+"<br>"+
+       "<strong>Sq reached:</strong> "+Array.from(Sq_reached).toSorted().join(' ')+"<br></p>"+
+       "<p class='receive'><strong>Rx calls:</strong> "+Array.from(active_rx).toSorted().join(' ')+"<br>"+
+       "<strong>Sq spotted:</strong> "+Array.from(Sq_spotted).toSorted().join(' ')+"<br></p>"+
        "</div>";
+  }
+
+  function SquareInHome(sq){
+    return (Squares.includes(sq.substr(0,2)) || Squares.includes(sq.substr(0,4)) || Squares.includes(sq.substr(0,6)))
   }
   
   function getVal(key,message){
@@ -253,6 +271,20 @@ document.getElementById('bandblock').appendChild(toAdd);
 
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
