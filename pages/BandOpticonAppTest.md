@@ -20,7 +20,7 @@ Next steps
 <html>
 <head>
 <style>
-* { background-color: #2196F3; color:black;text-align: left;}
+:root { background-color: #2196F3; color:black;text-align: left;}
 div {margin: 2px;  padding: 5px;}
 #title {text-align: center; font-size: 4em;}
 #subtitle {text-align: center; font-size: 1.3em;}
@@ -29,7 +29,7 @@ div {margin: 2px;  padding: 5px;}
 .bandblock > div {background-color: rgba(255, 255, 255, 0.8);}
 </style>
 </head>
-<body>
+<body><div>
 
 <div id="title">BandOpticon</div>
 <div id="subtitle">Live Pskreporter statistics for FT8 spots on all bands between Home and DX</div>
@@ -180,7 +180,7 @@ document.getElementById('bandblock').appendChild(toAdd);
 
 </script>
 
-</body>
+</div></body>
 </html>
 
 
