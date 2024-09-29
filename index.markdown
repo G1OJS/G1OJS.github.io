@@ -33,9 +33,7 @@ You can find quite a lot of ham radio content from me on my [G1OJS pages at Inst
 
 **[BandSpotsHere: see who's active in your country and who's receiving who]({{ site.baseurl }}/BandSpotsHere/)**
 
-**[BandOpticon: online version of BandSpotsHere - under development ]({{ site.baseurl }}/BandOpticonAppTest#subtitle/)**
-
 **[BandOpticon: online version of BandSpotsHere - under development ]({{ site.baseurl }}/BandOpticonAppTest/#subtitle)**
 
-**[BandOpticon: online version of BandSpotsHere - under development ]({{ site.baseurl }}/BandOpticonAppTest.md#subtitle/)**
+
 
