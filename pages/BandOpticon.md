@@ -45,7 +45,7 @@ div {margin: 2px;  padding: 5px;}
   function updateDetails(newWant){
   // this is clunky and risks not being defned if loading order differs?
     if(!(typeof newWant==='undefined')) {
-       if(newWant>0) {detailWanted=newWant} else {detailWanted="Layout"}
+       if(newWant>=0) {detailWanted=newWant} else {detailWanted="Layout"}
     };
     if(detailWanted=="Layout"){
       detail.innerHTML="<div>Band box layout:<br><strong>Band</strong><br> \
