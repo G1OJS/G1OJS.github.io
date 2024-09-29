@@ -17,10 +17,10 @@ div {margin: 2px;  padding: 5px;}
 </head>
 
 <body id="BandOpticonBody"><div>
-<div id="title">BandOpticon</div>
-<div id="subtitle">Live <a href='https://pskreporter.info/'>Pskreporter</a> statistics for FT8 spots on all bands between Home and DX</div>
+<div id="title" name="title">BandOpticon</div>
+<div id="subtitle" name="subtitle">Live <a href='https://pskreporter.info/'>Pskreporter</a> statistics for FT8 spots on all bands between Home and DX</div>
 <div class="detail" id="controls" name="controls"></div>
-<div class="detail" id="detail"></div>
+<div class="detail" id="detail" name="detail"></div>
 <div class="bandblock" id="bandblock"></div>
 </div></body>
 
@@ -187,12 +187,11 @@ document.getElementById('bandblock').appendChild(toAdd);
         if(DXCCs.includes(spot[5])) {active_rx.add(spot[3])};
       }
     }
-
     detail.innerHTML="<div>"+ 
        "<strong>"+Bands[iBand]+"</strong><br>"+ 
        "<a href='#controls' onclick='updateDetails(-1);'> show layout</a><br>" +
-       "Active Tx calls: "+Array.from(active_tx).join(' ')+"<br>"+
-       "Active Rx calls: "+Array.from(active_rx).join(' ')+
+       "<strong>Active Tx calls:</strong><br> "+Array.from(active_tx).join(' ')+"<br>"+
+       "<strong>Active Rx calls:</strong><br> "+Array.from(active_rx).join(' ')+
        "</div>";
   }
   
