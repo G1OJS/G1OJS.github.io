@@ -1,6 +1,5 @@
 ---
 layout: default
-bandopticon: true
 permalink: /BandOpticonAppTest/
 ---
 
@@ -19,9 +18,9 @@ div {margin: 2px;  padding: 5px;}
 
 <div id="title">BandOpticon</div>
 <div id="subtitle">Live <a href='https://pskreporter.info/'>Pskreporter</a> statistics for FT8 spots on all bands between Home and DX</div>
-<div class="detail" id="controls"></div>
-<div class="detail" id="detail"></div>
-<div class="bandblock" id="bandblock"></div>
+<div class="detail" id="controls">Test</div>
+<div class="detail" id="detail">Test</div>
+<div class="bandblock" id="bandblock">Test</div>
 </div></body>
 
 <script>
