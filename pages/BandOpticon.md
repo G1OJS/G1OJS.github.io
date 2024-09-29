@@ -4,7 +4,6 @@ permalink: /BandOpticon/
 ---
 
 
-
 <html>
 <head><style>
 :root {background-color: #91FCFE; color:black;text-align: left; font-size: 1em;}
@@ -67,7 +66,8 @@ div {margin: 2px;  padding: 5px;}
        +("0"+now.getUTCHours()).substr(-2)+":"
        +("0"+now.getUTCMinutes()).substr(-2)+":"
        +("0"+now.getUTCSeconds()).substr(-2)+" UTC";
-    controls.innerHTML="<div><strong>"+utc_timestamp+"</strong>"+
+    var runningmins=Math.trunc(((now-tStart)/1000) / 60);
+    controls.innerHTML="<div><strong>"+utc_timestamp+"</strong> (running for "+runningmins+" minutes)"+
        "<br>Home = DXCCs "+DXCCs+" <a href='#controls' onclick='editDXCCs();'>edit</a><br>"+
        "Spots purged when older than "+purgeMinutes+" minutes"
   }
@@ -87,6 +87,7 @@ div {margin: 2px;  padding: 5px;}
   let detailWanted="Layout";
   let spots=[];
   let tWrite=Date.now();
+  let tStart=Date.now();
   updateDetails();
   updateControls();
 
@@ -113,7 +114,6 @@ for(var i=0; i < Bands.length; i++){
      <a href='#controls' onclick='updateDetails("+i+");'> details</a><br> \
      <output id='"+Bands[i]+"spots'></output><br> \
      <output id='"+Bands[i]+"calls'></output>";
-  // console.log(newDiv.innerHTML);
    toAdd.appendChild(newDiv);
 }
 document.getElementById('bandblock').appendChild(toAdd);
@@ -125,7 +125,6 @@ document.getElementById('bandblock').appendChild(toAdd);
 
   function onMessage(message){    
     if ( (Date.now()-tWrite)/1000 > refreshSeconds ){
-      console.log("refresh");
     	tWrite=Date.now();
       purgeSpots();
       writeBandSpotStats();
@@ -133,6 +132,9 @@ document.getElementById('bandblock').appendChild(toAdd);
       updateDetails();
       updateControls();
     }
+    b=getVal("b",message); //ignore nessages for bands we aren't set up to watch
+    if(!Bands.includes(b)) {return;}
+    
     sa=parseInt(getVal("sa",message));
     if(DXCCs.includes(sa)){addSpot(message); return;}
     ra=parseInt(getVal("ra",message));
@@ -141,12 +143,12 @@ document.getElementById('bandblock').appendChild(toAdd);
   
   function purgeSpots(){
     var del=[];
-    for (let iSpot=1; iSpot < spots.length; iSpot++) {
+    for (let iSpot=0; iSpot < spots.length; iSpot++) {
       var spot=spots[iSpot];
       var tSpot=spot[1];
       if((Date.now()/1000-tSpot)/60 > purgeMinutes) {del.push(iSpot)}
     }
-    for (let iSpot=1; iSpot <del.length;iSpot++){spots.splice(del[iSpot],1)}
+    for (let iSpot=0; iSpot <del.length;iSpot++){spots.splice(del[iSpot],1)}
   }
   
   function addSpot(message){
@@ -160,8 +162,6 @@ document.getElementById('bandblock').appendChild(toAdd);
   }
   
   function writeBandSpotStats(){
- //   misc.innerHTML="Total spots: "+spots.length;
-  
     var bandStats = [];
     for(let i = 0; i < Bands.length; i++) {
         bandStats[i]=[];
@@ -169,18 +169,18 @@ document.getElementById('bandblock').appendChild(toAdd);
         bandStats[i][1]=0;
         bandStats[i][2]=0;
     }
-    for (let iSpot=1; iSpot < spots.length; iSpot++) {
+    for (let iSpot=0; iSpot < spots.length; iSpot++) {
       var spot=spots[iSpot];
       var dircode=0;    // dircode is 0=H->H, 1=DX->H, 2=H->DX, 3=DX-DX
       if(!DXCCs.includes(spots[iSpot][4])) {dircode+=1};
       if(!DXCCs.includes(spots[iSpot][5])) {dircode+=2};
       iBand=Bands.indexOf(spot[0]);
-      if(dircode>2){
+      if(dircode>2 || iBand==-1){
          console.log("Bad spot "+spot);
       } else {
-        bandStats[iBand][dircode]+=1;
+         bandStats[iBand][dircode]+=1;
       }
-          } 
+    }
     for (let iBand=0; iBand < Bands.length; iBand++) {
       var snum=bandStats[iBand];
       document.getElementById(Bands[iBand]+"spots").innerHTML=
@@ -253,6 +253,8 @@ document.getElementById('bandblock').appendChild(toAdd);
 
 
 </html>
+
+
 
 
 
