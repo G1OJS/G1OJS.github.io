@@ -21,6 +21,7 @@ div {margin: 2px;  padding: 5px;}
 <div class="detail" id="controls"></div>
 <div class="detail" id="detail"></div>
 <div class="bandblock" id="bandblock"></div>
+</div></body>
 
 <script>
   function updateDetails(newWant){
@@ -209,7 +210,7 @@ document.getElementById('bandblock').appendChild(toAdd);
 
 </script>
 
-</div></body>
+
 
 </html>
 
