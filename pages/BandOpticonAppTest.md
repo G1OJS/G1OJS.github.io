@@ -5,17 +5,6 @@ permalink: /BandOpticonAppTest/
 ---
 
 <html>
-<head>
-<style>
-:root { background-color: #2196F3; color:black;text-align: left;}
-div {margin: 2px;  padding: 5px;}
-#title {text-align: center; font-size: 4em;}
-#subtitle {text-align: center; font-size: 1.3em;}
-.detail > div {background-color: rgba(255, 255, 255, 0.8);}
-.bandblock {display: grid; grid-template-columns: auto auto auto auto auto;}
-.bandblock > div {background-color: rgba(255, 255, 255, 0.8);}
-</style>
-</head>
 <body><div>
 
 <div id="title">BandOpticon</div>
