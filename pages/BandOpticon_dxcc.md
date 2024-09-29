@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /BandOpticon/
+permalink: /BandOpticon_dxcc/
 ---
 
 
