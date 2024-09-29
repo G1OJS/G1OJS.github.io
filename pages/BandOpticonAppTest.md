@@ -6,7 +6,6 @@ permalink: /BandOpticonAppTest/
 <html>
 <head><style>
 
-div {margin: 2px;  padding: 5px;}
 #title {text-align: center; font-size: 4em;}
 #subtitle {text-align: center; font-size: 1.3em;}
 .detail > div {background-color: rgba(255, 255, 255, 0.8);}
@@ -15,13 +14,13 @@ div {margin: 2px;  padding: 5px;}
 </style>
 </head>
 
-<body id="BandOpticonBody">
+<body id="BandOpticonBody"><div>
 <div id="title">BandOpticon</div>
 <div id="subtitle">Live <a href='https://pskreporter.info/'>Pskreporter</a> statistics for FT8 spots on all bands between Home and DX</div>
 <div class="detail" id="controls">Test</div>
 <div class="detail" id="detail">Test</div>
 <div class="bandblock" id="bandblock">Test</div>
-</body>
+</div></body>
 
 <script>
   function updateDetails(newWant){
