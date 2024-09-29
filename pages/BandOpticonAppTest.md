@@ -1,4 +1,6 @@
 ---
+layout: default
+bandopticon: true
 permalink: /BandOpticonAppTest/
 ---
 
