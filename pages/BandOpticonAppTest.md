@@ -20,7 +20,7 @@ Next steps
 <html>
 <head>
 <style>
-:root { background-color: #2196F3; color:black;text-align: left;}
+* { background-color: #2196F3; color:black;text-align: left;}
 div {margin: 2px;  padding: 5px;}
 #title {text-align: center; font-size: 4em;}
 #subtitle {text-align: center; font-size: 1.3em;}
