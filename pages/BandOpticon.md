@@ -1,12 +1,14 @@
 ---
 layout: default
-permalink: /BandOpticonAppTest/
+permalink: /BandOpticon/
 ---
+
+
 
 <html>
 <head><style>
-:root { background-color: #2196F3; color:black;text-align: left;}
-#main_content { background-color: #2196F3; color:black;text-align: left;}
+:root { background-color: #DFF8FE; color:black;text-align: left;}
+#main_content { background-color: #DFF8FE; color:black;text-align: left;}
 div {margin: 2px;  padding: 5px;}
 #title {text-align: center; font-size: 4em;}
 #subtitle {text-align: center; font-size: 1.3em;}
@@ -52,7 +54,7 @@ div {margin: 2px;  padding: 5px;}
   }
 
   // Define the DXCCs and Bands of interest
-  localStorage.removeItem('DXCCs')
+  //localStorage.removeItem('DXCCs')
   if(localStorage.getItem('DXCCs')){
     var DXCCs=JSON.parse(localStorage.getItem('DXCCs'));
   } else {
@@ -141,9 +143,12 @@ document.getElementById('bandblock').appendChild(toAdd);
   function writeBandSpotStats(){
  //   misc.innerHTML="Total spots: "+spots.length;
   
-    var bandStats = new Array(Bands.length);
+    var bandStats = [];
     for(let i = 0; i < Bands.length; i++) {
-        bandStats[i]=[0,0,0];
+        bandStats[i]=[];
+        bandStats[i][0]=0;
+        bandStats[i][1]=0;
+        bandStats[i][2]=0;
     }
     for (let iSpot=1; iSpot < spots.length; iSpot++) {
       var spot=spots[iSpot];
@@ -151,13 +156,12 @@ document.getElementById('bandblock').appendChild(toAdd);
       if(!DXCCs.includes(spots[iSpot][4])) {dircode+=1};
       if(!DXCCs.includes(spots[iSpot][5])) {dircode+=2};
       iBand=Bands.indexOf(spot[0]);
-      bandStats[iBand][dircode]+=1;
       if(dircode>2){
          console.log("Bad spot "+spot);
       } else {
         bandStats[iBand][dircode]+=1;
       }
-    } 
+          } 
     for (let iBand=0; iBand < Bands.length; iBand++) {
       var snum=bandStats[iBand];
       document.getElementById(Bands[iBand]+"spots").value="Spots "+snum[0]+"/"+snum[2]+"/"+snum[1];
@@ -213,6 +217,20 @@ document.getElementById('bandblock').appendChild(toAdd);
 
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
