@@ -18,7 +18,7 @@ div {margin: 2px;  padding: 5px;}
 <body id="BandOpticonBody"><div>
 <div id="title">BandOpticon</div>
 <div id="subtitle">Live <a href='https://pskreporter.info/'>Pskreporter</a> statistics for FT8 spots on all bands between Home and DX</div>
-<div class="detail" id="controls"></div>
+<div class="detail" id="controls" name="controls"></div>
 <div class="detail" id="detail"></div>
 <div class="bandblock" id="bandblock"></div>
 </div></body>
@@ -47,7 +47,7 @@ div {margin: 2px;  padding: 5px;}
     var utc_timestamp = now.getUTCDate()+"/"+now.getUTCMonth()+"/"+now.getUTCFullYear()+" "+
         now.getUTCHours()+":"+now.getUTCMinutes()+":"+now.getUTCSeconds()+" UTC";
      controls.innerHTML="<div><center><strong>"+utc_timestamp+"</strong></center>"+
-       "<br>Home = DXCCs "+DXCCs+" <a href='#' onclick='editDXCCs();'>edit</a>"
+       "<br>Home = DXCCs "+DXCCs+" <a href='#controls' onclick='editDXCCs();'>edit</a>"
   }
 
   // Define the DXCCs and Bands of interest
@@ -88,7 +88,7 @@ for(var i=0; i < Bands.length; i++){
    var newDiv = document.createElement('div');
    newDiv.id = Bands[i];     
    newDiv.innerHTML="<strong>"+Bands[i]+"</strong> \
-     <a href='#' onclick='updateDetails("+i+");'> details</a><br> \
+     <a href='#controls' onclick='updateDetails("+i+");'> details</a><br> \
      <output id='"+Bands[i]+"spots'></output><br> \
      <output id='"+Bands[i]+"calls'></output>";
   // console.log(newDiv.innerHTML);
@@ -189,7 +189,7 @@ document.getElementById('bandblock').appendChild(toAdd);
 
     detail.innerHTML="<div>"+ 
        "<strong>"+Bands[iBand]+"</strong><br>"+ 
-       "<a href='#' onclick='updateDetails(-1);'> show layout</a><br>" +
+       "<a href='#controls' onclick='updateDetails(-1);'> show layout</a><br>" +
        "Active Tx calls: "+Array.from(active_tx).join(' ')+"<br>"+
        "Active Rx calls: "+Array.from(active_rx).join(' ')+
        "</div>";
