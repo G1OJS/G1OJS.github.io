@@ -33,7 +33,7 @@ div {margin: 2px;  padding: 5px;}
        if(newWant>0) {detailWanted=newWant} else {detailWanted="Layout"}
     };
     if(detailWanted=="Layout"){
-      detail.innerHTML="<div>Band box layout:<br><b>Band</b><br> \
+      detail.innerHTML="<div>Band box layout:<br><strong>Band</strong><br> \
          Spots: number of spots Home &#8680 Home / Home &#8680 DX / DX &#8680 Home<br> \
          Tx Calls: number of unique calls in 'Home' received by anyone<br> \
          Rx Calls: number of unique calls in 'Home' receiving anyone</div>"
