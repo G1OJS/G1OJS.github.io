@@ -4,8 +4,6 @@ permalink: /BandOpticon/
 ---
 
 
-
-
 <html>
 <head><style>
 :root { background-color: #91FCFE; color:black;text-align: left; font-size: 1em;}
@@ -187,13 +185,14 @@ document.getElementById('bandblock').appendChild(toAdd);
    }
     
   function showBandActiveCallsInDetails(iBand){
-  //spots array 0=band,1=tSpot,2=senderCall,3=receiverCall,4=senderDXCC,5=receiverDXCC
+
     var active_tx=new Set;
     var active_rx=new Set;
     var DXCC_reached=new Set;
     var DXCC_spotted=new Set;
     for (let iSpot=1; iSpot < spots.length; iSpot++) {
       var spot=spots[iSpot];
+ //spots array 0=band,1=tSpot,2=senderCall,3=receiverCall,4=senderDXCC,5=receiverDXCC
       if(spot[0]==Bands[iBand]){
         if(DXCCs.includes(spot[4])) {
            active_tx.add(spot[2]);
@@ -203,7 +202,7 @@ document.getElementById('bandblock').appendChild(toAdd);
            active_rx.add(spot[3]);
            DXCC_spotted.add(spot[4]);
         }
-       }
+      }
     }
     detail.innerHTML="<div>"+ 
        "<strong>"+Bands[iBand]+"</strong><br>"+ 
@@ -228,6 +227,19 @@ document.getElementById('bandblock').appendChild(toAdd);
 
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
