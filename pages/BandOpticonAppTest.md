@@ -16,76 +16,35 @@ Next steps
   - Credits
 
 # BandOpticon
+
 <html>
 <head>
 <style>
-#title {
-  grid-column: 1 / span 5;
-  background-color: #2196F3;
-  color:black;
-  text-align: center;
-  font-size: 4em;
-  padding: 5px;
-  grid-gap: 5px;
-  min-height:40px;
-}
-#key {
-  grid-column: 1 / span 5;
-  background-color: #2196F3;
-  color:black;
-  padding: 5px;
-  grid-gap: 5px;
-  min-height:40px;
-}
-#key > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  min-height:10px;
-  padding: 5px;
-}
-
-.bandblock {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  background-color: #2196F3;
-  padding: 5px;
-  grid-gap: 5px;
-}
-
-.bandblock > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  min-height:10px;
-  padding: 5px;
-}
-
-output {
-    display: inline-block;
-    margin-left: 0px;
-    margin-right: 3px;
-    width: auto;
-    text-align: left;
-}
-label {
-    display: inline-block;
-    margin-left: 0px;
-    margin-right: 2px;
-    width: auto;
-    text-align: left;
-    font-size: 1em;
-}
-
+:root { background-color: #2196F3; color:black;text-align: left;}
+div {margin: 2px;  padding: 5px;}
+#title {text-align: center; font-size: 4em;}
+#subtitle {text-align: center; font-size: 1.3em;}
+.detail > div {background-color: rgba(255, 255, 255, 0.8);}
+.bandblock {display: grid; grid-template-columns: auto auto auto auto auto;}
+.bandblock > div {background-color: rgba(255, 255, 255, 0.8);}
 </style>
 </head>
-
-
 <body>
 
 <div id="title">BandOpticon</div>
-<div id="key"></div>
+<div id="subtitle">Live Pskreporter statistics for FT8 spots on all bands between Home and DX</div>
+<div class="detail" id="controls"></div>
+<div class="detail" id="detail"></div>
 <div class="bandblock" id="bandblock"></div>
 
 <script>
   // Define the DXCCs and Bands of interest
-  const DXCCs=[223,114,265,122,279,106,294];
+  if(localStorage.getItem('DXCCs')){
+    var DXCCs=localStorage.getItem('DXCCs');
+  } else {
+    DXCCs=[223,114,265,122,279,106,294];
+    localStorage.setItem('DXCCs', DXCCs);
+  }
   const Bands=["160m","80m","60m","40m","30m","20m","17m","15m","12m","10m","6m","4m","2m","70cm","23cm"];
   const refreshSeconds=2;
   const purgeSeconds=600;
@@ -94,12 +53,25 @@ label {
 </script>
   
 <script>
-// Write the table heading block
-  key.innerHTML="Showing Pskreporter statistics for FT8 spots between Home and DX, \
-  where:<br><li>Home = DXCCs "+DXCCs+", and </li><li>DX = rest of world</li><br>Format: \
-  <div><b>Band</b><br>Spots: number of spots Home &#8680 Home, Home &#8680 DX, DX &#8680 Home<br> \
+// Write the initial controls and details content
+  controls.innerHTML="<div>Home = DXCCs "+DXCCs+" <a href='#' onclick='editDXCCs();'>edit</a>"
+  detail.innerHTML="<div>Band box layout:<br><b>Band</b><br> \
+  Spots: number of spots Home &#8680 Home / Home &#8680 DX / DX &#8680 Home<br> \
   Tx Calls: number of unique calls in 'Home' received by anyone<br> \
   Rx Calls: number of unique calls in 'Home' receiving anyone</div>"
+  
+  function editDXCCs(){
+    var resp=prompt("Enter DXCCs",DXCCs);
+    var regex=/^(([0-9]+)(,(?=[0-9]))?)+$/;
+    if (regex.test(resp)) {
+      DXCCs=resp;
+      controls.innerHTML="<div>Home = DXCCs "+DXCCs+" <a href='#' onclick='editDXCCs();'>edit</a>";
+      localStorage.setItem('DXCCs', DXCCs);
+      spots=[];
+    } else {
+      alert("DXCC list must be comma-separated integers");
+    }
+  }
 
 // Add in the boxes for all bands, and inside them the required outputs with IDs
 var toAdd = document.createDocumentFragment();
@@ -174,7 +146,7 @@ document.getElementById('bandblock').appendChild(toAdd);
     } 
     for (let iBand=0; iBand < Bands.length; iBand++) {
       var snum=bandStats[iBand];
-      document.getElementById(Bands[iBand]+"spots").value="Spots "+snum[0]+","+snum[2]+","+snum[1];
+      document.getElementById(Bands[iBand]+"spots").value="Spots "+snum[0]+"/"+snum[2]+"/"+snum[1];
     }
   }
   
@@ -209,8 +181,6 @@ document.getElementById('bandblock').appendChild(toAdd);
 </script>
 
 </body>
-
-
 </html>
 
 
