@@ -228,7 +228,7 @@ document.getElementById('bandblock').appendChild(toAdd);
     var Sq4_spotted=new Set;
     for (let iSpot=1; iSpot < spots.length; iSpot++) {
       var spot=spots[iSpot];
-  //spots array 0=band,1=tSpot,2=senderCall,3=receiverCall,4=senderSq,5=receiverSq
+      //spots array 0=band,1=tSpot,2=senderCall,3=receiverCall,4=senderSq,5=receiverSq
       if(spot[0]==Bands[iBand]){
         if(SquareInHome(spot[4])) {
            active_tx.add(spot[2]);
@@ -250,9 +250,9 @@ document.getElementById('bandblock').appendChild(toAdd);
        "<strong>"+Bands[iBand]+"</strong><br>"+ 
        "<a href='#controls' onclick='updateDetails(-1);'> show layout</a><br>" +
        "<p class='transmit'><strong>Tx calls:</strong> "+Array.from(active_tx).toSorted().join(' ')+"<br>"+
-       "<strong>Sq reached:</strong> "+Array.from(Sq_reached).toSorted().join(' ')+"<br></p>"+
+       "<strong>Squares reached:</strong> "+Array.from(Sq_reached).toSorted().join(' ')+"<br></p>"+
        "<p class='receive'><strong>Rx calls:</strong> "+Array.from(active_rx).toSorted().join(' ')+"<br>"+
-       "<strong>Sq spotted:</strong> "+Array.from(Sq_spotted).toSorted().join(' ')+"<br></p>"+
+       "<strong>Squares spotted:</strong> "+Array.from(Sq_spotted).toSorted().join(' ')+"<br></p>"+
        "</div>";
   }
 
