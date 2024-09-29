@@ -5,13 +5,14 @@ permalink: /BandOpticon/
 
 
 
+
 <html>
 <head><style>
-:root { background-color: #DFF8FE; color:black;text-align: left;}
-#main_content { background-color: #DFF8FE; color:black;text-align: left;}
+:root { background-color: #91FCFE; color:black;text-align: left; font-size: 1em;}
+#main_content { background-color: #DFF8FE; color:black;text-align: left; font-size: 1em;}
 div {margin: 2px;  padding: 5px;}
 #title {text-align: center; font-size: 4em;}
-#subtitle {text-align: center; font-size: 1.3em;}
+#subtitle {text-align: center; font-size: 1.2em;}
 .detail > div {background-color: rgba(255, 255, 255, 0.8);}
 .bandblock {display: grid; grid-template-columns: auto auto auto auto auto;}
 .bandblock > div {background-color: rgba(255, 255, 255, 0.8);}
@@ -169,7 +170,7 @@ document.getElementById('bandblock').appendChild(toAdd);
   }
   
    function writeBandActiveCallStats(){
-  //spots.push([band,tSpot,senderCall,receiverCall,senderDXCC,receiverDXCC])
+  //spots array 0=band,1=tSpot,2=senderCall,3=receiverCall,4=senderDXCC,5=receiverDXCC
      for (iBand=0; iBand<Bands.length; iBand++){
   //note that this sub could be written with integer counters now as it was going to do other things but now isn't
        var active_tx=new Set;
@@ -186,21 +187,31 @@ document.getElementById('bandblock').appendChild(toAdd);
    }
     
   function showBandActiveCallsInDetails(iBand){
-  //spots.push([band,tSpot,senderCall,receiverCall,senderDXCC,receiverDXCC])
+  //spots array 0=band,1=tSpot,2=senderCall,3=receiverCall,4=senderDXCC,5=receiverDXCC
     var active_tx=new Set;
     var active_rx=new Set;
+    var DXCC_reached=new Set;
+    var DXCC_spotted=new Set;
     for (let iSpot=1; iSpot < spots.length; iSpot++) {
       var spot=spots[iSpot];
       if(spot[0]==Bands[iBand]){
-        if(DXCCs.includes(spot[4])) {active_tx.add(spot[2])};
-        if(DXCCs.includes(spot[5])) {active_rx.add(spot[3])};
-      }
+        if(DXCCs.includes(spot[4])) {
+           active_tx.add(spot[2]);
+           DXCC_reached.add(spot[5]);
+        }
+        if(DXCCs.includes(spot[5])) {
+           active_rx.add(spot[3]);
+           DXCC_spotted.add(spot[4]);
+        }
+       }
     }
     detail.innerHTML="<div>"+ 
        "<strong>"+Bands[iBand]+"</strong><br>"+ 
        "<a href='#controls' onclick='updateDetails(-1);'> show layout</a><br>" +
-       "<strong>Active Tx calls:</strong><br> "+Array.from(active_tx).join(' ')+"<br>"+
-       "<strong>Active Rx calls:</strong><br> "+Array.from(active_rx).join(' ')+
+       "<strong>Tx calls:</strong><br> "+Array.from(active_tx).join(' ')+"<br>"+
+       "DXCC reached: "+Array.from(DXCC_reached).join(' ')+"<br>"+
+       "<strong>Rx calls:</strong><br> "+Array.from(active_rx).join(' ')+"<br>"+
+       "DXCC spotted: "+Array.from(DXCC_spotted).join(' ')+"<br>"+
        "</div>";
   }
   
@@ -217,6 +228,19 @@ document.getElementById('bandblock').appendChild(toAdd);
 
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
