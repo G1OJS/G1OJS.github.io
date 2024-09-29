@@ -17,10 +17,13 @@ permalink: /BandOpticonAppTest/
 <body id="BandOpticonBody"><div>
 <div id="title">BandOpticon</div>
 <div id="subtitle">Live <a href='https://pskreporter.info/'>Pskreporter</a> statistics for FT8 spots on all bands between Home and DX</div>
-<div class="detail" id="controls">Test</div>
-<div class="detail" id="detail">Test</div>
-<div class="bandblock" id="bandblock">Test</div>
+<div class="detail" id="controls"></div>
+<div class="detail" id="detail"></div>
+<div class="bandblock" id="bandblock"></div>
 </div></body>
+
+<!--Get the library for MQTT functions -->
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 
 <script>
   function updateDetails(newWant){
@@ -63,9 +66,7 @@ permalink: /BandOpticonAppTest/
   let tWrite=Date.now();
   updateDetails();
   updateControls();
-</script>
-  
-<script>
+
   function editDXCCs(){
     var resp=prompt("Enter DXCCs",DXCCs);
     var regex=/^(([0-9]+)(,(?=[0-9]))?)+$/;
@@ -93,12 +94,7 @@ for(var i=0; i < Bands.length; i++){
    toAdd.appendChild(newDiv);
 }
 document.getElementById('bandblock').appendChild(toAdd);
-</script>
 
-<!--Get the library for MQTT functions -->
-<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
-
-<script>
   // Connect to Pskreporter and subscribe on connect
   const client=mqtt.connect("wss://mqtt.pskreporter.info:1886");
   client.onSuccess=client.subscribe('pskr/filter/v2/+/FT8/+/+/+/+/+/#');
@@ -208,8 +204,6 @@ document.getElementById('bandblock').appendChild(toAdd);
  
 
 </script>
-
-
 
 
 </html>
