@@ -1,7 +1,8 @@
 ---
 ---
-
-@import "{{ site.theme }}";
+{% if !page.BandOpticon %}
+    @import "{{ site.theme }}";
+{% endif %}
 .page__title{
     font-size: 42px;
     font-weight: bold;
