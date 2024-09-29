@@ -47,7 +47,7 @@ permalink: /BandOpticonAppTest/
   }
 
   // Define the DXCCs and Bands of interest
-  //localStorage.removeItem('DXCCs')
+  localStorage.removeItem('DXCCs')
   if(localStorage.getItem('DXCCs')){
     var DXCCs=JSON.parse(localStorage.getItem('DXCCs'));
   } else {
