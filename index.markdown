@@ -27,6 +27,6 @@ You can find quite a lot of ham radio content from me on my [G1OJS pages at Inst
 
 **[BandOpticon: see who's active in your country and who's receiving who](https://g1ojs.github.io/BandOpticon/BandOpticon)**
 
-
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgjbae1212%2Fhit-counter)](https://hits.seeyoufarm.com)                    
 
 
