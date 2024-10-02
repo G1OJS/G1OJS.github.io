@@ -4,6 +4,10 @@ title: "BandSpotsHere"
 subtitle: "Who in my DXCC is transmitting and receiving whom on my favourite bands?"
 permalink: /BandSpotsHere/
 ---
+<span style="color:red">
+# Note - this software has been replaced by [BandOpticon](https://g1ojs.github.io/BandOpticon/)
+The program below was written in Python which has to be installed in one way or another on your machine in order to run. BandOpticon is web-based software that should run on any platform, and is more convenient to use (it even works on mobile devices) and works with familiar web interface controls.
+</span>span>
 
 # What is BandSpotsHere?
 BandSpotsHere is a piece of MS-Windows software that gets data from  [Pskreporter](https://pskreporter.info/) & gives an overview of who’s active and who’s receiving who. 
