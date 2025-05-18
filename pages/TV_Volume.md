@@ -8,6 +8,7 @@ permalink: /TV_IR_Motor_tiny/
 // for motorised volume control using ATTiny88
 // and LG Magic Remote, without needing IR library
 
+```
 #define IR_PIN 24  // A5 on my board with DrAzzy core
 #define LED_PIN 0  // Built in LED
 #define MOTORPOS_PIN 10
@@ -84,3 +85,4 @@ void loop() {
   } while ((millis()-lastPulseDetected_ms) < 200);
   motorStop();
 }
+```
