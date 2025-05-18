@@ -23,6 +23,9 @@ You can find quite a lot of ham radio content from me on my [G1OJS pages at Inst
 
 **[Calculating padding capacitors]({{ site.baseurl }}/calculating-padding-capacitors)**
 
+### TV Remote decoder for Motorised Volume Control
+**[TV Remote Decoder (no library needed)]({{ site.baseurl }}/TV_IR_Motor_tiny)**
+
 # Dedicated Sites
 
 **[BandOpticon: see who's active in your country and who's receiving who](https://g1ojs.github.io/BandOpticon/BandOpticon)**
