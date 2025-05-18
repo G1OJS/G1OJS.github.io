@@ -7,10 +7,9 @@ permalink: /TV_IR_Motor_tiny/
 ```
 // TV Remote Vol up / Vol down decoder and motor driver
 // for motorised volume control using ATTiny88
-// and LG Magic Remote, without needing IR library
-//
-// (C) 2025 Alan Robinson G1OJS 
-//
+// and LG Magic Remote codes (note that the LG remote may refuse to send
+// codes when external speakers are used, so it may be necessary to program
+// an alternative remote to send the usual codes)
 
 #define IR_PIN 24  // A5 on my board with DrAzzy core
 #define LED_PIN 0  // Built in LED
@@ -18,7 +17,21 @@ permalink: /TV_IR_Motor_tiny/
 #define MOTORNEG_PIN 11
 #define VOL_UP 0xFA
 #define VOL_DOWN 0xF8
+#define LEFT 2
+#define RIGHT 1
+#define OFF 0
 unsigned long lastPulseDetected_ms=0;
+
+void motorDrive(unsigned char state){
+  digitalWrite(MOTORPOS_PIN,(state==RIGHT));
+  digitalWrite(MOTORNEG_PIN,(state==LEFT));
+  digitalWrite(LED_PIN, (state!=OFF));
+  if (state!=OFF) {
+    do {
+      if (digitalRead(IR_PIN)==LOW) lastPulseDetected_ms=millis();
+    }   while ((millis()-lastPulseDetected_ms) < 200);
+  }  
+}
 
 void blinkLED_bits(unsigned long bits) {
   // blink out 8 bits for debugging, finding codes etc
@@ -31,22 +44,6 @@ void blinkLED_bits(unsigned long bits) {
   }
   digitalWrite(LED_PIN, LOW);
   delay(200);
-}
-
-void motorStartRight(){
-  digitalWrite(MOTORPOS_PIN,HIGH);
-  digitalWrite(MOTORNEG_PIN,LOW);
-  digitalWrite(LED_PIN, HIGH);  
-}
-void motorStartLeft(){
-  digitalWrite(MOTORPOS_PIN,LOW);
-  digitalWrite(MOTORNEG_PIN,HIGH);
-  digitalWrite(LED_PIN, HIGH);  
-}
-void motorStop(){
-  digitalWrite(MOTORPOS_PIN,LOW);
-  digitalWrite(MOTORNEG_PIN,LOW);
-  digitalWrite(LED_PIN, LOW);  
 }
 
 unsigned long getAddrAndCmdWord(){
@@ -71,7 +68,7 @@ unsigned char validCmd(unsigned long addrAndCmdWord){
 }
 
 void setup() {
-  pinMode(IR_PIN, INPUT);
+  pinMode(IR_PIN, INPUT_PULLUP);
   pinMode(LED_PIN, OUTPUT);
   pinMode(MOTORPOS_PIN, OUTPUT);
   pinMode(MOTORNEG_PIN, OUTPUT);  
@@ -81,11 +78,10 @@ void loop() {
   unsigned long addrAndCmdWord = getAddrAndCmdWord();
   unsigned char cmd = validCmd(addrAndCmdWord);
 //  blinkLED_bits(cmd);
-  if (cmd == VOL_UP) motorStartRight();
-  if (cmd == VOL_DOWN) motorStartLeft();
-  do {
-    if (digitalRead(IR_PIN)==LOW) lastPulseDetected_ms=millis();
-  } while ((millis()-lastPulseDetected_ms) < 200);
-  motorStop();
+  if (cmd == VOL_UP)   motorDrive(RIGHT);
+  if (cmd == VOL_DOWN) motorDrive(LEFT);
+  motorDrive(OFF);
 }
+
+
 ```
