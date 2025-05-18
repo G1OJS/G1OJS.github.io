@@ -33,21 +33,6 @@ void blinkLED_bits(unsigned long bits) {
   delay(200);
 }
 
-unsigned long getAddrAndCmdWord(){
-  // NEC Protocol: see https://wiki.keyestudio.com/052035_Basic_Starter_V2.0_Kit_for_Arduino#Project_14:_IR_Remote_Control
-  // and note that IR module ouitput is HIGH when IR remote is OFF, and LOW when IR remote is transmitting IR
-  unsigned long cmdWord;
-  unsigned char i=0;
-  while (digitalRead(IR_PIN)==HIGH) {};
-  cmdWord=0;
-  do {
-    cmdWord >>= 1;
-    if(pulseIn(IR_PIN, HIGH, 5000) < 1250) 
-      cmdWord |=0x80000000;
-  } while (i++ < 32);
-  return cmdWord;
-}
-
 void motorStartRight(){
   digitalWrite(MOTORPOS_PIN,HIGH);
   digitalWrite(MOTORNEG_PIN,LOW);
@@ -62,6 +47,21 @@ void motorStop(){
   digitalWrite(MOTORPOS_PIN,LOW);
   digitalWrite(MOTORNEG_PIN,LOW);
   digitalWrite(LED_PIN, LOW);  
+}
+
+unsigned long getAddrAndCmdWord(){
+  // NEC Protocol: see https://wiki.keyestudio.com/052035_Basic_Starter_V2.0_Kit_for_Arduino#Project_14:_IR_Remote_Control
+  // and note that IR module ouitput is HIGH when IR remote is OFF, and LOW when IR remote is transmitting IR
+  unsigned long cmdWord;
+  unsigned char i=0;
+  while (digitalRead(IR_PIN)==HIGH) {};
+  cmdWord=0;
+  do {
+    cmdWord >>= 1;
+    if(pulseIn(IR_PIN, HIGH, 5000) < 1250) 
+      cmdWord |=0x80000000;
+  } while (i++ < 32);
+  return cmdWord;
 }
 
 unsigned char validCmd(unsigned long addrAndCmdWord){
