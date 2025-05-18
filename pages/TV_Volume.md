@@ -4,11 +4,14 @@ title: "Minimal TV IR Decoder and Motor Driver using ATTiny mpc without library"
 permalink: /TV_IR_Motor_tiny/
 ---
 
+```
 // TV Remote Vol up / Vol down decoder and motor driver
 // for motorised volume control using ATTiny88
 // and LG Magic Remote, without needing IR library
+//
+// (C) 2025 Alan Robinson G1OJS 
+//
 
-```
 #define IR_PIN 24  // A5 on my board with DrAzzy core
 #define LED_PIN 0  // Built in LED
 #define MOTORPOS_PIN 10
