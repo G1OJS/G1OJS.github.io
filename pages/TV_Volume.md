@@ -7,21 +7,26 @@ permalink: /TV_IR_Motor_tiny/
 ```
 // TV Remote Vol up / Vol down decoder and motor driver
 // for motorised volume control using ATTiny88
-// and LG Magic Remote (note that the LG remote may refuse to send
-// codes when external speakers are used, so it may be necessary to program
-// an alternative remote to send the usual codes)
+// and LG Magic Remote
 //
 // (C) 2025 Alan Robinson G1OJS 
 
+// Code readability constants
+#define LEFT 2
+#define RIGHT 1
+#define OFF 0
 #define IR_PIN 24  // A5 on my board with DrAzzy core
 #define LED_PIN 0  // Built in LED
 #define MOTORPOS_PIN 10
 #define MOTORNEG_PIN 11
-#define VOL_UP 0xFA
-#define VOL_DOWN 0xF8
-#define LEFT 2
-#define RIGHT 1
-#define OFF 0
+// Magic Remote Vol+ / Vol -
+#define MRtx_VOL_UP 0xFA    
+#define MRtx_VOL_DOWN 0xF8
+// 'Device Connector' codes (LG Sound Sync off)
+#define TVtx_VOL_UP 0xE8     
+#define TVtx_VOL_DOWN 0xE9
+#define TVtx_MUTE 0xE0
+
 unsigned long lastPulseDetected_ms=0;  // to decide if button is held down
 
 void motorDrive(unsigned char state){
@@ -33,19 +38,20 @@ void motorDrive(unsigned char state){
   if (state!=OFF) {
     do {
       if (digitalRead(IR_PIN)==LOW) lastPulseDetected_ms=millis();
-    }   while ((millis()-lastPulseDetected_ms) < 200);
+      bool inactive = (millis()-lastPulseDetected_ms) > 200; 
+      if (inactive) break;
+    }   while (1);
   }  
 }
 
 // This is for debugging and working out codes only.
-// Blinks on a regular 'beat' (400ms) with 300ms flash = 1, 100ms flash = 0
-// First delay() sets the duration, second delay pads to 400ms
+// Blinks out 8 bits MSB to LSB, long flash = 1, short flash = 0.
 void blinkLED_bits(unsigned long bits) {
   for (int i = 0; i < 8; i++) {
     digitalWrite(LED_PIN, HIGH);
-    delay((bits & 255)? 300:100);
+    delay((bits & 128)? 400:100);
     digitalWrite(LED_PIN, LOW);
-    delay((bits & 255)? 100:300);
+    delay((bits & 128)? 100:400);
     bits *=2; // used * rather than bit shift to be absolutely sure I'm shifting the right way!
   }
   digitalWrite(LED_PIN, LOW);
@@ -93,10 +99,12 @@ void setup() {
 void loop() {
   unsigned long addrAndCmdWord = getAddrAndCmdWord();
   unsigned char cmd = validCmd(addrAndCmdWord);
-//  blinkLED_bits(cmd);
-  if (cmd == VOL_UP)   motorDrive(RIGHT);
-  if (cmd == VOL_DOWN) motorDrive(LEFT);
+  if ((cmd == MRtx_VOL_UP) || (cmd == TVtx_VOL_UP) )  { motorDrive(RIGHT); }
+  else if ((cmd == MRtx_VOL_DOWN) || (cmd == TVtx_VOL_DOWN) ) { motorDrive(LEFT); }
+  else {blinkLED_bits(cmd);}
   motorDrive(OFF);
 }
+
+
 
 ```
