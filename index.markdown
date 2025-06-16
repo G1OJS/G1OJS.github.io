@@ -12,6 +12,8 @@ You can find quite a lot of ham radio content from me on my [G1OJS pages at Inst
 # On this site:
 
 ### Airband Radio Receivers
+**[G1OJS VHF Airband Scanner using ATTiny85, NE612 and MC1350](https://github.com/G1OJS/ATTiny85-Scanner-Radio)**
+
 **[G1OJS VHF Airband Superhet Receiver]({{ site.baseurl }}/VHF-AM-Superhet)**
 
 **[G1OJS VHF Airband Superregen Receiver Altoids Tin]({{ site.baseurl }}/VHF-AM-SuperRegen Earpiece)**
